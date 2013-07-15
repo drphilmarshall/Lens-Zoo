@@ -4,9 +4,9 @@
   </div>
   
   <div class='controls'>
-    <a target="_blank" title="Add to Favourites" href='' data-type='heart'><div class='icon' data-icon='heart'></div></a>
-    <a target="_blank" title="Discuss on Talk" href='http://talk.spacewarps.org/#/subjects/<%- @zooId %>' data-type='talk'><div class='icon' data-icon='discuss'></div></a>
-    <a target="_blank" title="Get a better view, via the Quick Dashboard" href='http://localhost:3333/#/project/spacewarp/<%- @zooId %>' data-type='dashboard'><div class='icon' data-icon='dashboard'></div></a>
+    <a target="_blank" title="Save this image to your profile." href='' data-type='heart'><div class='icon' data-icon='heart'></div></a>
+    <a target="_blank" title="Discuss this image in Talk." href='http://talk.spacewarps.org/#/subjects/<%- @zooId %>' data-type='talk'><div class='icon' data-icon='discuss'></div></a>
+    <a target="_blank" title="Explore this image further with Quick Dashboard." href='' data-type='dashboard'><div class='icon' data-icon='dashboard'></div></a>
     <a class='last' data-type='finish' href=''>Next!</a>
   </div>
 </div>

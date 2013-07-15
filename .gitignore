@@ -1,6 +1,7 @@
 .DS_Store
 .fits
 .fits.fz
+npm-debug.log
 node_modules/
 public/data/
 public/subjects/
@@ -20,3 +21,6 @@ data-import/beta/simlens_extra
 
 build/
 scripts/
+
+*.m4v
+*.webm

@@ -1,56 +1,182 @@
 [
-  {
-    "id": "OFFLINE_RED",
-    "zooniverse_id": "OFF_R",
-    "coords": [0, 0],
-    "location": {"standard": "//placehold.it/1x1/f00.png"},
-    "metadata": {"offline": true},
-    "project_id": "OFFLINE_PROJECT_ID",
-    "workflow_ids": ["OFFLINE_WORKFLOW_ID"]
-  },
-  {
-    "id": "OFFLINE_YELLOW",
-    "zooniverse_id": "OFF_Y",
-    "coords": [0, 0],
-    "location": {"standard": "//placehold.it/1x1/ff0.png"},
-    "metadata": {"offline": true},
-    "project_id": "OFFLINE_PROJECT_ID",
-    "workflow_ids": ["OFFLINE_WORKFLOW_ID"]
-  },
-  {
-    "id": "OFFLINE_GREEN",
-    "zooniverse_id": "OFF_G",
-    "coords": [0, 0],
-    "location": {"standard": "//placehold.it/1x1/0f0.png"},
-    "metadata": {"offline": true},
-    "project_id": "OFFLINE_PROJECT_ID",
-    "workflow_ids": ["OFFLINE_WORKFLOW_ID"]
-  },
-  {
-    "id": "OFFLINE_CYAN",
-    "zooniverse_id": "OFF_C",
-    "coords": [0, 0],
-    "location": {"standard": "//placehold.it/1x1/0ff.png"},
-    "metadata": {"offline": true},
-    "project_id": "OFFLINE_PROJECT_ID",
-    "workflow_ids": ["OFFLINE_WORKFLOW_ID"]
-  },
-  {
-    "id": "OFFLINE_BLUE",
-    "zooniverse_id": "OFF_B",
-    "coords": [0, 0],
-    "location": {"standard": "//placehold.it/1x1/00f.png"},
-    "metadata": {"offline": true},
-    "project_id": "OFFLINE_PROJECT_ID",
-    "workflow_ids": ["OFFLINE_WORKFLOW_ID"]
-  },
-  {
-    "id": "OFFLINE_MAGENTA",
-    "zooniverse_id": "OFF_M",
-    "coords": [0, 0],
-    "location": {"standard": "//placehold.it/1x1/f0f.png"},
-    "metadata": {"offline": true},
-    "project_id": "OFFLINE_PROJECT_ID",
-    "workflow_ids": ["OFFLINE_WORKFLOW_ID"]
-  }
+   {
+      "id":"5183f151e4bb21021900017c",
+      "activated_at":"2013-06-26T19:21:56Z",
+      "classification_count":0,
+      "created_at":"2013-06-26T17:08:32Z",
+      "group_id":"5154a3783ae74086ab000002",
+      "location":{
+         "standard":"http://spacewarps.org/subjects/standard/5183f151e4bb21021900017c.png",
+         "thumbnail":"http://spacewarps.org/subjects/thumbnail/5183f151e4bb21021900017c.png"
+      },
+      "metadata":{
+         "id":"CFHTLS_091_2040",
+         "training":[
+            {
+               "lens_id":"215160",
+               "x":165.545898,
+               "y":241.936523,
+               "type":"lensed galaxy"
+            }
+         ]
+      },
+      "project_id":"5101a1341a320ea77f000001",
+      "random":0.22785913446002948,
+      "state":"active",
+      "updated_at":"2013-06-26T17:08:33Z",
+      "workflow_ids":[
+         "5101a1361a320ea77f000002"
+      ],
+      "zooniverse_id":"ASW00000ak"
+   },
+   {
+      "id":"5183f151e4bb2102190001ac",
+      "activated_at":"2013-06-26T19:21:57Z",
+      "classification_count":0,
+      "created_at":"2013-06-26T17:09:22Z",
+      "group_id":"5154a3783ae74086ab000002",
+      "location":{
+         "standard":"http://spacewarps.org/subjects/standard/5183f151e4bb2102190001ac.png",
+         "thumbnail":"http://spacewarps.org/subjects/thumbnail/5183f151e4bb2102190001ac.png"
+      },
+      "metadata":{
+         "id":"CFHTLS_091_2380",
+         "training":[
+            {
+               "lens_id":"157721",
+               "x":6.748047,
+               "y":42.652344,
+               "type":"lensed quasar"
+            }
+         ]
+      },
+      "project_id":"5101a1341a320ea77f000001",
+      "random":0.9631791979663005,
+      "state":"active",
+      "updated_at":"2013-06-26T17:09:22Z",
+      "workflow_ids":[
+         "5101a1361a320ea77f000002"
+      ],
+      "zooniverse_id":"ASW00000bw"
+   },
+   {
+      "id":"5183f151e4bb2102190001ac",
+      "activated_at":"2013-06-26T19:21:57Z",
+      "classification_count":0,
+      "created_at":"2013-06-26T17:09:22Z",
+      "group_id":"5154a3783ae74086ab000002",
+      "location":{
+         "standard":"http://spacewarps.org/subjects/standard/5183f151e4bb2102190001ac.png",
+         "thumbnail":"http://spacewarps.org/subjects/thumbnail/5183f151e4bb2102190001ac.png"
+      },
+      "metadata":{
+         "id":"CFHTLS_091_2380",
+         "training":[
+            {
+               "lens_id":"157721",
+               "x":6.748047,
+               "y":42.652344,
+               "type":"lensed quasar"
+            }
+         ]
+      },
+      "project_id":"5101a1341a320ea77f000001",
+      "random":0.9631791979663005,
+      "state":"active",
+      "updated_at":"2013-06-26T17:09:22Z",
+      "workflow_ids":[
+         "5101a1361a320ea77f000002"
+      ],
+      "zooniverse_id":"ASW00000bw"
+   },
+   {
+      "id":"5183f151e4bb21021900090e",
+      "activated_at":"2013-06-26T19:21:56Z",
+      "classification_count":0,
+      "created_at":"2013-06-26T17:40:33Z",
+      "group_id":"5154a3783ae74086ab000002",
+      "location":{
+         "standard":"http://spacewarps.org/subjects/standard/5183f151e4bb21021900090e.png",
+         "thumbnail":"http://spacewarps.org/subjects/thumbnail/5183f151e4bb21021900090e.png"
+      },
+      "metadata":{
+         "id":"CFHTLS_091_1719",
+         "training":[
+            {
+               "lens_id":"101045",
+               "x":411.097656,
+               "y":189.601074,
+               "type":"lensing cluster"
+            }
+         ]
+      },
+      "project_id":"5101a1341a320ea77f000001",
+      "random":0.9609168876021442,
+      "state":"active",
+      "updated_at":"2013-06-26T17:40:33Z",
+      "workflow_ids":[
+         "5101a1361a320ea77f000002"
+      ],
+      "zooniverse_id":"ASW00001se"
+   },
+   {
+      "id":"5183f151e4bb2102190002d8",
+      "activated_at":"2013-06-26T19:21:56Z",
+      "classification_count":0,
+      "created_at":"2013-06-26T17:14:20Z",
+      "group_id":"5154a3783ae74086ab000002",
+      "location":{
+         "standard":"http://spacewarps.org/subjects/standard/5183f151e4bb2102190002d8.png",
+         "thumbnail":"http://spacewarps.org/subjects/thumbnail/5183f151e4bb2102190002d8.png"
+      },
+      "metadata":{
+         "id":"CFHTLS_091_1858",
+         "training":[
+            {
+               "lens_id":"42717",
+               "x":340.498047,
+               "y":314.804932,
+               "type":"lensed galaxy"
+            }
+         ]
+      },
+      "project_id":"5101a1341a320ea77f000001",
+      "random":0.02406680815363693,
+      "state":"active",
+      "updated_at":"2013-06-26T17:14:20Z",
+      "workflow_ids":[
+         "5101a1361a320ea77f000002"
+      ],
+      "zooniverse_id":"ASW00000k8"
+   },
+   {
+      "id":"5183f151e4bb210219000620",
+      "activated_at":"2013-06-26T19:21:56Z",
+      "classification_count":0,
+      "created_at":"2013-06-26T17:28:18Z",
+      "group_id":"5154a3783ae74086ab000002",
+      "location":{
+         "standard":"http://spacewarps.org/subjects/standard/5183f151e4bb210219000620.png",
+         "thumbnail":"http://spacewarps.org/subjects/thumbnail/5183f151e4bb210219000620.png"
+      },
+      "metadata":{
+         "id":"CFHTLS_091_0608",
+         "training":[
+            {
+               "lens_id":"37808",
+               "x":108.210938,
+               "y":29.48291,
+               "type":"lensing cluster"
+            }
+         ]
+      },
+      "project_id":"5101a1341a320ea77f000001",
+      "random":0.4506531379883003,
+      "state":"active",
+      "updated_at":"2013-06-26T17:28:18Z",
+      "workflow_ids":[
+         "5101a1361a320ea77f000002"
+      ],
+      "zooniverse_id":"ASW000017k"
+   }
 ]

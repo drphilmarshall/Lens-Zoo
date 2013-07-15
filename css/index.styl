@@ -18,19 +18,11 @@ $img-dim    = 441px
 @import './profile'
 @import './tutorial'
 @import './quick_guide'
+@import './counters'
+@import './tooltip'
 
 .zooniverse-top-bar
   position fixed
-
-// Disabling some nav links
-nav
-  a[data-page="home"]
-    font-family futura
-  a[data-page="dashboard"]
-    pointer-events none
-  // a[data-page="profile"]
-  //   pointer-events none
-
 
 body
   background url('images/blue.jpg') repeat
@@ -126,8 +118,8 @@ body
       
     a[data-page="classifier"]
       background-image url('images/classify.png')
-    a[data-page="science"]
-      background-image url('images/science.png')
+    a[data-page="about"]
+      background-image url('images/about.png')
     a[data-page="guide"]
       background-image url('images/spotter.png')
     a[data-page="dashboard"]
@@ -136,8 +128,6 @@ body
       background-image url('images/profile.png')
     a[data-page="discuss"]
       background-image url('images/discuss.png')
-    // a[data-page="feedback"]
-    //   font-size 18px
-    //   padding 36px 0 30px
-      
+    a[data-page="faq"]
+      background-image url('images/faq.png')
 

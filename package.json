@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "dependencies": {
     "serveup": "~0.0.5",
-    "hem": "git+ssh://git@github.com:spine/hem.git",
+    "hem": "~0.2.7",
     "es5-shimify": "~0.0.1",
     "json2ify": "~0.0.1",
-    "spine": "~1.0.8",
+    "spine": "1.0.8",
     "underscore": "~1.4.2",
-    "zooniverse": "git+ssh://git@github.com:zooniverse/Zooniverse.git#no-deps",
-    "zootorial": "git+ssh://git@github.com:brian-c/zootorial.git#new-features",
+	"zooniverse": "git://github.com/zooniverse/Zooniverse.git#no-deps",
+	"zootorial": "git://github.com/brian-c/zootorial.git#new-features",
     "nib": "~0.9.1"
   }
 }

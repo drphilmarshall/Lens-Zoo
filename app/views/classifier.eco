@@ -1,22 +1,10 @@
 <div class='mask'></div>
 <div class='side-mask'></div>
 
-<div class='stats'>
-  <div class='stat'>
-    <p class='number' data-type='classified'>0</p>
-    <p class='description'>images viewed</p>
-  </div>
-  <div class='stat'>
-    <p class='number' data-type='potentials'>0</p>
-    <p class='description'>potential lenses</p>
-  </div>
-  <div class='stat'>
-    <p class='number' data-type='favorites'>0</p>
-    <p class='description'>favourite images</p>
-  </div>
-</div>
+<div class='stats'></div>
 
 <div class='annotation'>
+  <div class='remove-all'>Remove All Markers</div>
   <svg class='primary' xmlns="http://www.w3.org/2000/svg"></svg>
 </div>
 

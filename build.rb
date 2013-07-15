@@ -57,12 +57,14 @@ to_upload.each.with_index do |file, index|
     'application/x-gzip'
   when '.ico'
     'image/x-ico'
+  when '.webm'
+    'video/webm'
   else
     `file --mime-type -b #{ file }`.chomp
   end
   
   puts "#{ '%2d' % (index + 1) } / #{ '%2d' % total }: Uploading #{ file } as #{ content_type }"
-  bucket.objects["beta/#{file}"].write file: file, acl: :public_read, content_type: content_type
+  bucket.objects["#{file}"].write file: file, acl: :public_read, content_type: content_type, cache_control: 'no-cache, must-revalidate'
 end
 
 Dir.chdir working_directory

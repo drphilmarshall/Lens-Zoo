@@ -1,4 +1,10 @@
+@keyframes progress
+  0%
+    background-position: 0 0
 
+  100%
+    background-position: 50px 0
+    
 $margin-top = 30px
 
 .classifier
@@ -22,6 +28,11 @@ $margin-top = 30px
     &.show
       display block
       opacity 0.9
+    
+    &.loading
+      animation 0.5s progress linear infinite
+      background linear-gradient(left top, #101010 25%, #000 25%, #000 50%, #101010 50%, #101010 75%, #000 75%)
+      background-size 25px 25px
   
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
     .side-mask
@@ -38,35 +49,24 @@ $margin-top = 30px
     background -ms-linear-gradient(right, rgba(10, 10, 10, 255), rgba(0, 0, 0, 0))
     z-index 2
   
-  .stats
-    border-left 1px solid rgb(0, 52, 96)
-    border-bottom 1px solid rgb(0, 52, 96)
-    box-sizing border-box
+  .remove-all
+    display none
+    position absolute
+    margin-top $margin-top - 30
+    margin-left 320px
+    font-size 12px
+    z-index 4
+    padding 6px
     
-    .stat
-      display inline-block
-      margin 0
-      width 143px
-      border-right 1px solid rgb(0, 52, 96)
+    &.show
+      display block
       
-      .number
-        color #FFF
-        font-size 24px
-        font-weight 100
-        text-shadow 0 1px 0 #013A66
-        padding-left 20px
-        margin 0
-        
-      .description
-        color #000d18
-        font-size 9px
-        padding-left 20px
-        font-weight 600
-        text-shadow 0px 1px 0px rgba(255, 255, 255, 0.25)
-        text-transform uppercase
-  
+    &:hover
+      cursor pointer
+      
   .annotation
     position absolute
+    background-color rgba(0, 0, 0, 0.0001)
     width $img-dim
     height $img-dim
     margin-top $margin-top

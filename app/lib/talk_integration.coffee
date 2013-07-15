@@ -10,43 +10,45 @@ module.exports =
     
     return headers
   
-  # List Talk collections owned by user
-  getTalkCollections: (user) ->
+  # Create a Talk collection unless it exists
+  setTalkCollections: (user, titles, descriptions) ->
     
-    # Send the request
+    # Get a list of Talk collections owned by user
     $.ajax({
       url: "#{@constructor.host}/projects/spacewarp/talk/users/collection_list",
       dataType: 'json',
-      success: (collections, status, response) =>
-        @setTalkCollection(user, collections)
-      headers: @setAuthentication(user)
-    })
-  
-  # Set a Quick Dashboard collection unless it exists
-  setTalkCollection: (user, collections) ->
-    
-    # Check users collections for Quick Dashboard
-    for collection in collections
-      if collection.title is @dashboardCollection
-        @collectionId = collection.zooniverse_id
-        return
-    
-    # Create collection for user
-    $.ajax({
-      url: "#{@constructor.host}/projects/spacewarp/talk/collections",
-      type: 'POST',
-      data: {subject_id: 'ASW0000001', title: @dashboardCollection, description: 'A collection of all Space Warp images examined in the Quick Dashboard.'},
       headers: @setAuthentication(user),
-      success: (collection, status, response) =>
-        @collectionId = collection.zooniverse_id
+      success: (collections, status, response) =>
+        
+        # Loop over the collection titles requested
+        for title, index in titles
+          
+          # Make sure the collection doesn't already exist
+          for collection in collections
+            if collection.title is title
+              @talkIds[title] = collection.zooniverse_id
+              break
+          
+          if @talkIds[title]?
+            continue
+          
+          $.ajax({
+            url: "#{@constructor.host}/projects/spacewarp/talk/collections",
+            type: 'POST',
+            data: {subject_id: 'ASW0000a7l', title: titles[index], description: descriptions[index]},
+            headers: @setAuthentication(user),
+            success: (collection, status, response) =>
+              @talkIds[title] = collection.zooniverse_id
+          })
     })
   
   # Add subject to Talk collection
-  addToTalkCollection: (user, zooniverseId) ->
+  addToTalkCollection: (user, collectionId, subjectId) ->
     
-    $.ajax({
-      url: "#{@constructor.host}/projects/spacewarp/talk/collections/#{@collectionId}/add_subject",
-      type: 'POST',
-      data: {subject_id: zooniverseId},
-      headers: @setAuthentication(user),
-    })
+    if collectionId?
+      $.ajax({
+        url: "#{@constructor.host}/projects/spacewarp/talk/collections/#{collectionId}/add_subject",
+        type: 'POST',
+        data: {subject_id: subjectId},
+        headers: @setAuthentication(user),
+      })

@@ -51,12 +51,12 @@ module.exports =
     number: 5
     header: 'Identifying gravitational lenses'
     details: "The yellow-ish looking galaxy is a gravitational lens. It is bending and magnifying the light from a faint blue galaxy, lying far behind, into a blue arc that surrounds the lensing galaxy."
-    attachment: 'left top .current 1 0.38'
+    attachment: 'left top .current 1 0.5'
     block: '.annotation, .controls:first'
     className: 'arrow-left'
     onEnter: ->
       bounding = document.createElementNS('http://www.w3.org/2000/svg', "circle")
-      bounding.setAttribute("transform", "translate(#{388}, #{270})")
+      bounding.setAttribute("transform", "translate(#{258}, #{324})")
       bounding.setAttribute("class", "outline")
       bounding.setAttribute("stroke", 'white')
       bounding.setAttribute("stroke-width", 2)
@@ -70,8 +70,8 @@ module.exports =
     number: 6
     header: 'Marking lensed features'
     details: 'If you see something that is being lensed, mark it. In this case, click on the blue arc.'
-    attachment: 'left top .current 1 0.44'
-    block: '.controls'
+    attachment: 'left top .current 1 0.52'
+    block: '.controls:first'
     className: 'arrow-left'
     onEnter: (tutorial) ->
       canvas = document.createElement('canvas')
@@ -83,18 +83,18 @@ module.exports =
         ctx.drawImage(img, 0, 0, img.width, img.height)
       img.src = $('.current .image img').attr('src')
     next:
-      'mouseup svg.primary': (e, tutorial, step) ->
+      'mouseup .annotation': (e, tutorial, step) ->
         mask = getMaskValue(e)
         return if mask is 255 then 'goodjob' else 'tryagain'
   
   goodjob: new Step
     header: "Great job!"
-    details: 'You’ve correctly identified a gravitational lens!'
-    attachment: 'left top .current 1 0.44'
-    block: '.annotation, .controls'
+    details: "You’ve correctly identified a gravitational lens!<br/><br/>To remove a marker, just click it and you'll see the remove button."
+    attachment: 'left top .current 1 0.52'
+    block: '.controls'
     className: 'arrow-left'
     next: 'training'
-  
+    
   tryagain: new Step
     header: 'Whoops, try again.'
     details: 'Drag the marker over the blue arc to identify the lens.'
@@ -102,7 +102,7 @@ module.exports =
     className: 'arrow-left'
     blocks: '.controls:first'
     next:
-      'mouseup svg.primary': (e, tutorial, step) ->
+      'mouseup .annotation': (e, tutorial, step) ->
         mask = getMaskValue(e)
         return if mask is 255 then 'goodjob' else false
   

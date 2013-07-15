@@ -1,5 +1,9 @@
 .stack > :not(.classifier)
-
+  
+  // Offset the same way as the classifier page
+  // TODO: abstract this style further.
+  margin 4% 0 0 12%
+  
   &.home
 
     .portal
@@ -15,10 +19,18 @@
         position absolute
         width 100%
         z-index 1
-
-      img
-        border-radius 50%
-        display block
+      
+      .lenstoy
+        position relative
+        
+        img
+          border-radius 50%
+          display block
+        
+        #lenstoyholder
+          position absolute
+          top -28px
+          left -38px
 
     .site-actions
       @extends #semantic-list
@@ -42,38 +54,9 @@
         margin 0 0 40px 0
         position relative
 
-  .guide-content
-    background url(images/bg-light-blue.png) repeat
-
-  .guide-menu
-    @extends #clearfix
-    @extends #semantic-list
-
-    li
-      background url(images/bg-dark-blue.png) repeat
-      border 1px solid transparent
-      border-bottom-color #3c90d2
-      box-sizing border-box
-      color #2c81c4
-      cursor pointer
-      float left
-      font-weight 700
-      line-height 41px
-      text-align center
-      width 50%
-
-      &.show
-        background url(images/bg-light-blue.png) repeat
-        border-color #3c90d2
-        border-bottom-color transparent
-        color #fff
-        text-shadow 0 1px 0 #013a66
-
   .content
     color #EFEFEF
-    margin 0 auto
     padding 1px 0 0 0 // cheating
-    text-shadow 0 1px 0 rgba(#013a66, 0.8)
     width 800px
     
     .quote
@@ -81,48 +64,110 @@
       margin-top 30px
       line-height 40px
       text-align right
+    
+    h2
+      color #000d18
+      font-size 11px
+      font-weight 600
+      text-shadow 0px 1px 0px rgba(255, 255, 255, 0.25)
+      text-transform uppercase
+      padding 30px 0
+      border-bottom 1px solid #003461
+      box-shadow 0px 1px 0px #0072C9
+    
+    .q
+      font-weight 700
+      font-size 14px
       
+      &:before
+        content "Q:"
+        padding-right 10px
+    
+    .a
+      padding-bottom 10px
+      font-size 14px
+    
+      &:before
+        font-weight 700
+        content "A:"
+        padding-right 10px
+    
+    .guide-menu
+      @extends #clearfix
+      @extends #semantic-list
+      border-bottom 5px solid black
+
+      li
+        box-sizing border-box
+        color rgb(46, 130, 191)
+        background-color rgb(3, 71, 119)
+        cursor pointer
+        float left
+        font-weight 700
+        font-size 16px
+        line-height 41px
+        text-align center
+        padding 0 10px
+        width 150px
+
+        &.show
+          color #FFF
+          background-color black
+          text-shadow 0 1px 0 #013a66
     
     &:last-child
       padding 1px 0 50px 0
 
     > header
-      padding 50px 0 30px 0
+      padding-bottom 30px
       text-align center
 
       h1:last-child
         margin-bottom 0
 
       p
-        color #000
         font-size 16px
         margin 0 auto
-        text-shadow 0 1px 1px lighten(#0072c9, 8%)
         width 86%
     
-
     section
 
       &:not(.show)
         display none
     
+    .bio
+      
+      h4
+        letter-spacing 1px
+        font-weight 400
+      
+      .name
+        font-size 14px
+      
+      .twitter
+        &:before
+          content "\2003"
+          
+        font-size 12px
+        
+      p
+        padding-bottom 10px
+        font-weight 200
+        letter-spacing 1px
+    
     ul.menu
       @extends #semantic-list
-      border-top 1px solid #3792d9
-      border-bottom 1px solid #2670aa
       height 40px
       margin 20px 0
       position relative
 
       &:before
-        border-top 1px solid #2670aa
         content ""
         position absolute
         top 0
         width 100%
 
       &:after
-        border-bottom 1px solid #3792d9
         bottom 0
         content ""
         left 0
@@ -130,15 +175,15 @@
         width 100%
 
       li
-        color #fff
+        color #000d18
         cursor pointer
         float left
-        font-size 12px
+        font-size 14px
         font-weight 700
         margin 0 30px 0 0
         line-height 41px
 
         &.show
-          color #000d18
+          color #FFF
           text-shadow none
 

@@ -1,12 +1,7 @@
 <ul>
   <% for subject in @subjects: %>
   <li>
-    <img src="<%- subject.subjects[0].location.thumbnail %>">
-    <div class='controls small'>
-      <a target="_blank" href='' data-type='heart'><div class='icon' data-icon='heart'></div></a>
-      <a target="_blank" href='http://talk.spacewarps.org/#/subjects/<%- subject.subjects[0].zooniverse_id %>'><div class='icon' data-icon='discuss'></div></a>
-      <a target="_blank" href='' data-type='dashboard'><div class='icon' data-icon='dashboard'></div></a>
-    </div>
+    <a href='http://talk.spacewarps.org/#/subjects/<%- subject.subjects[0].zooniverse_id %>'><img src="<%- subject.subjects[0].location.thumbnail %>" width="176px" height="176px"></a>
   </li>
   <% end %>
 </ul>

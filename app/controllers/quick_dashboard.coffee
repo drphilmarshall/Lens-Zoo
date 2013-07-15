@@ -4,7 +4,7 @@ browserDialog = require 'zooniverse/controllers/browser-dialog'
 {Dialog}      = require 'zootorial'
 
 
-class Viewer extends Controller
+class QuickDashboard extends Controller
   dimension: 441
   bands:  ['g', 'r', 'i']
   source: 'http://spacewarps.org.s3.amazonaws.com/subjects/raw/'
@@ -47,16 +47,27 @@ class Viewer extends Controller
     # Get the browser vendor and version
     userAgent = browserDialog.testAgent(navigator.userAgent)
     
-    unless (DataView?) or (userAgent.browser is 'msie')
+    unless (DataView?)
       alert 'Sorry, your browser does not support features needed for this tool.'
       return
     
     # Determine if WebGL is supported, otherwise fall back to canvas
     canvas  = document.createElement('canvas')
-    context = canvas.getContext('webgl')
-    context = canvas.getContext('experimental-webgl') unless context?
+    for name in ['webgl', 'experimental-webgl']
+      try
+        context = canvas.getContext(name)
+        
+        # Check if browser support floating-point textures
+        ext = context.getExtension('OES_texture_float')
+        
+      catch error
+        continue
+      break if context?
     
     lib = if context? then 'gl' else 'canvas'
+    
+    # Default to canvas if browser does not support WebGL floating-point texture extension
+    lib = if ext? then 'gl' else 'canvas'
     
     # Default to canvas if Safari regardless of WebGL
     lib = 'canvas' if userAgent.browser is 'safari'
@@ -73,6 +84,9 @@ class Viewer extends Controller
   
   load: (prefix) ->
     @prefix = prefix
+    
+    # Add loading class
+    $('.mask').addClass('loading')
     
     # Setup WebFITS object
     @wfits = new astro.WebFITS(@el.find('.webfits')[0], @dimension)
@@ -161,6 +175,9 @@ class Viewer extends Controller
   # Call when all channels are received (i.e. each deferred is resolved)
   allChannelsReceived: =>
     
+    # Remove loading class
+    $('.mask').removeClass('loading')
+    
     # Setup callback for escape key
     document.onkeydown = (e) =>
       if e.keyCode is 27
@@ -172,10 +189,10 @@ class Viewer extends Controller
     @append("""
       <div class='viewer-tools'>
         <div class='controls'>
-          <a href='' data-preset='0'>Standard</a>
-          <a href='' data-preset='1'>Brighter</a>
-          <a href='' data-preset='2'>Bluer</a>
-          <a href='' data-preset='finished'>Return</a>
+          <a title='See the same view as on the main interface.' href='' data-preset='0'>Standard</a>
+          <a title="Turn down the yellow galaxies’ brightness" href='' data-preset='1'>Brighter</a>
+          <a title='Turn up the brightness of the faintest objects' href='' data-preset='2'>Bluer</a>
+          <a title='Back to main interface' href='' data-preset='finished'>Return</a>
         </div>
         <div class='flag'>?</div>
         <div class='instructions'>Scroll to zoom.  Drag to move around the image.</div>
@@ -226,4 +243,4 @@ class Viewer extends Controller
       delete @cache[key]
 
 
-module.exports = Viewer
+module.exports = QuickDashboard

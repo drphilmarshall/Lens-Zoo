@@ -7,9 +7,10 @@ class QuickGuide extends Controller
   show: false
   
   events:
-    'click .tab'  : 'toggle'
-    'click img'   : 'onClick'
-
+    'click .tab'      : 'toggle'
+    'click img'       : 'onClick'
+    
+    
   constructor: ->
     super
     @html @template
@@ -30,5 +31,6 @@ class QuickGuide extends Controller
     
     $(".guide-menu li[data-type='#{sectionType}']").click()
     $("ul.menu li[data-type='#{type}']").click()
-    
+
+
 module.exports = QuickGuide

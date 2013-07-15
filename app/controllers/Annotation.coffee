@@ -209,6 +209,7 @@ class Annotation extends Controller
     
     # Hide the remove SVG
     @gRemove.setAttribute("visibility", "hidden")
+    @trigger 'remove-off' if @isRemoveVisible
     @isRemoveVisible = false
     
     halfWidth = Annotation.halfWidth
@@ -249,19 +250,24 @@ class Annotation extends Controller
   
   onclick: (e) =>
     e.preventDefault()
-      
+    @trigger 'click'
+    
     if @isRemoveVisible
       @gRemove.setAttribute("visibility", "hidden")
       @gCross.setAttribute("stroke", @color)
+      @trigger 'remove-off'
     else
       @gRemove.removeAttribute("visibility")
       @gCross.setAttribute("stroke", @selectColor)
+      @trigger 'remove-on'
+      
     @isRemoveVisible = not @isRemoveVisible
     
     if @hasDragged
       @gRemove.setAttribute("visibility", "hidden")
       @gCross.setAttribute("stroke", @color)
       @hasDragged = false
+      @trigger 'remove-off'
       @isRemoveVisible = false
   
   toJSON: ->
@@ -272,6 +278,7 @@ class Annotation extends Controller
   
   remove: =>
     $(@gRoot).remove()
+    @trigger 'remove-off' if @isRemoveVisible
     @trigger 'remove', @
 
 

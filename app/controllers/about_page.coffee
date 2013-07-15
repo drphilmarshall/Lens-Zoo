@@ -1,9 +1,9 @@
 Page  = require 'controllers/page'
 
-
-class GuidePage extends Page
-  el: $('.guide')
-  className: 'guide'
+# TODO: Merge this class with GuidePage.
+class AboutPage extends Page
+  el: $('.about')
+  className: 'about'
   
   events:
     'click .menu li'        : 'show'
@@ -23,4 +23,4 @@ class GuidePage extends Page
     @el.scroll() # trick lazyload
 
 
-module.exports = GuidePage
+module.exports = AboutPage

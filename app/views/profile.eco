@@ -1,12 +1,28 @@
-<div class='favorites'>
-  <h1>Favourites</h1>
-  <div class='subjects loading'>
-    <p>Just a moment ...</p>
-  </div>
+<div class='stats'></div>
+
+<div class='no-user'>
+  <h2>Please sign in to keep track of your classifications.</h2>
 </div>
-<div class='recents'>
-  <h1>Recents</h1>
-  <div class='subjects loading'>
-    <p>Just a moment ...</p>
+
+<div class='user'>
+  <div class='favorites'>
+    <h2 class='border'>Favourites</h2>
+    <div class='pagination'>
+      <div class='previous' data-type='favorite'></div>
+      <div class='next' data-type='favorite'></div>
+    </div>
+    <div class='subjects loading'>
+      <p>Just a moment ...</p>
+    </div>
+  </div>
+  <div class='recents'>
+    <h2 class='border'>Recents</h2>
+    <div class='pagination'>
+      <div class='previous' data-type='recent'></div>
+      <div class='next' data-type='recent'></div>
+    </div>
+    <div class='subjects loading'>
+      <p>Just a moment ...</p>
+    </div>
   </div>
 </div>

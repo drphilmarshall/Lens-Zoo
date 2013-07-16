@@ -46,7 +46,19 @@
 #         ./build.rb
 
 
-npm install
+# OK, first need to make sure Node is installed and up to date. This package
+# comes with homebrew, so it was enough to do:
+
+#   brew update
+
+# to get the latest version of node and npm. [I got homebrew some time ago,
+# with:  ruby ~/software/homebrew.rb after downloading homebrew.rb from the 
+# homebrew website.]
+
+# Now run the node install command:
+
+npm install .
+
 # npm http GET https://registry.npmjs.org/spine/1.0.8
 # npm http GET https://registry.npmjs.org/nib
 # ...
@@ -71,9 +83,14 @@ npm install
 # └── testacular@0.4.0 (xmlbuilder@0.4.2, chokidar@0.6.2, glob@3.2.3, minimatch@0.2.12, socket.io@0.9.16)
 
 # Done. This makes a directory called "node_modules". To do a hard reinstall, 
-# rm this directory and its contents.
+# \rm -rf this directory and redo the npm install .
 
-# Now start server:
+
+# Now for the hem server - needs to be the right version!
+
+sudo npm install hem@0.2.9 -g
+
+# Start it up! The Css flag is important.
 
 hem server --includeCss
 
@@ -97,11 +114,12 @@ hem server --includeCss
 # site testing?
 
 # Actually the build is not needed. All we need to do is point a browser at
-# the following url:
+# the following development server url:
 
 #          http://0.0.0.0:9294/
 
 # This works (with some help from Amit, fixing bugs at his end!)
+
 
 # ============================================================================
 # 2013-07-16 (Tuesday) 10:57 PDT
@@ -118,6 +136,9 @@ hem server --includeCss
 # * Fork Lens-Zoo repo to drphilmarshall              DONE
 # * Make Aprajita and Anupreeta collaborators         DONE
 
+# ---------------------------------------------------------------
+# A) Phil: over-write index.html (and other files) as needed:
+#
 # * Create dev branch to work in                      DONE
 # * Keep copies of stage 1 html, eco files:           DONE
 #     * public/index_CFHTLS_stage1.html               DONE
@@ -133,8 +154,40 @@ hem server --includeCss
 # * When ready:
 #     * Merge dev branch into master branch
 #     * Submit pull request
-#     
-# Notes:
+#
+# ---------------------------------------------------------------
+# B) Amit: since Sci Team changes are purely content, just change switches 
+#    in index.coffee to point at different content!
+# 
+#    https://github.com/zooniverse/Lens-Zoo/blob/master/app/index.coffee
+#
+#    Need to learn how to do this...
+#
+# ---------------------------------------------------------------
+# 
+# Required differences between Stage 1 and Stage 2:
+#
+# stage1.html, stage2.html with different spotters guides, labels etc.
+# Different instant feedback... Different tutorial? Single pop-up? Doesn't
+# have to be on particular image, can just come up on first visit to Stage 2.
+# 
+# ---------------------------------------------------------------
+# 
+# What about different projects in different branches?
+#
+# Potentially dangerous, if merging is not handled well... 
+# Better to just flick switch in index.coffee in Amit's scheme. 
+# 
+# ie instead of having index.html, use CFHTLS.html, DES.html etc for content,
+# and put images in
+# 
+# images/CFHTLS/guide, images/CFHTLS/tutorial
+# 
+# instead of images/guide/images/tutorial
+
+
+# ---------------------------------------------------------------
+# Notes on git:
 # 
 # - Local master branch is to be kept a clean copy of the remote Zooniverse 
 #   Lens-Zoo repo. Pull in Amit's edits using:
@@ -146,8 +199,11 @@ hem server --includeCss
 #   git remote add upstream https://github.com/zooniverse/Lens-Zoo.git
 #    (to connect yourself to the zooniverse version of the repo)
 # 
-#   git fetch upstream/master
-#    (to get any new changes that Amit made)
+#   git fetch upstream
+#    (to get any new changes that Amit made, from zooniverse/Lens-Zoo)
+# 
+#   git merge upstream/master
+#    (to merge in these new changes)
 # 
 # 
 #   git checkout dev
@@ -159,6 +215,7 @@ hem server --includeCss
 #   git push origin dev
 #        (to push committed changes in your local dev branch to the dev branch at https://github.com/drphilmarshall/Lens-Zoo)
 # 
+#
 # - Learn more about branches here:    
 #     http://git-scm.com/book/en/Git-Branching-Remote-Branches
 #   

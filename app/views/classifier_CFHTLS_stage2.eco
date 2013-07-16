@@ -1,0 +1,18 @@
+<div class='mask'></div>
+<div class='side-mask'></div>
+
+<div class='stats'></div>
+
+<div class='annotation'>
+  <div class='remove-all'>Remove All Markers</div>
+  <svg class='primary' xmlns="http://www.w3.org/2000/svg"></svg>
+</div>
+
+<div class='viewer'>
+  <div class='webfits'></div>
+</div>
+<div class='overflow'>
+  <div class='subjects'></div>
+</div>
+
+<div class='quick-guide'></div>

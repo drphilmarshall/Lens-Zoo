@@ -1,0 +1,7 @@
+<ul>
+  <% for subject in @subjects: %>
+  <li>
+    <a href='http://talk.spacewarps.org/#/subjects/<%- subject.subjects[0].zooniverse_id %>'><img src="<%- subject.subjects[0].location.thumbnail %>" width="176px" height="176px"></a>
+  </li>
+  <% end %>
+</ul>

@@ -124,6 +124,7 @@ class Classifier extends Page
     @xDown            = null
     @yDown            = null
     @isAnnotatable    = true
+    @tutorial         = null
     
     delete @classification
     
@@ -418,9 +419,12 @@ class Classifier extends Page
   
   # Check if volunteer marked a simulated lens
   checkImageMask: (x, y) =>
-    pixel = @ctx.getImageData(x, y, 1, 1)
-    mask = pixel.data[3]
-    return if mask is 255 then true else false
+    try
+      pixel = @ctx.getImageData(x, y, 1, 1)
+      mask = pixel.data[3]
+    catch err
+      mask = 0
+    return if mask is 255 then true else mask
   
   # Prevent annotations over SVG elements
   stopPropagation: (e) ->
@@ -662,13 +666,18 @@ class Classifier extends Page
         # Check if any annotation over lens
         for index, annotation of @annotations
           @isLensMarked = @checkImageMask(annotation.x, annotation.y)
-          break if @isLensMarked
+          break if @isLensMarked is true
         
-        if @isLensMarked
+        if @isLensMarked is true
+          # Lens was marked
           @tutorial = @createSimulationFoundFeedback(e, trainingType, x, y)
-        else
+        else if @isLensMarked in [false, 254]
+          # Lens was missed
           @tutorial = @createSimulationMissedFeedback(e, trainingType, x, y)
-        
+        else
+          # User's machine triggers errors when checking pixel mask, so move on to the next subject
+          @submit(e)
+      
       else if trainingType is 'empty'
         
         # Count the number of annotations
@@ -677,7 +686,7 @@ class Classifier extends Page
         @tutorial = if nAnnotations > 0 then @createDudMissedFeedback(e) else @createDudFoundFeedback(e)
       
       # Start the tutorial
-      @tutorial.start()
+      @tutorial?.start()
       
     else
       @submit(e)

@@ -1,0 +1,154 @@
+# ============================================================================
+# 2013-07-16 (Tuesday) 09:42 PDT
+# 
+# Reconfiguring SW website for CFHTLS stage 2. Need to run the site locally, to
+# check appearance, performance etc. 
+# 
+# Follow Amit's instructions:
+#
+#     The readme should get you going. You need to install Node. 
+#     Then from the project root directory, run
+# 
+#     npm install
+#     hem server --includeCss
+
+# Here's the contents of the README.md:
+
+#     ## Setting up
+# 
+#         git clone git@github.com:zooniverse/Lens-Zoo.git
+#         npm install .
+# 
+#     ## Starting local server
+# 
+#         hem server --includeCss
+# 
+#     ## Building subjects
+# 
+#         cd /path/to/ouroboros
+#         rails r /path/to/spacewarps/data-import/builder.rb
+# 
+#     or to build against staging server
+# 
+#         RAILS_ENV=staging rails r /path/to/spacewarps/data-import/builder.rb
+#         ssh ubuntu@dev.zooniverse.org
+#         cd /rails/apps/ouroboros_staging/current
+#         sudo -u www-data bundle exec rails c staging
+# 
+#         # Clear the redis cache
+#         SpacewarpSubject.redis_set.destroy
+# 
+#         # Activate subjects
+#         SpacewarpGroup.activate
+# 
+#     ## Building and deploying project
+# 
+#         ./build.rb
+
+
+npm install
+# npm http GET https://registry.npmjs.org/spine/1.0.8
+# npm http GET https://registry.npmjs.org/nib
+# ...
+# npm http 200 https://registry.npmjs.org/options/-/options-0.0.5.tgz
+# npm http 200 https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+# > ws@0.4.27 install /Users/pjm/public_html/SpaceWarps/Dev/node_modules/hem/node_modules/testacular/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws
+# > (node-gyp rebuild 2> builderror.log) || (exit 0)
+#   CXX(target) Release/obj.target/bufferutil/src/bufferutil.o
+#   SOLINK_MODULE(target) Release/bufferutil.node
+#   ...
+# hem@0.2.9 node_modules/hem
+# ├── watch@0.5.1
+# ├── coffee-script@1.6.3
+# ├── optimist@0.3.7 (wordwrap@0.0.2)
+# ├── eco@1.1.0-rc-3 (strscan@1.0.1)
+# ├── uglify-js@1.3.5
+# ├── stylus@0.34.1 (debug@0.7.2, mkdirp@0.3.5, cssom@0.2.5)
+# ├── http-proxy@0.8.7 (colors@0.6.0-1, pkginfo@0.2.3)
+# ├── fast-detective@0.0.2 (burrito@0.2.12)
+# ├── strata@0.20.1 (strftime@0.4.6, bufferedstream@1.6.0, mime@1.2.3, markdown@0.3.1)
+# ├── jade@0.33.0 (character-parser@1.0.2, mkdirp@0.3.5, commander@1.2.0, monocle@0.1.48, with@1.1.0, constantinople@1.0.1, transformers@2.0.1)
+# └── testacular@0.4.0 (xmlbuilder@0.4.2, chokidar@0.6.2, glob@3.2.3, minimatch@0.2.12, socket.io@0.9.16)
+
+# Done. Now start server:
+
+hem server --includeCss
+# path.existsSync is now called `fs.existsSync`.
+# >> Strata web server version 0.15.1 running on node 0.8.2
+# >> Listening on 0.0.0.0:9294, CTRL+C to stop
+
+# OK good! This terminal is now unusable, as the server is there listening in the
+# background. Probably we could bg it, but its OK to just use a different term.
+
+# Now - do we need to do the ouruboros stuff? Or can we just build?
+# Try it:
+
+./build.rb
+
+# ./build.rb:5: syntax error, unexpected ':', expecting $end
+# AWS.config access_key_id: ENV['S3_ACCESS_ID'], secret_a...
+
+# Looks like ruby script is expecting some Amazon passwords or something.
+# Do we need this? Or can we run even more locally somehow, just for 
+# site testing?
+
+# ============================================================================
+# 2013-07-16 (Tuesday) 10:57 PDT
+#
+# How to handle website reconfigurations?
+# One branch per survey and stage? Or files stored per survey and stage?
+# Or, one branch per survey, and keep separate files for stages?
+#   This latter one has nice features: lots of PNG files needed for website
+#   could be kept in separate branches. Stage 2 edits are minor, in principle
+#   - so could be handled by 
+# 
+# Plan:
+#
+# * Fork Lens-Zoo repo to drphilmarshall              DONE
+# * Make Aprajita and Anupreeta collaborators         DONE
+
+# * Create dev branch to work in                      DONE
+# * Keep copies of stage 1 html, eco files:           DONE
+#     * public/index_CFHTLS_stage1.html               DONE
+#     * app/views/classifier_CFHTLS_stage1.eco        DONE
+#     * app/views/profile_subjects_CFHTLS_stage1.eco  DONE
+# * Reconfigure the following files:
+#     * public/index_CFHTLS_stage2.html               IN PROGRESS
+#     * app/views/classifier_CFHTLS_stage2.eco        IN PROGRESS
+#     * app/views/profile_subjects_CFHTLS_stage2.eco  IN PROGRESS
+# * Write simple shell script to reconfigure website  IN PROGRESS
+# * Test local dev branch site using hem server       IN PROGRESS
+# * Merge in Zooniverse changes to master branch
+# * When ready:
+#     * Merge dev branch into master branch
+#     * Submit pull request
+#     
+# Notes:
+# 
+# - Local master branch is to be kept a clean copy of the remote Zooniverse 
+#   Lens-Zoo repo. Pull in Amit's edits using:
+#   
+# 
+#   git checkout master   
+#    (to move to the master branch of drphilmarshall/Lens-Zoo)
+# 
+#   git remote add upstream https://github.com/zooniverse/Lens-Zoo.git
+#    (to connect yourself to the zooniverse version of the repo)
+# 
+#   git fetch upstream/master
+#    (to get any new changes that Amit made)
+# 
+# 
+#   git checkout dev
+#        (to return to your local dev branch)
+#
+#   git merge master
+#        (to merge in changes from the master branch)
+# 
+#   git push origin dev
+#        (to push committed changes in your local dev branch to the dev branch at https://github.com/drphilmarshall/Lens-Zoo)
+# 
+# - Learn more about branches here:    
+#     http://git-scm.com/book/en/Git-Branching-Remote-Branches
+#   
+# ============================================================================

@@ -70,9 +70,13 @@ npm install
 # ├── jade@0.33.0 (character-parser@1.0.2, mkdirp@0.3.5, commander@1.2.0, monocle@0.1.48, with@1.1.0, constantinople@1.0.1, transformers@2.0.1)
 # └── testacular@0.4.0 (xmlbuilder@0.4.2, chokidar@0.6.2, glob@3.2.3, minimatch@0.2.12, socket.io@0.9.16)
 
-# Done. Now start server:
+# Done. This makes a directory called "node_modules". To do a hard reinstall, 
+# rm this directory and its contents.
+
+# Now start server:
 
 hem server --includeCss
+
 # path.existsSync is now called `fs.existsSync`.
 # >> Strata web server version 0.15.1 running on node 0.8.2
 # >> Listening on 0.0.0.0:9294, CTRL+C to stop
@@ -91,6 +95,13 @@ hem server --includeCss
 # Looks like ruby script is expecting some Amazon passwords or something.
 # Do we need this? Or can we run even more locally somehow, just for 
 # site testing?
+
+# Actually the build is not needed. All we need to do is point a browser at
+# the following url:
+
+#          http://0.0.0.0:9294/
+
+# This works (with some help from Amit, fixing bugs at his end!)
 
 # ============================================================================
 # 2013-07-16 (Tuesday) 10:57 PDT

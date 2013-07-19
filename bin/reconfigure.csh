@@ -23,6 +23,8 @@
 #
 #   reconfigure.csh  CFHTLS 2
 #
+#   reconfigure.csh --update CFHTLS
+#
 # BUGS:
 #
 # REVISION HISTORY:

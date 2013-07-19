@@ -77,9 +77,11 @@ if ($#x < $NargsRequired) then
     goto FINISH
 else if ($update) then
     set survey = $x[1]
+    set Editing = "Updating"
 else 
     set survey = $x[1]
     set stage  = $x[2]
+    set Editing = "Reconfiguring"
 endif
 
 if (! $?SW_WEB_DIR) then
@@ -98,7 +100,7 @@ app/views/profile_subjects.eco \
 # ----------------------------------------------------------------------
 
 echo '================================================================================'
-echo '                    Reconfiguring the Space Warps Website                       '
+echo '                    $Editing the Space Warps Website                       '
 echo '================================================================================'
 
 if ($update) then
@@ -133,6 +135,7 @@ if ($update) then
 
     # Merge in the new files:
 
+    echo "reconfigure: merging in any updates..."
     git merge master
 
     # Update the stage 1 copies:

@@ -148,9 +148,10 @@ hem server --includeCss
 #     * public/index_CFHTLS_stage2.html               IN PROGRESS
 #     * app/views/classifier_CFHTLS_stage2.eco        IN PROGRESS
 #     * app/views/profile_subjects_CFHTLS_stage2.eco  IN PROGRESS
-# * Write simple shell script to reconfigure website  IN PROGRESS
-# * Test local dev branch site using hem server       IN PROGRESS
-# * Merge in Zooniverse changes to master branch
+#     * others...
+# * Write simple shell script to reconfigure website  DONE
+# * Test local dev branch site using hem server       DONE
+# * Merge in Zooniverse changes to master branch      ONGOING
 # * When ready:
 #     * Merge dev branch into master branch
 #     * Submit pull request
@@ -171,6 +172,8 @@ hem server --includeCss
 # Different instant feedback... Different tutorial? Single pop-up? Doesn't
 # have to be on particular image, can just come up on first visit to Stage 2.
 # 
+# Needs discussion.
+#
 # ---------------------------------------------------------------
 # 
 # What about different projects in different branches?
@@ -183,9 +186,8 @@ hem server --includeCss
 # 
 # images/CFHTLS/guide, images/CFHTLS/tutorial
 # 
-# instead of images/guide/images/tutorial
-
-
+# instead of images/guide/images/tutorial, etc.
+#
 # ---------------------------------------------------------------
 # Notes on git:
 # 
@@ -220,3 +222,9 @@ hem server --includeCss
 #     http://git-scm.com/book/en/Git-Branching-Remote-Branches
 #   
 # ============================================================================
+# 2013-07-18 (Thursday) 13:43 PDT
+
+# Split Spotter's Guide into separate file? Hmm. Not sure how this will work.
+
+# ============================================================================
+

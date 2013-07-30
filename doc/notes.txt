@@ -90,7 +90,9 @@ npm install .
 
 sudo npm install hem@0.2.9 -g
 
-# Start it up! The Css flag is important.
+# Start it up! The Css flag is important. This command needs to be executed in
+# the Lens-Zoo directory, and will serve the site that is in the current
+# branch (obviously?).
 
 hem server --includeCss
 
@@ -224,7 +226,15 @@ hem server --includeCss
 # ============================================================================
 # 2013-07-18 (Thursday) 13:43 PDT
 
-# Split Spotter's Guide into separate file? Hmm. Not sure how this will work.
+# It would be nice to split the Spotter's Guide into a separate file? Hmm. 
+# Not sure how to do this yet, For now, just add a gallery.
+
+# Copied images into gallery directory, and wrote shell script to write html
+# snippet, which can then be pasted into the stage2 index.html file. Script 
+# lives in bin. First go: all lens images go in one single gallery, can change
+# this later. Same for false positive gallery? Might as well. 
+
+
 
 # ============================================================================
 

@@ -25,6 +25,10 @@
 #
 #   reconfigure.csh --update CFHTLS
 #
+# REQUIRES:
+#   Environment variable SW_WEB_DIR to be set; this is the top level 
+#   directory of the Lens-Zoo website git repo.
+#
 # BUGS:
 #
 # REVISION HISTORY:

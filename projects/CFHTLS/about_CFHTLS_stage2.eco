@@ -22,6 +22,9 @@
     <%- translate 'p', 'about.needles_text_1' %>
     <%- translate 'p', 'about.needles_text_2' %>
     
+    <%- translate 'h2', 'about.searching' %>
+    <%- translate 'p', 'about.searching_text' %>
+    
     <div class='animation'>
       <video controls>
         <source src="video/eso0847b.m4v" />

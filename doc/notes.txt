@@ -291,9 +291,15 @@ bin/reconfigure.csh CFHTLS 1
 # home_CFHTLS_stage1.eco
 # home_CFHTLS_stage2.eco
 
-# Good. Check in. Next time, need to start porting changes from old
+# Good. Check in. Now need to start porting changes from old
 # index files to these new ones, esp the en_us.coffee file with all the text
 # in it. Alert the others!
 
+# First edits - to the about page. Added the following to
+# about_CFHTLS_stage2.eco:
+# 
+#     <%- translate 'h2', 'about.searching' %>
+#     <%- translate 'p', 'about.searching_text' %>
+    
 # ============================================================================
 

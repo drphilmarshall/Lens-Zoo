@@ -1,17 +1,19 @@
+<% translate = require 't7e' %>
+
 <div class='stat'>
   <p class='number' data-type='classified'><%- @classified %></p>
-  <p class='description'>images viewed</p>
+  <%- translate 'p', 'counters.images_viewed', class: 'description' %>
 </div>
 <div class='stat'>
   <p class='number' data-type='potentials'><%- @potentials %></p>
-  <p class='description'>potential lenses</p>
+  <%- translate 'p', 'counters.potential_lenses', class: 'description' %>
 </div>
 <div class='stat'>
   <p class='number' data-type='favorites'><%- @favorites %></p>
-  <p class='description'>favourite images</p>
+  <%- translate 'p', 'counters.favorite_images', class: 'description' %>
 </div>
 <div class='stat tool-container'>
   <p class='number' data-type='sim-freq'><%- @simFrequency %></p>
-  <p class='description'>simulation frequency</p>
-  <span class='tooltip'>This shows the frequency of simulations that you will be shown.</span>
+  <%- translate 'p', 'counters.sim_freq', class: 'description' %>
+  <%- translate 'span', 'counters.sim_freq_tip', class: 'tooltip' %>
 </div>

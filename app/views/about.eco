@@ -1,0 +1,148 @@
+<% translate = require 't7e' %>
+
+<div class="content">
+  <header>
+    <%- translate 'p', 'about.quote', class: 'quote' %>
+  </header>
+  
+  <ul class='guide-menu'>
+    <%- translate 'li', 'about.science', 'data-type': 'science', class: 'show' %>
+    <%- translate 'li', 'about.team', 'data-type': 'team', class: '' %>
+  </ul>
+  
+  <section data-type='science' class='show'>
+    
+    <%- translate 'h2', 'about.gravitational_lensing' %>
+    <%- translate 'p', 'about.lensing_text_1' %>
+    <%- translate 'p', 'about.lensing_text_2' %>
+    <%- translate 'p', 'about.lensing_text_3' %>
+    <%- translate 'p', 'about.lensing_text_4' %>
+    
+    <%- translate 'h2', 'about.needles' %>
+    <%- translate 'p', 'about.needles_text_1' %>
+    <%- translate 'p', 'about.needles_text_2' %>
+    
+    <div class='animation'>
+      <video controls>
+        <source src="video/eso0847b.m4v" />
+        <source src="video/eso0847b.webm" />
+      </video>
+    </div>
+    
+    <%- translate 'h2', 'about.discovering' %>
+    <%- translate 'p', 'about.discovering_text' %>
+  </section>
+  
+  <section data-type='team'>
+    <h2>Science Team</h2>
+    
+    <div class='bio'>
+      <h4 class='name'>Phil Marshall<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=drphilmarshall">@drphilmarshall</a></span></h4>
+      <%- translate 'p', 'about.marshall_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Aprajita Verma<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=aprajita">@aprajita</a></span></h4>
+      <%- translate 'p', 'about.verma_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Anupreeta More<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=anupreeta">@anupreeta</a></span></h4>
+      <%- translate 'p', 'about.a_more_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Elisabeth Baeten<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=ElisabethB">@ElisabethB</a></span></h4>
+      <%- translate 'p', 'about.baeten_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Claude Cornen</h4>
+      <%- translate 'p', 'about.cornen_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Cécile Faure<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=cecilefaure">@cecilefaure</a></span></h4>
+      <%- translate 'p', 'about.faure_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Janine Fohlmeister<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=JanineF">@JanineF</a></span></h4>
+      <%- translate 'p', 'about.fohlmeister_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Mandeep Gill</h4>
+      <%- translate 'p', 'about.gill_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Thomas J<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=thomas_j">@thomas_j</a></span></h4>
+      <%- translate 'p', 'about.thomas_j_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Rafael Kueng</h4>
+      <%- translate 'p', 'about.kueng_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Christine Macmillan<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=budgieye">@budgieye</a></span></h4>
+      <%- translate 'p', 'about.macmillan_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Surhud More</h4>
+      <%- translate 'p', 'about.s_more_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Prasenjit Saha<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=psaha">@psaha</a></span></h4>
+      <%- translate 'p', 'about.saha_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Matthias Tecza<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=mtecza">@mtecza</a></span></h4>
+      <%- translate 'p', 'about.tecza_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Julianne Wilcox<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=capella05">@capella05</a></span></h4>
+      <%- translate 'p', 'about.wilcox_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Layne Wright</h4>
+      <%- translate 'p', 'about.wright_bio' %>
+    </div>
+    
+    <h2>Development Team</h2>
+    
+    <div class='bio'>
+      <h4 class='name'>Kelly Borden<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=BordenKelly">@BordenKelly</a></span></h4>
+      <%- translate 'p', 'about.borden_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Amit Kapadia<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=amitinho">@amitinho</a></span></h4>
+      <%- translate 'p', 'about.kapadia_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>David Miller<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=davidmill">@davidmill</a></span></h4>
+      <%- translate 'p', 'about.miller_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Michael Parrish<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=michael_parrish">@michael_parrish</a></span></h4>
+      <%- translate 'p', 'about.parrish_bio' %>
+    </div>
+    
+    <div class='bio'>
+      <h4 class='name'>Arfon Smith<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=arfon">@arfon</a></span></h4>
+      <%- translate 'p', 'about.smith_bio' %>
+    </div>
+    
+  </section>
+  
+</div>

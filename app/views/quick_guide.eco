@@ -1,12 +1,13 @@
+<% translate = require 't7e' %>
 
-<div class='tab'>Spotter's Guide</div>
+<%- translate 'div', 'quick_guide.heading', class: 'tab' %>
 
 <div class='content'>
-  <h1>Spotter's Guide</h1>
-  <h2 class='instruction'>Click on the thumbnails to find out more</h2>
+  <%- translate 'h1', 'quick_guide.heading', class: '' %>
+  <%- translate 'h2', 'quick_guide.instructions', class: 'instruction' %>
   <div class='lenses'>
-    <h2>Lenses</h2>
-  
+    <%- translate 'h2', 'quick_guide.lenses', class: '' %>
+    
     <div class='lenses'>
       <img title='A distant quasar being lensed by a massive galaxy in the foreground.' data-type='lensed-quasars' src='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri_zoom.png' width='100' height='100'>
 
@@ -18,8 +19,8 @@
 
       <img title='A distant quasar being lensed by a massive galaxy in the foreground.' data-type='lensed-quasars' src='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri_zoom.png' width='100' height='100'>
     </div>
-  
-    <h2>Non-Lenses</h2>
+    
+    <%- translate 'h2', 'quick_guide.nonlenses', class: '' %>
     <div class='non-lenses'>
       <img title='Some lightweight galaxies have arms and tails that can look like lensed arcs.' data-type='lightweights' src='images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri_zoom.png' width='100' height='100'>
       <img title='Some lightweight galaxies have arms and tails that can look like lensed arcs.' data-type='mergers-neighbors' src='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri_zoom.png' width='100' height='100'>

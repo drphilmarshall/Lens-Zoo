@@ -18,8 +18,16 @@ TopBar    = require 'zooniverse/controllers/top-bar'
 User      = require 'zooniverse/models/user'
 Recent    = require 'zooniverse/models/recent'
 
+LanguagePicker = require 'controllers/language_picker'
+
 # Initialize Counter model
 new Counter({classified: 0, potentials: 0, favorites: 0}).save()
+  
+# Navigation
+$('body').append require 'views/navigation'
+
+languagePicker = new LanguagePicker
+languagePicker.el.prependTo document.body
 
 # Setup the stack
 stack = new Stack

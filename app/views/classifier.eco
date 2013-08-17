@@ -1,10 +1,12 @@
+<% translate = require 't7e' %>
+
 <div class='mask'></div>
 <div class='side-mask'></div>
 
 <div class='stats'></div>
 
 <div class='annotation'>
-  <div class='remove-all'>Remove All Markers</div>
+  <%- translate 'div', 'classifier.remove_markers', class: 'remove-all' %>
   <svg class='primary' xmlns="http://www.w3.org/2000/svg"></svg>
 </div>
 

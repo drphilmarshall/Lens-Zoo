@@ -1,5 +1,6 @@
 {Tutorial}  = require 'zootorial'
 {Step}      = require 'zootorial'
+translate   = require 't7e'
 
 ctx = null
 
@@ -16,7 +17,7 @@ module.exports =
   
   welcome: new Step
     number: 1
-    header: 'Welcome to Space Warps!'
+    header: translate 'span', "tutorial.welcomeHeader"
     details: 'Gravitational Lenses are very rare astronomical objects. We need your help finding them!'
     attachment: 'center center .current center center'
     block: '.annotation, .controls:first'

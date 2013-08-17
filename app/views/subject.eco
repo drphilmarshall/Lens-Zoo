@@ -1,12 +1,14 @@
+<% translate = require 't7e' %>
+
 <div class='subject'>
   <div class='image'>
     <img src='<%- @url %>' />
   </div>
   
   <div class='controls'>
-    <a target="_blank" title="Save this image to your profile." href='' data-type='heart'><div class='icon' data-icon='heart'></div></a>
+    <%- translate 'a', '<div class="icon" data-icon="heart"></div>', href: '', "data-type": "heart", "title": "classifier.favorite", class: '' %>
     <a target="_blank" title="Discuss this image in Talk." href='http://talk.spacewarps.org/#/subjects/<%- @zooId %>' data-type='talk'><div class='icon' data-icon='discuss'></div></a>
-    <a target="_blank" title="Explore this image further with Quick Dashboard." href='' data-type='dashboard'><div class='icon' data-icon='dashboard'></div></a>
-    <a class='last' data-type='finish' href=''>Next!</a>
+    <%- translate 'a', '<div class="icon" data-icon="dashboard"></div>', href: '', "data-type": "dashboard", "title": "classifier.dashboard", class: '' %>
+    <%- translate 'a', 'classifier.next', class: 'last', href: '', "data-type": 'finish' %>
   </div>
 </div>

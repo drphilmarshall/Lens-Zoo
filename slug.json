@@ -4,6 +4,8 @@
     "json2ify",
     "jqueryify",
     
+    "t7e",
+    
     "spine",
     "spine/lib/route",
     "spine/lib/manager",

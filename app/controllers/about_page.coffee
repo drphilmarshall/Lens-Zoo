@@ -4,10 +4,16 @@ Page  = require 'controllers/page'
 class AboutPage extends Page
   el: $('.about')
   className: 'about'
+  template: require 'views/about'
   
   events:
     'click .menu li'        : 'show'
     'click .guide-menu li'  : 'show'
+  
+  
+  constructor: ->
+    super
+    @html @template
   
   active: ->
     super

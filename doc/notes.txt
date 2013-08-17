@@ -234,7 +234,66 @@ hem server --includeCss
 # lives in bin. First go: all lens images go in one single gallery, can change
 # this later. Same for false positive gallery? Might as well. 
 
+# ============================================================================
+# 2013-08-16 (Friday) 18:06 PDT
 
+# OK, Amit did the splitting, for translatability. Updated reconfigure.csh
+# to make copies of the stage 1 and stage 2 files we need:
+# 
+# set files = ( \
+# app/translations/en_us.coffee \
+# app/views/home.eco \
+# app/views/guide.eco \
+# app/views/faq.eco \
+# app/views/about.eco \
+# app/lib/feedback.coffee \
+# app/lib/create_feedback.coffee \
+# )
+
+# We'll keep them all in projects/CFHTLS and copy them back and forth as
+# we reconfigure.
+
+# To get started:
+
+bin/reconfigure.csh --update CFHTLS
+
+# OK, this worked - including copying current files to _stage1 etc files.
+# Now, reconfigure to Stage 1:
+
+bin/reconfigure.csh CFHTLS 1
+
+# Good. Check projects directory:
+
+ls -1 projects/CFHTLS/
+# about_CFHTLS_stage1.eco
+# create_feedback_CFHTLS_stage1.coffee
+# en_us_CFHTLS_stage1.coffee
+# faq_CFHTLS_stage1.eco
+# feedback_CFHTLS_stage1.coffee
+# guide_CFHTLS_stage1.eco
+# home_CFHTLS_stage1.eco
+
+# OK, good! Can now reconfigure to stage 2 and make all those files too:
+
+bin/reconfigure.csh CFHTLS 1
+
+# about_CFHTLS_stage1.eco
+# about_CFHTLS_stage2.eco
+# create_feedback_CFHTLS_stage1.coffee
+# create_feedback_CFHTLS_stage2.coffee
+# en_us_CFHTLS.coffee
+# faq_CFHTLS_stage1.eco
+# faq_CFHTLS_stage2.eco
+# feedback_CFHTLS_stage1.coffee
+# feedback_CFHTLS_stage2.coffee
+# guide_CFHTLS_stage1.eco
+# guide_CFHTLS_stage2.eco
+# home_CFHTLS_stage1.eco
+# home_CFHTLS_stage2.eco
+
+# Good. Check in. Next time, need to start porting changes from old
+# index files to these new ones, esp the en_us.coffee file with all the text
+# in it. Alert the others!
 
 # ============================================================================
 

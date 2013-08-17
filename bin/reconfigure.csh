@@ -33,6 +33,7 @@
 #
 # REVISION HISTORY:
 #   2013-07-16  started: Marshall (KIPAC)
+#   2013-08-15  adapted to new translatable site: Marshall (KIPAC)
 #-
 # ==============================================================================
 
@@ -95,13 +96,22 @@ if (! $?SW_WEB_DIR) then
     goto FINISH
 endif
 
-# List of files to be included in reconfigure:
+# List of files to be included in reconfigure. Aim to leave controllers 
+# generic, but have the content they pull be changed. Most of the website text
+# is in translations/en_us.coffee.
 
 set files = ( \
-public/index.html \
-app/views/classifier.eco \
-app/views/profile_subjects.eco \
+app/translations/en_us.coffee \
+app/views/home.eco \
+app/views/guide.eco \
+app/views/faq.eco \
+app/views/about.eco \
+app/lib/feedback.coffee \
+app/lib/create_feedback.coffee \
 )
+
+# Nice to keep all these in a separate directory? projects/CFHTLS
+# and then have the filenames change as well, for clarity.
 
 # ----------------------------------------------------------------------
 
@@ -119,6 +129,11 @@ echo "reconfigure: understood SW web directory to be $SW_WEB_DIR"
 # Make sure we are in the right place:
 echo "reconfigure: moving there now..."
 chdir $SW_WEB_DIR
+
+# and that the right archive exists:
+set archive = $SW_WEB_DIR/projects/${survey}
+mkdir -p $archive
+
 
 # ----------------------------------------------------------------------------
 
@@ -150,7 +165,11 @@ if ($update) then
 
     # Note that the backups do not need to exist at this point!
     foreach file ($files)
-        set newfile = ${file:r}_${survey}_stage1.${file:e}
+        if (${file:h:t} == 'translations') then
+            set newfile = ${archive}/${file:t:r}_${survey}.${file:e}
+        else
+            set newfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
+        endif
         cp -v $file $newfile
     end
 
@@ -179,13 +198,17 @@ else
     set comfile = ./reconfigure.commands ; \rm -f $comfile
 
     foreach file ($files)
-        set newfile = ${file:r}_${survey}_stage${stage}.${file:e}
-        if (-e $newfile) then
-            echo "cp -v $newfile $file" >> $comfile
+        if (${file:h:t} == 'translations') then
+            set newfile = ${archive}/${file:t:r}_${survey}.${file:e}
         else
-            echo "reconfigure: $survey stage $stage version of $file does not exist, exiting"
-            goto FINISH
+            set newfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
         endif
+        if (! -e $newfile) then
+            echo "reconfigure: WARNING: $survey stage $stage version of $file does not exist"
+            echo "reconfigure: creating it by copying current version..."
+            echo "cp -v $file $newfile" >> $comfile
+        endif
+        echo "cp -v $newfile $file" >> $comfile
     end
 
     # Actually do the copying:

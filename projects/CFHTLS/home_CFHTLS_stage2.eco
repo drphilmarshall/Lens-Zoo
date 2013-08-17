@@ -1,0 +1,37 @@
+<% translate = require 't7e' %>
+
+<div class="content">
+  <header>
+    <%- translate 'h1', 'home.heading', class: '' %>
+    <%- translate 'p', 'home.subheading', class: '' %>
+  </header>
+  <div class="columns two">
+    <div class="column">
+      <figure class="portal">
+        <div class='lenstoy'>
+          <img id="lensimg" src="SW_field_440x440.png">
+        </div>
+      </figure>
+     </div>
+    <div class="column">
+      <ul class="site-actions">
+        <li>
+          <figure><a href='#/classify'><img class="classfy" src="images/classify.png"></a></figure>
+          <h4><%- translate 'a', 'home.discover', href: '#/classify', class: '' %></h4>
+          <%- translate 'p', 'home.discover_snippet', class: '' %>
+        </li>
+        <li>
+          <figure><a href='#/guide'><img class="learn" src="images/about.png"></a></figure>
+          <h4><%- translate 'a', 'home.learn', href: '#/guide', class: '' %></h4>
+          <%- translate 'p', 'home.learn_snippet', class: '' %>
+        </li>
+        <li>
+          <figure><a target="_blank" href='http://talk.spacewarps.org/#/boards/BSW0000007'><img class="explore" src="images/dashboard.png"></a></figure>
+          <h4><%- translate 'a', 'home.news', href: 'http://talk.spacewarps.org/#/boards/BSW0000007', class: '' %></h4>
+          <%- translate 'p', 'home.news_snippet', class: '' %>
+        </li>
+      </ul>
+      <a href="#/classify"><%- translate 'button', 'home.get_started', class: 'large' %></a>
+    </div>
+  </div>
+</div>

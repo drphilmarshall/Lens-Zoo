@@ -1,0 +1,149 @@
+@import "../node_modules/nib/lib/nib/"
+
+$white = #FFF
+$black = #404040
+
+$nav-width  = 200px
+$img-dim    = 441px
+
+@import "../node_modules/zooniverse/css/top-bar.css"
+@import "../node_modules/zooniverse/css/dialog.css"
+@import "../node_modules/zootorial/zootorial.css"
+
+@import './common'
+@import './pages'
+@import './classifier'
+@import './annotation'
+@import './controls'
+@import './profile'
+@import './tutorial'
+@import './quick_guide'
+@import './counters'
+@import './tooltip'
+
+.zooniverse-top-bar
+  position fixed
+
+.language-picker
+  float left
+  margin 10px 10px 10px 220px
+  
+  select
+    appearance: none
+    background: transparent
+    border: 0
+    color: $white
+    font: inherit
+    font-size: 10px
+
+    option
+      color: $white
+      background: $black
+
+body
+  background url('images/blue.jpg') repeat
+  margin 0 auto
+  font-family helvetica neue, helvetica, sans-serif
+  color $white
+  width 100%
+  height 100%
+  border-top 5px solid black
+  
+  p
+    font-size 13px
+    font-weight 400
+    line-height 20px
+    margin 1.2em 0 1em 0
+  
+  // Display control for Spine stack
+  .main
+    box-sizing border-box
+    margin 0 0 0 $nav-width
+
+    > div
+      display none
+    > .active
+      display block
+  
+  nav
+    background rgb(0, 12, 24)
+    border-right 1px solid #003056, 55%
+    box-shadow 1px 0 22px 0 rgba(#000, 1)
+    position fixed
+    top 0
+    left 0
+    z-index 2
+    overflow hidden
+    
+    float left
+    width $nav-width
+    height 100%
+    min-height 672px
+    margin 0
+    padding 0
+
+    &:before
+      background #030303
+      content ""
+      height 100%
+      position absolute
+      right -2px
+      top 0
+      width 1px
+    
+    a
+      position relative
+      display block
+      box-sizing border-box
+      max-width $nav-width
+      height 12%
+      border-top 1px solid rgb(0, 30, 54)
+      border-bottom 1px solid rgb(0, 30, 54)
+      text-align center
+      font-size 11px
+      text-decoration none
+      color $white
+      background-repeat no-repeat
+      background-position center 30%
+      background-size auto 30%
+      border-left 3px solid rgba(225, 85, 0, 0)
+      padding 0
+      
+      &:hover
+        background-color rgb(0, 0, 0)
+      &.active
+        border-left 3px solid rgb(225, 85, 0)
+      
+      span
+        position absolute
+        width 100%
+        left 0
+        padding-bottom 12%
+        bottom 0
+      
+    a[data-page="home"]
+      font-size 14px
+      font-weight 700
+      letter-spacing 4px
+      text-transform uppercase
+      height 120px
+      padding 0
+      
+      span
+        padding-bottom 25%
+      
+    a[data-page="classifier"]
+      background-image url('images/classify.png')
+    a[data-page="about"]
+      background-image url('images/about.png')
+    a[data-page="guide"]
+      background-image url('images/spotter.png')
+    a[data-page="dashboard"]
+      background-image url('images/dashboard.png')
+    a[data-page="profile"]
+      background-image url('images/profile.png')
+    a[data-page="discuss"]
+      background-image url('images/discuss.png')
+    a[data-page="faq"]
+      background-image url('images/faq.png')
+

@@ -108,6 +108,7 @@ app/views/faq.eco \
 app/views/about.eco \
 app/lib/feedback.coffee \
 app/lib/create_feedback.coffee \
+css/index.styl \
 )
 
 # Nice to keep all these in a separate directory? projects/CFHTLS
@@ -143,12 +144,12 @@ if ($update) then
 
     # Get all new files:
 
-    echo "reconfigure: pulling in remote updates..."
+    echo "reconfigure: pulling in remote updates from the Zooniverse..."
     git checkout master
     git fetch upstream
     git merge upstream/master
 
-    # Reconfigure back to Stage 1:
+    # Reconfigure back to Stage 1 (using this very script!):
 
     echo "reconfigure: reconfiguring to Stage 1..."
     git checkout dev
@@ -164,6 +165,7 @@ if ($update) then
     echo "reconfigure: copying updated files into stage 1 backups"
 
     # Note that the backups do not need to exist at this point!
+    # BUG: what if upstream is configured to Stage 2?! Need a STATE cookie... 
     foreach file ($files)
         if (${file:h:t} == 'translations') then
             set newfile = ${archive}/${file:t:r}_${survey}.${file:e}

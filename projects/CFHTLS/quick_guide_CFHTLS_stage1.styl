@@ -1,0 +1,64 @@
+.quick-guide
+  position fixed
+  z-index 4
+  width 30%
+  right 0
+  top 0
+  height 100%
+  
+  
+  transition all 450ms cubic-bezier(0.770, 0.000, 0.175, 1.000)
+  -webkit-transition-timing-function cubic-bezier(0.770, 0.000, 0.175, 1.000)
+  -moz-transition-timing-function cubic-bezier(0.770, 0.000, 0.175, 1.000)
+  transition-timing-function cubic-bezier(0.770, 0.000, 0.175, 1.000)
+  
+  .tab
+    position absolute
+    width 77px
+    background-color black
+    padding 8px 12px
+    top 150px
+    left -64px
+    z-index 1
+    font-size 11px
+    transform rotate(-90deg)
+    cursor pointer
+    
+  .content
+    height 100%
+    background url('images/blue-light.jpg') repeat
+    border-top 5px solid #1C1C1C
+    border-left 1px solid #1C1C1C
+    letter-spacing 1px
+    padding 39px 40px 20px
+    z-index 2
+    box-sizing border-box
+    overflow-y auto
+    
+    img
+      cursor pointer
+      
+      &:hover
+        border 3px solid #01a0e2
+        box-sizing border-box
+    
+    h1
+      font-size 22px
+      font-weight 100
+      text-shadow 0 1px 0 #013A66
+      margin-bottom 20px
+  
+    h2
+      color #000d18
+      font-size 12px
+      text-shadow 0px 1px 0px rgba(255, 255, 255, 0.25)
+      text-transform uppercase
+      margin-bottom 10px
+      
+      &.instruction
+        font-size 10px
+        letter-spacing 0
+        margin-top 0
+    
+    .lenses, non-lenses
+      display inline-block

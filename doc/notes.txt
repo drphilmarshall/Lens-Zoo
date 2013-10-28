@@ -94,7 +94,7 @@ sudo npm install hem@0.2.9 -g
 # the Lens-Zoo directory, and will serve the site that is in the current
 # branch (obviously?).
 
-hem server --includeCss
+hem server --includeCss &
 
 # path.existsSync is now called `fs.existsSync`.
 # >> Strata web server version 0.15.1 running on node 0.8.2
@@ -103,22 +103,22 @@ hem server --includeCss
 # OK good! This terminal is now unusable, as the server is there listening in the
 # background. Probably we could bg it, but its OK to just use a different term.
 
-# Now - do we need to do the ouruboros stuff? Or can we just build?
-# Try it:
+   # # Now - do we need to do the ouruboros stuff? Or can we just build?
+   # # Try it:
+   # 
+   # ./build.rb
 
-./build.rb
+   # ./build.rb:5: syntax error, unexpected ':', expecting $end
+   # AWS.config access_key_id: ENV['S3_ACCESS_ID'], secret_a...
 
-# ./build.rb:5: syntax error, unexpected ':', expecting $end
-# AWS.config access_key_id: ENV['S3_ACCESS_ID'], secret_a...
-
-# Looks like ruby script is expecting some Amazon passwords or something.
-# Do we need this? Or can we run even more locally somehow, just for 
-# site testing?
+   # Looks like ruby script is expecting some Amazon passwords or something.
+   # Do we need this? Or can we run even more locally somehow, just for 
+   # site testing?
 
 # Actually the build is not needed. All we need to do is point a browser at
 # the following development server url:
 
-#          http://0.0.0.0:9294/
+open http://0.0.0.0:9294/
 
 # This works (with some help from Amit, fixing bugs at his end!)
 
@@ -302,4 +302,28 @@ bin/reconfigure.csh CFHTLS 1
 #     <%- translate 'p', 'about.searching_text' %>
     
 # ============================================================================
+# 2013-10-28 (Monday) 11:36 PDT
 
+# Visiting Zooniverse, working on reconfiguring for stage 2 following
+# Aprajita's orange push :-) 
+
+# Starting server...
+
+npm install .
+hem server --includeCss &
+
+# Good - needed Brian's help to get zootorial updates cleanly, by editing
+# package.json to read:
+# 
+#     "zootorial": "~0.3.0",
+
+# OK, orange looks cool. Heath (designer) suggested going a little darker, and
+# changing other instances of blue into *white*.
+# Try to do this!
+
+# Orange = rgb(225, 85, 0) = #E155000
+# Orange shadow = #9A3B01
+
+# Looks good! :-)
+
+# ============================================================================

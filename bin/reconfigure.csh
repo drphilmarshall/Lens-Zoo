@@ -109,6 +109,11 @@ app/views/about.eco \
 app/lib/feedback.coffee \
 app/lib/create_feedback.coffee \
 css/index.styl \
+css/common.styl \
+css/quick_guide.styl \
+css/pages.styl \
+css/profile.styl \
+css/counters.styl \
 )
 
 # Nice to keep all these in a separate directory? projects/CFHTLS

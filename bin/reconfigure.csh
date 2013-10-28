@@ -106,6 +106,7 @@ app/views/home.eco \
 app/views/guide.eco \
 app/views/faq.eco \
 app/views/about.eco \
+app/views/navigation.eco \
 app/lib/feedback.coffee \
 app/lib/create_feedback.coffee \
 css/index.styl \

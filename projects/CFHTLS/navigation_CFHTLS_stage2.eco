@@ -1,7 +1,7 @@
 <% translate = require 't7e' %>
 
 <nav>
-  <a data-page="home" href="#/home"><span>Spacewarps</span><br><div class='small'>purify</div></a>
+  <a data-page="home" href="#/home"><span>Spacewarps</span><br><div class='small'>refine</div></a>
   <a data-page="classifier" href="#/classify"><%- translate 'span', 'navigation.classify', class: '' %></a>
   <a data-page="about" href="#/about"><%- translate 'span', 'navigation.about', class: '' %></a>
   <a data-page="guide" href="#/guide"><%- translate 'span', 'navigation.guide', class: '' %></a>

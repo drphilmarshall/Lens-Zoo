@@ -326,4 +326,106 @@ hem server --includeCss &
 
 # Looks good! :-)
 
+
+# 2013-11-01 (Friday) 22:15 PDT
+
+# Finished off color changes - now all colors are defined in css/index.styl,
+# and other styl files refer to these variables.
+
+# ============================================================================
+# 2013-11-01 (Friday) 22:16 PDT
+
+# Chris is about to do a bunch of editing to make the site translatable - 
+# several scripts will change. Try an alternative way of reconfiguring: 
+# one branch per configuration.
+
+# Cloned a fresh repo in to Lens-Zoo:
+
+git clone git@github.com:drphilmarshall/Lens-Zoo.git
+
+# Now make a CFHTLS_Stage1 branch, and copy the relevant files from my Dev
+# area...
+
+set files = ( \
+app/translations/en_us.coffee \
+app/views/home.eco \
+app/views/guide.eco \
+app/views/faq.eco \
+app/views/about.eco \
+app/views/navigation.eco \
+app/lib/feedback.coffee \
+app/lib/create_feedback.coffee \
+css/index.styl \
+css/quick_guide.styl \
+)
+
+cd Lens-Zoo
+
+set k = 1
+git branch CFHTLS_stage$k
+git checkout CFHTLS_stage$k
+
+foreach file ( $files )
+  set stem = $file:t:r
+  set ext = $file:e
+  set target = ../Dev/projects/CFHTLS/${stem}_CFHTLS_stage$k.${ext}
+  echo "cp $target $file"
+end  
+  
+# Also need other new styl files:  
+
+set stylfiles = (\
+css/common.styl \
+css/counters.styl \
+css/pages.styl \
+css/profile.styl \
+)
+
+foreach file ( $stylfiles )
+  set target = ../Dev/$file
+  echo "cp $target $file"
+end  
+
+# OK, this branch is now the same as master except for the styl files have
+# changed to handle color better. Could merge into master at this point and
+# submit a pull request, just to get color s handled better...
+
+# Branch stage 2 from stage 1, and copy files across:
+
+set k = 2
+git branch CFHTLS_stage$k
+git checkout CFHTLS_stage$k
+
+foreach file ( $files )
+  set stem = $file:t:r
+  set ext = $file:e
+  set target = ../Dev/projects/CFHTLS/${stem}_CFHTLS_stage$k.${ext}
+  echo "cp $target $file"
+end  
+
+git status
+# On branch CFHTLS_stage2
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   app/views/about.eco
+#       modified:   app/views/home.eco
+#       modified:   app/views/navigation.eco
+#       modified:   css/index.styl
+#       modified:   css/quick_guide.styl
+
+# OK, this looks right - oh, except translation file! Needs to be done
+# separetly, because its not stage-dependent.
+  
+# Done. This system should allow for an easy merge of Chris's edits.
+# The danger is that we might merge the wrong way at some point, and 
+# end up over-writing some of the historical CFHTLS_stage1 record, for 
+# example. Maybe the reconfigure script could be used to do the merging
+# safely? In the branch method, we reconfigure the site using git checkout.
+# And we bring in changes from Adler with a looped merge, going through 
+# all the configurations' branches. 
+
+#  
+
 # ============================================================================

@@ -1,7 +1,33 @@
 @import "../node_modules/nib/lib/nib/"
 
-$white = #FFF
-$black = #404040
+$white       = #FFFFFF
+$black       = #404040
+
+$orange      = #E15500
+$lightorange = #E36939
+$duskyorange = #9A3B01
+
+$blue        = #0056B6 // = rgb(0,92,183) or very close
+$lightblue   = #006EC8 // = rgb(0,111,201) or very close
+$duskyblue   = #034777 // = rgb(3, 71, 119)
+$brightblue  = #2E82BF // = rgb(46, 130, 191)
+$darkblue    = #013A66
+$darkerblue  = #003461 // = rgb(0,52,96) or very close
+$lighterblue = #0072C9 
+$cyan        = #01A0E2
+
+$background         = $blue
+$lightbackground    = $lightblue
+$textshadow         = $darkblue
+$headingline        = $darkerblue
+$headinglineshadow  = $lighterblue
+$boxline            = $darkerblue
+$boxlineshadow      = $lighterblue
+$tabtext            = $brightblue
+$tabbackground      = $duskyblue
+$figureshadow       = $duskyblue
+$qghighlight        = $cyan
+
 
 $nav-width  = 200px
 $img-dim    = 441px
@@ -131,6 +157,11 @@ body
       
       span
         padding-bottom 25%
+      
+      .small
+        text-align center
+        font-size 8px
+        margin-top 60px
       
     a[data-page="classifier"]
       background-image url('images/classify.png')

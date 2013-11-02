@@ -38,7 +38,7 @@
 
       figure
         background #000
-        border 4px solid #02477e
+        border 4px solid $figureshadow
         border-radius 65px
         left -85px
         padding 10px
@@ -72,8 +72,8 @@
       text-shadow 0px 1px 0px rgba(255, 255, 255, 0.25)
       text-transform uppercase
       padding 30px 0
-      border-bottom 1px solid #003461
-      box-shadow 0px 1px 0px #0072C9
+      border-bottom 1px solid $boxline
+      box-shadow 0px 1px 0px $boxlineshadow
     
     .q
       font-weight 700
@@ -99,8 +99,8 @@
 
       li
         box-sizing border-box
-        color rgb(46, 130, 191)
-        background-color rgb(3, 71, 119)
+        color $tabtext
+        background-color $tabbackground
         cursor pointer
         float left
         font-weight 700
@@ -113,7 +113,7 @@
         &.show
           color #FFF
           background-color black
-          text-shadow 0 1px 0 #013a66
+          text-shadow 0 1px 0 $textshadow
     
     &:last-child
       padding 1px 0 50px 0

@@ -18,7 +18,7 @@
         <li>
           <figure><a href='#/classify'><img class="classfy" src="images/classify.png"></a></figure>
           <h4><%- translate 'a', 'home.discover', href: '#/classify', class: '' %></h4>
-          <%- translate 'p', 'home.discover_snippet', class: '' %>
+          <%- translate 'p', 'home.refine_snippet', class: '' %>
         </li>
         <li>
           <figure><a href='#/guide'><img class="learn" src="images/about.png"></a></figure>

@@ -426,6 +426,73 @@ git status
 # And we bring in changes from Adler with a looped merge, going through 
 # all the configurations' branches. 
 
-#  
+# 2013-11-05 (Tuesday) 22:08 PST
+ 
+# OK, merged in changes from translations branch. Here's what I did:
+
+
+git remote add upstream git@github.com:zooniverse/Lens-Zoo.git
+git remote -v
+git branch
+
+git checkout master
+git branch translations
+git pull upstream translations
+
+git checkout CFHTLS_stage1
+git merge translations
+
+git checkout CFHTLS_stage2
+git merge translations
+# At this point I had to fix some conflicts:
+nedit app/translations/en_us.coffee
+git add app/translations/en_us.coffee
+git commit -am "Merged in translations"
+
+# OK! Now I pulled in the dev branch again, to start thinking about how to 
+# do the archiving of teh various files - this is for convenience, so we can
+# look at the various different versions without changing branch...
+
+git checkout master
+git pull origin dev
+# This was a mistake - I should have made a dev branch first, and then pulled
+# into *that*. Here's how to recover, and make the master branch match the 
+# remote version:
+git reset --hard origin/master
+# Carry on:
+git branch dev
+git checkout dev
+git pull origin dev
+
+# At this point dev does not have the translations merged in...
+
+# Push the stage branches to the remote, so all can see them:
+
+git checkout CFHTLS_stage1
+git push origin CFHTLS_stage1
+git checkout CFHTLS_stage2
+git push origin CFHTLS_stage2
+git checkout translations
+git push origin translations
+
+
+# Notes:
+# * If we use branches like this to reconfigure the site, we may still want a 
+#   reconfigure script to repeat the above sequence or something like it.
+# * Have to remember to create branches and then pull into them!
+# * Script might have a role in propagating edits across all stages?
+# * Currently, dev branch contains old-style files not consistent with
+#   translations... Need to work in CFHTLS_stage2 branch now, and archive
+#   into projects folder later...
+# * New app does not run, throwing error:
+# 
+# { [Error: ENOENT, no such file or directory './app/lib/jquery.js']
+#   errno: 34,
+#   code: 'ENOENT',
+#   path: './app/lib/jquery.js',
+#   syscall: 'open' }
+# 
+#   Need to use new run script?
+
 
 # ============================================================================

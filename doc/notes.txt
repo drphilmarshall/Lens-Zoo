@@ -554,4 +554,59 @@ kill -9 73908
 git checkout CFHTLS_stage2
 npm run-script start
 
+# Missing zooniverse language library - console error is:
+#
+#     Uncaught module 'zooniverse/lib/language-manager' not found 
+
+# Talk to Chris....
+
+
+
+# Adding in new stage 2 feedback messages, from google spreadsheet 
+# "stage2_fp_detailed_feedback" at:
+#
+# https://docs.google.com/spreadsheet/ccc?key=0AgJSOgFpShAsdHlfbVlvTE1SdVFYSWkwQXlVRGQ5NFE&usp=drive_web#gid=0
+
+# Exported to csv, and reformat to coffeescript variables:
+
+git checkout CFHTLS_stage2
+cd app/translations/
+
+set input = app/translations/stage2_fp_detailed_feedback.csv
+set output = $input:r.coffee
+
+echo "      CFHTLS_stage2_fps:" > $output
+set QUOTES = '"'
+
+set nlines = `cat $input | wc -l`
+set n = 0
+while ($n < $nlines)
+  @ n = $n + 1
+  set line = `tail -n +$n $input | head -1 | sed s/',%'/'%'/g | cut -d'%' -f1`
+  set name = `echo "$line" | cut -d',' -f2`
+  set message = `echo "$line" | cut -d',' -f3- | sed s/'""'/"'"/g | sed s/'"'//g`
+  echo "        ${name}: ${QUOTES}$message${QUOTES}" | sed s/',,,'//g >> $output
+end
+
+# Note the usefulness of the '%' signs in the column, for helping in slicing
+# up the messages from teh comments etc. The issue is that the messages
+# can contain commas, so need quotes (sometimes), and that we can't then cut
+# on commas. 
+
+head $output
+#       CFHTLS_stage2_fps:
+#         stars: "Yellow-red (or white-blue or white-green) stars can look like lens galaxies, but are smaller, very close to circular, and in CFHTLS images often have 'spikes' coming out of them at 12, 3, 6 and 9 o clock."
+#         stars_1: "A bright blue star, that has two red compact sources neighbouring it i.e. there is no lensing galaxy in this image. Also, if the two red compact sources were lensed background galaxies, they would be symmetrically arranged either side of the lens to be a lensing feature."
+#         stars_2: "The red object is not a galaxy but a single red star (that cannot act as a lens). Stars are more defined than fuzzy galaxies (see the yellow galaxies in this field). The neighbouring blue 'arc' is also too thick and not curved enought around the 'lens' to be a plausible lensed arc."
+#         stars_3: "Two blue objects flank a yellow object, however this is not a gravitational lens. The objects have the shapes of stars, not extended or compact galaxies that are seen in the same image. This is just a chance alignment of two blue stars and a red star in between."
+#         stars_4: "The yellow object that has two blue objects around it is a star, so it cannot act as a lens. The blue objects either side of the star are a little fuzzy and slightly different colours, and could be background galaxies. The red pair of objects close by are likely to be foreground red stars. This is just a chance alignment."
+#         stars_5: "This bright blue star has a neighbouring yellow galaxy close to it. The apparently curved shape of the yellow galaxy makes this look a bit like a gravitational lens, but a star cannot act as a lens (it doesn't have enough mass) do this is just a chance alignment of a galaxy and a star."
+#         stars_6: "This field contains several bright stars that cause lots of unusual effects on the images. The object to the lower middle is such a star, not a gravitational lens. The pink and blue colours arise from different effects on the images seen in different filters. So the blue ring you see is because the light from the star caused a larger area of the CCD to be affected than in the green or red bands. The neighbouring blue blobs either side are just aligned by chance."
+#         stars_7: "This field contains a red object flanked by two blue objects. The shape of the red object and the blue object to the left suggest that these are stars. The blue object to the right is a galaxy. This is not a lens but a chance alignment of these three unrelated objects."
+#         stars_8: "This is a bright yellow star, with two beighbouring blue stars. While the blue sources have very similar colours and are compact, if they were really lensed background galaxies/QSOs they would appear on opposing sides of the lensing mass. Therefore this is not a lens but a chance alignment of these unrelated objects."
+
+# etc
+
+# OK, pasted the messages into the en_us.coffee file, in the feedback section!
+
 # ============================================================================

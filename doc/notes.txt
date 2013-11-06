@@ -539,4 +539,19 @@ npm run-script start
 
 # Ask Chris to see if he can run the CFHTLS_stage2 branch.
 
+# 2013-11-06 (Wednesday) 10:07 PST
+
+# He can! Apparently the issue is I am running another server... Need to 
+# kill that one first.
+
+ps -e | grep hem
+# 50410 ttys024    0:01.70 grep hem
+# 73908 ttys024    1:27.51 node /usr/local/bin/hem server --includeCss
+kill -9 73908
+
+# OK, now try:
+
+git checkout CFHTLS_stage2
+npm run-script start
+
 # ============================================================================

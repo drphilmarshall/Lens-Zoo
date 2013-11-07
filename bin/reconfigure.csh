@@ -239,8 +239,10 @@ if ($update) then
         echo "reconfigure: dev branch updated."
                
     end
+  
+  end
    
-    echo "reconfigure: update completed"
+  echo "reconfigure: update completed"
    
 #         git status >& msg
 #         set pass = `grep nothing msg | grep 'to commit' | wc -l`

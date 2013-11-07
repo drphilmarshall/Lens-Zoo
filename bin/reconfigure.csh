@@ -190,7 +190,7 @@ if ($update) then
           echo "reconfigure: nothing to commit in this branch."
         else
           echo "reconfigure: committing all changes..."
-          git commit -am "Merged in edits from $remote"
+          git commit -am "Merged in edits from origin"
         endif  
       
         # Can now switch to dev branch, and merge in archived files from 
@@ -214,6 +214,7 @@ if ($update) then
                set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
             endif
             cp -v $tmparchivedfile $archivedfile
+            git add $archivedfile
         end
         
         # Now, dev branch may need committing:
@@ -225,7 +226,7 @@ if ($update) then
           echo "reconfigure: nothing new to commit in projects folder."
         else
           echo "reconfigure: committing all changes..."
-          git commit -am "Merged in edits from $remote"
+          git commit -am "Merged in edits from origin"
         endif  
       
         echo "reconfigure: dev branch updated."

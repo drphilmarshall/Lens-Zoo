@@ -224,12 +224,12 @@ if ($update) then
         endif
         
         foreach file ($files)
-          set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
-          if (-e $archivedfile) then
-            git checkout --patch $branch $archivedfile
-          else  
-            git checkout $branch $archivedfile
-          endif  
+            set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
+            if (-e $archivedfile) then
+              git checkout --patch $branch $archivedfile
+            else  
+              git checkout $branch $archivedfile
+            endif  
         end
       
         echo "reconfigure: dev branch updated."

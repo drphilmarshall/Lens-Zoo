@@ -224,9 +224,13 @@ if ($update) then
         endif
         
         foreach file ($files)
-            set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
+            if (${file:h:t} == 'translations') then
+               set archivedfile = ${archive}/${file:t:r}_${survey}.${file:e}
+            else
+               set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
+            endif
             if (-e $archivedfile) then
-              git checkout --patch $branch $archivedfile
+              echo 'y' | git checkout --patch $branch $archivedfile
             else  
               git checkout $branch $archivedfile
             endif  

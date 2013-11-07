@@ -97,8 +97,9 @@ if (! $?SW_WEB_DIR) then
 endif
 
 # List of files to be included in reconfigure. Aim to leave controllers 
-# generic, but have the content they pull be changed. Most of the website text
-# is in translations/en_us.coffee.
+# generic, but have the content they pull be changed. All of the website text
+# is in translations/en_us.coffee, which in principle just grows with time.
+# We still keep a record of what was used in each project though.
 
 set files = ( \
 app/translations/en_us.coffee \
@@ -107,13 +108,13 @@ app/views/guide.eco \
 app/views/faq.eco \
 app/views/about.eco \
 app/views/navigation.eco \
-app/lib/feedback.coffee \
+app/controllers/classifier.coffee \
 app/lib/create_feedback.coffee \
 css/index.styl \
 css/quick_guide.styl \
 )
 
-# Nice to keep all these in a separate directory? projects/CFHTLS
+# Nice to keep all these in a separate directory? eg projects/CFHTLS
 # and then have the filenames change as well, for clarity.
 
 # ----------------------------------------------------------------------
@@ -123,7 +124,7 @@ echo '                    $Editing the Space Warps Website                      
 echo '================================================================================'
 
 if ($update) then
-    echo "reconfigure: updating dev branch stage 1 files with remote changes"
+    echo "reconfigure: updating files with remote changes"
 else
     echo "reconfigure: survey/stage requested: $survey/$stage"
 endif
@@ -133,10 +134,8 @@ echo "reconfigure: understood SW web directory to be $SW_WEB_DIR"
 echo "reconfigure: moving there now..."
 chdir $SW_WEB_DIR
 
-# and that the right archive exists:
-set archive = $SW_WEB_DIR/projects/${survey}
-mkdir -p $archive
-
+# and set the archive name:
+set archive = projects/${survey}
 
 # ----------------------------------------------------------------------------
 
@@ -144,46 +143,113 @@ mkdir -p $archive
 
 if ($update) then
 
+  foreach remote ( upstream )
+
     # Get all new files:
 
-    echo "reconfigure: pulling in remote updates from the Zooniverse..."
-    git checkout master
-    git fetch upstream
-    git merge upstream/master
+    echo "reconfigure: pulling in updates from the $remote master branch..."
 
-    # Reconfigure back to Stage 1 (using this very script!):
-
-    echo "reconfigure: reconfiguring to Stage 1..."
-    git checkout dev
-    $SW_WEB_DIR/bin/reconfigure.csh $survey 1
-
-    # Merge in the new files:
-
-    echo "reconfigure: merging in any updates..."
-    git merge master
-
-    # Update the stage 1 copies:
-
-    echo "reconfigure: copying updated files into stage 1 backups"
-
-    # Note that the backups do not need to exist at this point!
-    # BUG: what if upstream is configured to Stage 2?! Need a STATE cookie... 
-    foreach file ($files)
-        if (${file:h:t} == 'translations') then
-            set newfile = ${archive}/${file:t:r}_${survey}.${file:e}
-        else
-            set newfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
-        endif
-        cp -v $file $newfile
-    end
-
-    echo "reconfigure: completed. Site is now configured for $survey Stage 1"
+    git checkout master >& msg
+    set fail = `grep error msg | wc -l`
+    cat msg
+    if ($fail) then
+      goto FINISH
+    endif  
     
-    # Now check in?
-    # git commit -m "Updates from the Zooniverse"
+    git pull $remote master
 
-    # No - leave this for manual operation, better that way!
+    # Merge the new edits into each project_stage branch in turn:
+    
+    foreach stage ( 1 2 )
+        
+        set branch = ${survey}_stage${stage}
+            
+        # First make sure branch exists
+        git branch $branch >& /dev/null
+        
+        # Now switch to that branch - checkouts can fail if there are
+        # uncommitted edits...
+        git checkout $branch >& msg
+        set fail = `grep error msg | wc -l`
+        cat msg
+        if ($fail) then
+          goto FINISH
+        endif  
+      
+        # And make sure it is up to date with the origin:
+        echo "reconfigure: making sure the ${branch} branch is up to date..."
+        git pull origin $branch
+        
+        # Now merge in new changes from master:
+        echo "reconfigure: merging remote edits into ${branch} branch..."
+        git merge master
+        
+        
+        # Update the archive copies of the reconfigured files:
+        echo "reconfigure: copying updated files into projects folder"
+        
+        mkdir -p ${archive}
+        foreach file ($files)
+            if (${file:h:t} == 'translations') then
+                set newfile = ${archive}/${file:t:r}_${survey}.${file:e}
+            else
+                set newfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
+            endif
+            cp -v $file $newfile
+        end
+        git add ${archive}
+        
+        # Commit changes:
+        
+        git status >& msg
+        set pass = `grep nothing msg | grep 'to commit' | wc -l`
+        cat msg
+        if ($pass) then
+          echo "reconfigure: nothing to commit in this branch."
+        else
+          echo "reconfigure: committing all changes..."
+          git commit -am "Merged in edits from $remote"
+        endif  
+      
+        # Can now switch to dev branch, and merge in archived files from 
+        # each project_stage branch:
+        
+        echo "reconfigure: merging back to archive folder in dev branch..."
 
+        git checkout dev >& msg
+        set fail = `grep error msg | wc -l`
+        cat msg
+        if ($fail) then
+          goto FINISH
+        endif
+        
+        foreach file ($files)
+          set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
+          if (-e $archivedfile) then
+            git checkout --patch $branch $archivedfile
+          else  
+            git checkout $branch $archivedfile
+          endif  
+        end
+      
+        echo "reconfigure: dev branch updated."
+               
+    end
+   
+    echo "reconfigure: update completed"
+   
+#         git status >& msg
+#         set pass = `grep nothing msg | grep 'to commit' | wc -l`
+#         cat msg
+#         if ($pass) then
+#           echo "reconfigure: nothing to commit in this branch."
+#         else
+#           echo -n "reconfigure: commit all changes? (y or n, def=n)"
+#           set ans = $<
+#           if ($ans == 'y') then
+#             git commit -am "Merged in edits from $remote"
+#           endif
+#         endif  
 # ----------------------------------------------------------------------------
 
 else
@@ -193,7 +259,12 @@ else
     # Make sure we are in the right branch:
 
     echo "reconfigure: checking out dev branch"
-    git checkout dev
+    git checkout dev >& msg
+    set fail = `grep error msg | wc -l`
+    cat msg
+    if ($fail) then
+      goto FINISH
+    endif  
 
     # Copy relevant files into place:
     echo "reconfigure: copying requested files into place:"
@@ -229,3 +300,4 @@ echo '==========================================================================
 
 # ==============================================================================
 FINISH:
+\rm -f msg

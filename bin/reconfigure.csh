@@ -123,7 +123,6 @@ echo '==========================================================================
 echo '                    $Editing the Space Warps Website                       '
 echo '================================================================================'
 
-
 if ($update) then
     echo "reconfigure: updating files with remote changes"
 else
@@ -234,6 +233,18 @@ if ($update) then
           git commit -am "Merged in edits from origin"
         endif  
       
+        # Commit changes:
+        
+        git status >& msg
+        set pass = `grep nothing msg | grep 'to commit' | wc -l`
+        cat msg
+        if ($pass) then
+          echo "reconfigure: nothing to commit in this branch."
+        else
+          echo "reconfigure: committing all changes..."
+          git commit -am "Merged in edits from $branch"
+        endif
+        
         echo "reconfigure: dev branch updated."
         
     end

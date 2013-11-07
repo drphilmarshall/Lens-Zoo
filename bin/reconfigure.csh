@@ -230,7 +230,7 @@ if ($update) then
                set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
             endif
             if (-e $archivedfile) then
-              echo 'y' | git checkout --patch $branch $archivedfile
+              echo 'a' | git checkout --patch $branch $archivedfile
             else  
               git checkout $branch $archivedfile
             endif  

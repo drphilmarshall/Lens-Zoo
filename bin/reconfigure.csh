@@ -307,6 +307,10 @@ else
     # Actually do the copying:
     source $comfile
     \rm -f $comfile
+    
+    # Adjust the state of teh directory:
+    
+    echo "${survey}_stage${stage}" > STATE
 
     echo "reconfigure: complete. Site is now configured for $survey Stage $stage"
 

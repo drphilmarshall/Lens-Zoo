@@ -123,6 +123,13 @@ echo '==========================================================================
 echo '                    $Editing the Space Warps Website                       '
 echo '================================================================================'
 
+
+
+echo "THIS SCRIPT LONGER WORKS - USE BRANCHES INSTEAD"
+goto FINISH
+
+
+
 if ($update) then
     echo "reconfigure: updating files with remote changes"
 else

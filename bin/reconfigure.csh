@@ -152,7 +152,7 @@ if ($update) then
             
         # Make sure we are tracking remote branch:
         git checkout -b $branch origin/$branch >& msg
-        set fail = `grep fatal msg | wc -l`
+        set fail = `grep fatal msg | grep -v "already exists" | wc -l`
         cat msg
         if ($fail) then
           goto FINISH

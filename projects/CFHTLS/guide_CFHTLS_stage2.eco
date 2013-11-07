@@ -22,76 +22,76 @@
       </ul>
       
       <section data-type="lensed-galaxies" class="show">
-      <%- translate 'p', 'guide.lensed_galaxies_text_1' %>
-      <%- translate 'p', 'guide.lensed_galaxies_text_2' %>
-      <%- translate 'p', 'guide.lensed_galaxies_text_3' %>
-      <%- translate 'p', 'guide.lensed_galaxies_text_4' %>
+        <%- translate 'p', 'guide.lensed_galaxies_text_1' %>
+        <%- translate 'p', 'guide.lensed_galaxies_text_2' %>
+        <%- translate 'p', 'guide.lensed_galaxies_text_3' %>
+        <%- translate 'p', 'guide.lensed_galaxies_text_4' %>
+        
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.lensed_galaxies_text_5' %>
+        
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_105_1740_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_105_1740_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.lensed_galaxies_text_6' %>
       
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_109_1055_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_109_1055_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.lensed_galaxies_text_7' %>
       
-      <%- translate 'p', 'guide.lensed_galaxies_text_5' %>
-      
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_105_1740_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_105_1740_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.lensed_galaxies_text_6' %>
-    
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_109_1055_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_109_1055_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.lensed_galaxies_text_7' %>
-    
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.lensed_galaxies_text_8' %>
-      
-      <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri_zoom.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_040_1764_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_040_1764_gri_zoom.png' width='340' height='340'>
-      <%- translate 'p', 'guide.lensed_galaxies_text_9' %>
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.lensed_galaxies_text_8' %>
+        
+        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_040_1764_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_040_1764_gri_zoom.png' width='340' height='340'>
+        <%- translate 'p', 'guide.lensed_galaxies_text_9' %>
       </section>
     
       <section data-type='lensed-quasars'>
-      <%- translate 'p', 'guide.lensed_quasars_text_1' %>
-      
-      <h2>Double</h2>
-      <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.lensed_quasars_text_2' %>
-      
-      <h2>Quad</h2>
-      <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.lensed_quasars_text_3' %>
+        <%- translate 'p', 'guide.lensed_quasars_text_1' %>
+        
+        <%- translate 'h2', 'guide.double' %>
+        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.lensed_quasars_text_2' %>
+        
+        <%- translate 'h2', 'guide.quad' %>
+        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.lensed_quasars_text_3' %>
 
-      <h2>High-z</h2>
-      <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1222_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1222_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.lensed_quasars_text_4' %>
+        <%- translate 'h2', 'guide.high_z' %>
+        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1222_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1222_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.lensed_quasars_text_4' %>
       </section>
     
       <section data-type='lensing-clusters'>
-      
-      <%- translate 'p', 'guide.group_lenses_text_1' %>
-      
-      <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_037_1973_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_037_1973_gri_zoom.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.group_lenses_text_2' %>
-      
-      <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_001_1554_gri.png' width='340' height='340'>
-      <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_001_1554_gri_zoom.png' width='340' height='340'>
-      
-      <%- translate 'p', 'guide.group_lenses_text_3' %>
-      
+        
+        <%- translate 'p', 'guide.group_lenses_text_1' %>
+        
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_037_1973_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_037_1973_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.group_lenses_text_2' %>
+        
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_001_1554_gri.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_001_1554_gri_zoom.png' width='340' height='340'>
+        
+        <%- translate 'p', 'guide.group_lenses_text_3' %>
+        
       </section>
 
     </section>
@@ -121,8 +121,7 @@
       <section data-type="loners">
         
         <%- translate 'p', 'guide.loners_text_1' %>
-        
-        <h2>Isolated Blue Irregular Galaxy</h2>
+        <%- translate 'h2', 'guide.isolated_blue' %>
         <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri_zoom.png' width='340' height='340'>
         
@@ -132,8 +131,8 @@
         <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_101_10091_10348_b_gri_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.loners_text_3' %>
-        
-        <h2>Blue Group</h2>
+
+        <%- translate 'h2', 'guide.blue_group' %>
         <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_110_1042_7688_b_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_110_1042_7688_b_gri_zoom.png' width='340' height='340'>
         
@@ -143,12 +142,12 @@
       <section data-type="lightweights">
         <%- translate 'p', 'guide.lightweights_text_1' %>
         
-        <h2>Straight or Distant Arclets</h2>
+        <%- translate 'h2', 'guide.arclets' %>
         <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri_zoom.png' width='340' height='340'>
         <%- translate 'p', 'guide.lightweights_text_2' %>
         
-        <h2>Bulgeless Blue Galaxies</h2>
+        <%- translate 'h2', 'guide.bulgeless_blue' %>
         <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_152_7089_17977_b_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_152_7089_17977_b_gri_zoom.png' width='340' height='340'>
         
@@ -158,14 +157,14 @@
       <section data-type="mergers-neighbors">
         <%- translate 'p', 'guide.mergers_neighbors_text_1' %>
         <%- translate 'p', 'guide.mergers_neighbors_text_2' %>
-        
-        <h2>Mergers</h2>
+
+        <%- translate 'h2', 'guide.mergers' %>
         <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.mergers_neighbors_text_3' %>
         
-        <h2>Neighbouring Galaxies</h2>
+        <%- translate 'h2', 'guide.neighbouring_galaxies' %>
         <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri_zoom.png' width='340' height='340'>
         

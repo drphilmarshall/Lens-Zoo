@@ -626,6 +626,18 @@ head $output
 # syntax error. How to trace this sort of thing?!
 
   
+# Meanwhile, reconfigure is working again. 
+# For Aprajita to work on the guide, she should:
+
+git checkout dev
+bin/reconfigure.csh CFHTLS 1
+
+git pull origin dev
+bin/reconfigure.csh --update CFHTLS
+
+git checkout CFHTLS_stage2
+
+# and then edit the translation file in app/translations/en_us.coffee
 
 
 # ============================================================================

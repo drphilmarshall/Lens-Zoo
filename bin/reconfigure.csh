@@ -153,8 +153,8 @@ if ($update) then
         # Make sure we are tracking remote branch:
         git checkout -b $branch origin/$branch >& msg
         set fail = `grep fatal msg | grep -v "already exists" | wc -l`
-        cat msg
         if ($fail) then
+          cat msg
           goto FINISH
         endif  
          
@@ -250,7 +250,12 @@ if ($update) then
     end
     
     echo "reconfigure: don't forget to push each branch's commits as necessary"
-                
+    echo "reconfigure: also, to see the stage branches, do:"
+    echo " "
+    echo "  git checkout ${survey}_stage1"
+    echo "  git checkout ${survey}_stage2"
+    echo " "
+         
 #         git status >& msg
 #         set pass = `grep nothing msg | grep 'to commit' | wc -l`
 #         cat msg

@@ -1,3 +1,4 @@
+module.exports = JSON.parse """
 {
   "navigation": {
     "classify": "Clasificar",
@@ -55,3 +56,4 @@
     "team": "Grupo"
   }
 }
+"""

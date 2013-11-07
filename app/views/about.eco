@@ -34,7 +34,7 @@
   </section>
   
   <section data-type='team'>
-    <h2>Science Team</h2>
+    <%- translate 'h2', 'about.science_team' %>
     
     <div class='bio'>
       <h4 class='name'>Phil Marshall<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=drphilmarshall">@drphilmarshall</a></span></h4>
@@ -116,8 +116,7 @@
       <%- translate 'p', 'about.wright_bio' %>
     </div>
     
-    <h2>Development Team</h2>
-    
+    <%- translate 'h2', 'about.development_team' %>
     <div class='bio'>
       <h4 class='name'>Kelly Borden<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=BordenKelly">@BordenKelly</a></span></h4>
       <%- translate 'p', 'about.borden_bio' %>

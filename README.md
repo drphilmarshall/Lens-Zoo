@@ -7,7 +7,7 @@
     
 ## Starting local server
 
-    hem server --includeCss
+    npm run-script start
 
 ## Building subjects
 
@@ -29,7 +29,7 @@ or to build against staging server
 
 ## Building and deploying project
 
-    ./build.rb
+    npm run-script deploy
   
   
 ### Notes

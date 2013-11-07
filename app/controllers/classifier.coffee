@@ -664,6 +664,9 @@ class Classifier extends Page
       
       if trainingType in ['lensing cluster', 'lensed quasar', 'lensed galaxy']
         
+        # Snake-case trainingType
+        trainingType = trainingType.replace ' ', '_'
+
         # Get the location for the dialog
         x = (training.x + 30) / @subjectDimension
         y = 1 - (training.y / @subjectDimension)

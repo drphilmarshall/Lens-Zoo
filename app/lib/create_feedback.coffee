@@ -1,23 +1,22 @@
+{ Tutorial, Step }  = require 'zootorial'
+translate = require 't7e'
 
-{Tutorial}  = require 'zootorial'
-{Step}      = require 'zootorial'
-
-Feedback  = require 'lib/feedback'
-
+FeedbackStrings  = translate.strings.feedback
 
 module.exports =
-  
   createSimulationFoundFeedback: (e, trainingType, x, y) ->
     
+    headers = details = []
+    headers.push key for key, value of FeedbackStrings.headers
+    details.push key for key, value of FeedbackStrings.details[trainingType]
+    
     # Get random header and detail
-    header = Feedback.header
-    detail = Feedback.detail[trainingType]
+    index1 = Math.floor(Math.random() * headers.length)
+    index2 = Math.floor(Math.random() * details.length)
     
-    index1 = Math.floor(Math.random() * header.length)
-    index2 = Math.floor(Math.random() * detail.length)
-    
-    header = "#{Feedback.header[index1]}! You spotted a simulated lens."
-    detail = detail[index2]
+    base_header = translate 'span', "feedback.base_header"
+    header = translate 'span', "feedback.headers[#{ index1 }]"
+    detail = translate 'span', "feedback.details.#{ trainingType }.#{ index2 }"
     
     return new Tutorial
       id: 'simFound'
@@ -27,7 +26,7 @@ module.exports =
         length: 1
         
         simFound: new Step
-          header: header
+          header: "#{ base_header } #{ header }"
           details: detail
           attachment: "left center .annotation #{x} #{y}"
           block: '.annotation'
@@ -40,10 +39,9 @@ module.exports =
   createSimulationMissedFeedback: (e, trainingType, x, y) ->
     
     # Get random detail
-    missed = Feedback.missed
-    index = Math.floor(Math.random() * missed.length)
-    
-    detail = missed[index]
+    details = []
+    details.push key for key, value of FeedbackStrings.details['missed']
+    index = Math.floor(Math.random() * details.length)
     
     return new Tutorial
       id: 'simMissed'
@@ -54,7 +52,7 @@ module.exports =
         
         simMissed: new Step
           number: 1
-          details: detail
+          details: translate 'span', "feedback.details.missed.option_#{ index }"
           attachment: "left center .annotation #{x} #{y}"
           block: '.annotation'
           className: 'arrow-left'
@@ -72,8 +70,8 @@ module.exports =
         length: 1
         
         emptyFound: new Step
-          header: 'Nice! There is no gravitational lens in this field!'
-          details: "This is a different kind of Training Image, one that has already been inspected by the Science Team and found not to contain any gravitational lenses."
+          header: translate 'span', 'feedback.dud_found.header'
+          details: translate 'span', 'feedback.dud_found.details'
           attachment: 'center center .annotation center center'
           block: '.annotation'
           nextButton: 'Close'
@@ -90,8 +88,8 @@ module.exports =
         length: 1
         
         missed: new Step
-          header: 'There is no gravitational lens in this field!'
-          details: "This is a different kind of Training Image, one that has already been inspected by the Science Team and found not to contain any gravitational lenses."
+          header: translate 'span', 'feedback.dud_missed.header'
+          details: translate 'span', 'feedback.dud_missed.details'
           attachment: 'center center .annotation center center'
           block: '.annotation'
           nextButton: 'Close'

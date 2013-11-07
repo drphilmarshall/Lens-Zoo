@@ -1,13 +1,13 @@
-{Tutorial}  = require 'zootorial'
-{Step}      = require 'zootorial'
+{ Tutorial, Step }  = require 'zootorial'
+translate = require 't7e'
 
 module.exports =
   length: 1
   
   dashboard: new Step
     number: 1
-    header: 'Quick Dashboard'
-    details: 'As gravitationally lensed features can be faint and/or small, you can explore an image in more detail in the Quick Dashboard. Try clicking on this button.'
+    header: translate 'span', 'tutorial.dashboard.header'
+    details: translate 'span', 'tutorial.dashboard.details'
     attachment: 'center bottom [data-type="dashboard"] 0.55 -0.2'
     className: 'arrow-bottom'
     onEnter: ->

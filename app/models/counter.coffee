@@ -1,7 +1,4 @@
-
-
-{Model} = require 'spine'
-
+{ Model } = require 'spine'
 
 class Counter extends Model
   @configure "Counter", "classified", "potentials", "favorites", "simFrequency"
@@ -15,6 +12,5 @@ class Counter extends Model
     value = @[key]
     value -= 1
     @updateAttribute(key, value)
-
 
 module.exports = Counter

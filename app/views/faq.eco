@@ -2,80 +2,14 @@
 
 <div class="content">
   <header>
-    <%- translate 'h1', 'faq.heading', class: '' %>
+    <%- translate 'h1', 'faq.heading' %>
   </header>
   
-  <div class='content'>
-    <h2>Interface</h2>
-    <div class='questions'>
-      <p class='q'>What is my main task?</p>
-      <p class='a'>The main task for the current project is to inspect the images on the classification page, look for a gravitational lens and mark (at least) any one of the lensed images within a lens system in an image. Lens systems are rare. Most of the images won’t have any lenses, a few images will have a lens and in extremely rare cases, there might be more than one lens in an image. So, watch out!</p>
-      
-      <p class='q'>I marked a simulated lens but was told that I missed it. What’s the problem?</p>
-      <p class='a'>We'd like you to mark any lensed object that you see i.e. you can mark one or all of the curved arcs, or multiple quasars. Sometimes the site will tell you that you missed a simulated lens, when you actually marked something nearby the lensed object, e.g. the marker might have been placed on the lens galaxy itself instead of the lensed features.</p>
-      
-      <p class='q'>What do I do if I see more than one lensed image per lens system?</p>
-      <p class='a'>You should place a marker on at least one lensed feature that you see per lens system. If you see an arc, mark it and preferably, mark its counter-arc if you can see it. If you see a pair of quasars (compact objects) either side of a lensing galaxy, mark both of them preferably.</p>
-      
-      <p class='q'>When should I use the Quick Dashboard?</p>
-      <p class='a'>Many lensed images are faint and very close to the bright yellow lensing galaxies. You can switch to the Quick Dashboard to play with different settings or zoom/pan to get a detailed view near the lensing galaxy and be more confident of not missing a faint lens.</p>
-      <p class='q'>I missed a lens! How do I go back?</p>
-      <p class='a'>The last image you saw is in your 'Recents' list, on your <a href="#/profile">Profile</a>. You can click on this image to take it to Talk, where you can tag it for other people to see, and discuss it with them.</p>
-      
-      <p class='q'>Can I delete my markers?</p>
-      <p class='a'>Yes, if you click on one of your markers, a little cross should appear above it. If you click on this cross, the marker is deleted.</p>
-      
-      <p class='q'>Can I turn off the simulated lenses?</p>
-      <p class='a'>We found that without the simulated lenses, we started to make mistakes. We don’t want to miss any lenses, so we thought it best to keep showing simulated lenses, just in case! As you do more classifications we will show you a smaller number of simulated lenses.</p>
-      
-      <p class='q'>Can I turn off the feedback messages?</p>
-      <p class='a'>As with the simulated lenses, we found that without the messages, we also started to make mistakes. We don’t want to miss any lenses, so we thought it best to keep the messages turned on!</p>
-      
-      <p class='q'>The images are really small! Can I make them bigger?</p>
-      <p class='a'>Yes. Click on the Quick Dashboard, and scroll with your mouse to zoom in. You can move around in the image by dragging it with your cursor.</p>
-      
-      <p class='q'>I found something interesting! What do I do?</p>
-      <p class='a'>The markers are only for lensed features, but you can add any image, whether you think it has a lens in it or not, to your favourites using the button. This will appear in your favourites list on your profile page. You can then click on that image to take it to Talk, where you can discuss it with with other people.</p>
-      
-      <p class='q'>Sometimes a vertical/horizontal section of the image looks completely dark. why is that?</p>
-      <p class='a'>Nothing to worry. These images are at the edges of the survey region where the telescope did not collect data. Since there’s no data, these sections look dark.</p>
-      
-      <p class='q'>I can't see some pages on the website. What internet browser should I use?</p>
-      <p class='a'>We support modern browsers, although the site is optimized for Chrome.
-        <ul>
-          <li>Google Chrome</li>
-          <li>Mozilla Firefox 19 and up</li>
-          <li>Safari 5 and up</li>
-          <li>Internet Explorer 10 (no support for Quick Dashboard)</li>
-        </ul>
-      </p>
-    </div>
+  <div class="content">
+    <%- translate 'h2', 'faq.interface.header' %>
+    <%- translate 'div.questions', 'faq.interface.questions' %>
     
-    <h2>Science</h2>
-    <div class='questions'>
-      <p class='q'>What is a gravitational lens system?</p>
-      <p class='a'>When a massive galaxy, or cluster of galaxies, sitting right in front of another, much more distant galaxy, the light from the background galaxy gets deflected and focused towards us by the warped space around the foreground galaxy. This is referred to as a gravitational lens system.</p>
-      <p class='q'>What does a typical lens system look like?</p>
-      <p class='a'>A typical lens system will show a massive lensing galaxy or a galaxy group surrounded by magnified and distorted multiple images of a background galaxy.</p>
-      
-      <p class='q'>What’s the difference between a lens(ing) galaxy and a lensed galaxy?</p>
-      <p class='a'>A lens galaxy or a lensing galaxy is the foreground massive galaxy which warps the space around it and causes light to bend around it. A lensed galaxy is a distant background galaxy from which light rays emerge and get bent or deflected due to the lens galaxy before arriving on earth.</p>
-      
-      <p class='q'>Why are gravitational lens systems interesting?</p>
-      <p class='a'>Gravitational lenses have a plethora of applications in astrophysics. Most importantly, they are used for understanding properties of Dark Matter which is very difficult to probe by other methods. Since lens systems also create magnified images of the distant background galaxies, we get a detailed view and hence, better understanding of these distant and faint galaxies which would be impossible otherwise. Other interesting applications include measuring the age of the Universe, finding exoplanets, etc.</p>
-      
-      <p class='q'>Why do you need my help to look for gravitational lenses?</p>
-      <p class='a'>How a lens system will look like in the sky depends on several factors relating to properties of the foreground and the background object. There is enough complexity in these lens systems that the process of detection has not been fully automated till date. One of the major problems is contamination from lens-like systems e.g., spiral galaxies, ring galaxies and other artefacts in the images that mimic arc-like shapes. Human beings are better at processing and filtering objects that have multiple levels of complexities even if they are non-standard. Lens systems fall in this category and we need your help both in discovering newer types of lenses and building better algorithms.</p>
-      
-      <p class='q'>How do I know what’s a lens and what isn’t?</p>
-      <p class='a'>We’ve put up some examples of lenses, and non-lenses, in the Spotter’s Guide. You can see these examples on the main classification page (on the pull-out tab on the right hand side), and you can click on them to read more about them in the Guide page. You can also go to <a href='http://talk.spacewarps.org/'>Talk</a> and see what other people have found.</p>
-      
-      <p class='q'>What are simulated lens systems?</p>
-      <p class='a'>Simulated lens systems are computer generated images of gravitational lens systems using standard models for a foreground galaxy (or galaxy group) and a background galaxy (or a quasar). These simulated lenses are then added to the real images of the sky observed with a telescope.</p>
-      
-      <p class='q'>Why do the images have simulated lens systems?</p>
-      <p class='a'>Lens systems come in a wide variety and Spotter’s Guide page can be used to show only typical examples of lenses. Hence, we use simulated lens system to provide further training for the users. Also, we want to do a comparison of human vs. robots (ie. automated lens finding codes) for which we need a large test sample. Adding a large sample of simulated lenses to the real data help us achieve such comparison.</p>
-      
-    </div>
+    <%- translate 'h2', 'faq.science.header' %>
+    <%- translate 'div.questions', 'faq.science.questions' %>
   </div>
 </div>

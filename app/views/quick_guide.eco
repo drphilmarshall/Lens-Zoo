@@ -2,34 +2,27 @@
 
 <%- translate 'div', 'quick_guide.heading', class: 'tab' %>
 
-<div class='content'>
+<div class="content">
   <%- translate 'h1', 'quick_guide.heading', class: '' %>
   <%- translate 'h2', 'quick_guide.instructions', class: 'instruction' %>
-  <div class='lenses'>
+
+  <div class="lenses">
     <%- translate 'h2', 'quick_guide.lenses', class: '' %>
-    
-    <div class='lenses'>
-      <img title='A distant quasar being lensed by a massive galaxy in the foreground.' data-type='lensed-quasars' src='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri_zoom.png' width='100' height='100'>
-
-      <img title='An edge-on spiral galaxy acting as a gravitational lens.' data-type='lensed-galaxies' src='images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri_zoom.png' width='100' height='100'>
-      <img title='A group of massive galaxies acting as a gravitational lens.' data-type='lensing-clusters' src='images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri_zoom.png' width='100' height='100'>
-
-      <img title='A distant blue galaxy being lensed by a massive galaxy in the foreground.' data-type='lensed-galaxies' src='images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri_zoom.png' width='100' height='100'>
-      <img title='A distant blue galaxy being lensed by a massive galaxy in the foreground.' data-type='lensed-galaxies' src='images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri_zoom.png' width='100' height='100'>
-
-      <img title='A distant quasar being lensed by a massive galaxy in the foreground.' data-type='lensed-quasars' src='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri_zoom.png' width='100' height='100'>
+    <div class="lenses">
+      <% lens_examples = [] %>
+      <% lens_examples.push "example_#{ i }" for i in [1..6] %>
+      <% for example in lens_examples: %>
+        <%- translate 'img', '', title: "quick_guide.lens_examples.#{ example }.title", "data-type": "quick_guide.lens_examples.#{ example }.data_type", src: "quick_guide.lens_examples.#{ example }.image" %>
+      <% end %>
     </div>
-    
+
     <%- translate 'h2', 'quick_guide.nonlenses', class: '' %>
-    <div class='non-lenses'>
-      <img title='Some lightweight galaxies have arms and tails that can look like lensed arcs.' data-type='lightweights' src='images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri_zoom.png' width='100' height='100'>
-      <img title='Some lightweight galaxies have arms and tails that can look like lensed arcs.' data-type='mergers-neighbors' src='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri_zoom.png' width='100' height='100'>
-
-      <img title='Some faint blue galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it’s not being lensed.' data-type='loners' src='images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri_zoom.png' width='100' height='100'>
-      <img title='Some faint blue galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it’s not being lensed.' data-type='loners' src='images/guide/non-lenses/loners/CFHTLS_110_1042_7688_b_gri_zoom.png' width='100' height='100'>
-
-      <img title='Spirals and ring galaxies can host blue arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs.' data-type='mergers-neighbors' src='images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri_zoom.png' width='100' height='100'>
-      <img title='Spirals and ring galaxies can host blue arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs.' data-type='rings-spirals' src='images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri_zoom.png' width='100' height='100'>
+    <div class="non-lenses">
+      <% non_lens_examples = [] %>
+      <% non_lens_examples.push "example_#{ i }" for i in [1..6] %>
+      <% for example in non_lens_examples: %>
+        <%- translate 'img', '', title: "quick_guide.non_lens_examples.#{ example }.title", "data-type": "quick_guide.non_lens_examples.#{ example }.data_type", src: "quick_guide.non_lens_examples.#{ example }.image" %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -151,9 +151,14 @@ if ($update) then
         
         set branch = ${survey}_stage${stage}
             
-        # First make sure branch exists
-        git branch $branch >& /dev/null
-        
+        # Make sure we are tracking remote branch:
+        git checkout -b $branch origin/$branch >& msg
+        set fail = `grep fatal msg | wc -l`
+        cat msg
+        if ($fail) then
+          goto FINISH
+        endif  
+         
         # Now switch to that branch - checkouts can fail if there are
         # uncommitted edits...
         git checkout $branch >& msg

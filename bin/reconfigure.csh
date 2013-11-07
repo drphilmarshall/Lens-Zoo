@@ -123,6 +123,7 @@ echo '==========================================================================
 echo '                    $Editing the Space Warps Website                       '
 echo '================================================================================'
 
+
 if ($update) then
     echo "reconfigure: updating files with remote changes"
 else
@@ -136,27 +137,13 @@ chdir $SW_WEB_DIR
 
 # and set the archive name:
 set archive = projects/${survey}
+set tmparchive = /tmp/projects/${survey}
 
 # ----------------------------------------------------------------------------
 
 # Are we up to date relative to the upstream repo at the Zooniverse?
 
 if ($update) then
-
-  foreach remote ( upstream )
-
-    # Get all new files:
-
-    echo "reconfigure: pulling in updates from the $remote master branch..."
-
-    git checkout master >& msg
-    set fail = `grep error msg | wc -l`
-    cat msg
-    if ($fail) then
-      goto FINISH
-    endif  
-    
-    git pull $remote master
 
     # Merge the new edits into each project_stage branch in turn:
     
@@ -180,24 +167,19 @@ if ($update) then
         echo "reconfigure: making sure the ${branch} branch is up to date..."
         git pull origin $branch
         
-        # Now merge in new changes from master:
-        echo "reconfigure: merging remote edits into ${branch} branch..."
-        git merge master
-        
-        
+                
         # Update the archive copies of the reconfigured files:
-        echo "reconfigure: copying updated files into projects folder"
+        echo "reconfigure: copying updated files into dev branch projects folder"
         
-        mkdir -p ${archive}
+        mkdir -p ${tmparchive}
         foreach file ($files)
             if (${file:h:t} == 'translations') then
-                set newfile = ${archive}/${file:t:r}_${survey}.${file:e}
+                set newfile = ${tmparchive}/${file:t:r}_${survey}.${file:e}
             else
-                set newfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
+                set newfile = ${tmparchive}/${file:t:r}_${survey}_stage${stage}.${file:e}
             endif
             cp -v $file $newfile
         end
-        git add ${archive}
         
         # Commit changes:
         
@@ -225,23 +207,33 @@ if ($update) then
         
         foreach file ($files)
             if (${file:h:t} == 'translations') then
+               set tmparchivedfile = ${tmparchive}/${file:t:r}_${survey}.${file:e}
                set archivedfile = ${archive}/${file:t:r}_${survey}.${file:e}
             else
+               set tmparchivedfile = ${tmparchive}/${file:t:r}_${survey}_stage${stage}.${file:e}
                set archivedfile = ${archive}/${file:t:r}_${survey}_stage${stage}.${file:e}
             endif
-            if (-e $archivedfile) then
-              echo 'y' | git checkout --patch $branch $archivedfile
-            else  
-              git checkout $branch $archivedfile
-            endif  
+            cp -v $tmparchivedfile $archivedfile
         end
+        
+        # Now, dev branch may need committing:
+      
+        git status >& msg
+        set pass = `grep nothing msg | grep 'to commit' | wc -l`
+        cat msg
+        if ($pass) then
+          echo "reconfigure: nothing new to commit in projects folder."
+        else
+          echo "reconfigure: committing all changes..."
+          git commit -am "Merged in edits from $remote"
+        endif  
       
         echo "reconfigure: dev branch updated."
-               
+        
     end
-   
-    echo "reconfigure: update completed"
-   
+    
+    echo "reconfigure: don't forget to push each branch's commits as necessary"
+                
 #         git status >& msg
 #         set pass = `grep nothing msg | grep 'to commit' | wc -l`
 #         cat msg

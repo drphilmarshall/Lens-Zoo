@@ -726,5 +726,8 @@ npm install .
 
 # Hmm - no working package.json files at all?!
 
+# Nope - language-menu and new-features both seem to be broken :-( 
+# Issue this.
+
 
 # ============================================================================

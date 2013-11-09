@@ -639,5 +639,92 @@ git checkout CFHTLS_stage2
 
 # and then edit the translation file in app/translations/en_us.coffee
 
+# ============================================================================
+# 2013-11-09 (Saturday) 13:26 PST
+
+# Debugging TERMINATOR error...
+
+# package.json was screwed up... Need to get it from zooniverse again.
+
+git checkout translations
+git pull upstream translations
+
+git checkout CFHTLS_stage2
+git merge translations
+
+# Hmm - says its already merged, becaus of its recursive strategy...
+
+# Still get require error. Try pulling in Chris' own version:
+
+git checkout master
+
+git remote add chrissnyder git@github.com:chrissnyder/Lens-Zoo.git
+git branch chrissnyder
+git pull chrissnyder master
+
+npm install .
+npm run-script start
+
+# That doesn't work either! Still failing to require index...
+
+# Go back to translations branch. What are the packages it needs?
+more package.json 
+# {
+#   "name": "spacewarps",
+#   "version": "0.0.1",
+#   "dependencies": {
+#     "hem": "~0.2.7",
+#     "t7e": "~0.2.1",
+#     "es5-shimify": "~0.0.1",
+#     "json2ify": "~0.0.1",
+#     "spine": "1.0.8",
+#     "underscore": "~1.4.2",
+#     "zootorial": "~0.3.4",
+#     "nib": "~0.9.1",
+#     "zooniverse": "git://github.com/zooniverse/Zooniverse#language-menu",
+#     "publisssh": "~0.2.1",
+#     "coffee-script": "~1.6.3"
+#   },
+#   "scripts": {
+#     "start": "hem server --includeCss",
+#     "deploy-to-demo": "ruby build.rb && publisssh build zooniverse-demo/spacewarps-z8e && trash ./build"
+#   }
+# }
+
+# npm install . fails on this:
+# 
+# npm ERR! git checkout language-menu error: pathspec 'language-menu' did not match any file(s) known to git.
+# npm ERR! Error: `git "checkout" "language-menu"` failed with 1
+# npm ERR!     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/exec.js:56:20)
+
+# Can we even run the master branch app?
+
+git checkout master
+git pull upstream master
+# From github.com:zooniverse/Lens-Zoo
+#  * branch            master     -> FETCH_HEAD
+# Already up-to-date.
+
+npm install .
+# npm http GET https://registry.npmjs.org/jqueryify
+# npm http 304 https://registry.npmjs.org/jqueryify
+# npm ERR! git checkout new-features error: pathspec 'new-features' did not match any file(s) known to git.
+# npm ERR! Error: `git "checkout" "new-features"` failed with 1
+# npm ERR!     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/exec.js:56:20)
+
+# What?
+
+# Trash npm directory and start afresh, to make sure...
+# Same error.
+
+# Try translations branch afresh?
+
+npm install .
+# npm ERR! git checkout language-menu error: pathspec 'language-menu' did not match any file(s) known to git.
+# npm ERR! Error: `git "checkout" "language-menu"` failed with 1
+# npm ERR!     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/exec.js:56:20) 
+
+# Hmm - no working package.json files at all?!
+
 
 # ============================================================================

@@ -727,7 +727,19 @@ npm install .
 # Hmm - no working package.json files at all?!
 
 # Nope - language-menu and new-features both seem to be broken :-( 
-# Issue this.
+# Issue this. New features more of a problem perhaps? Try reverting to 0.3.4
+
+# OK, app runs with 
+# 
+#     "zootorial": "~0.3.4",
+#     "zooniverse": "git://github.com/zooniverse/Zooniverse#no-deps",
+
+# But I still get the console error, 
+
+# SynTax Error: unexpected TERMINATOR   application.js:1
+# Uncaught ReferenceError: require is not defined (index:51)
+# event.returnValue is deprecated. Please use the standard event.preventDefault() instead  jquery.js:55
+
 
 
 # ============================================================================

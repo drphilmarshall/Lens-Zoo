@@ -740,6 +740,45 @@ npm install .
 # Uncaught ReferenceError: require is not defined (index:51)
 # event.returnValue is deprecated. Please use the standard event.preventDefault() instead  jquery.js:55
 
+# ============================================================================
+# 2013-11-11 (Monday) 09:35 PST
 
+# OK, Chris provided new package.json via zooniverse translations branch.
+# Does this app run?
+
+git checkout translations
+git pull upstream translations
+
+\rm -rf node_modules
+npm install .
+
+set pid = `ps -e | grep hem | grep -v grep | head -1 | awk '{print $1}'`
+if ($#pid > 0) kill -9 $pid
+npm run-script start &
+
+# -> shift refresh browser.
+
+# No - still getting require error. When I do all this in a fresh clone of
+# the Lens-Zoo repo though, I get a working app. So, something has gotten 
+# screwed up in merging the Lens-Zoo repo with ours.
+
+# Look for differences between files in drphilmarshall/translations and 
+# zooniverse/translations...
+
+set files = ( *.* public/index.html css/*.* app/*.* app/*/*.* )
+foreach file ( $files )
+  if (-e ../Lens-Zoo/$file) then 
+    sdiff -w 80 -s ../Lens-Zoo/$file $file > junk
+    set fail = `cat junk | head -1 | wc -l`
+    if ($fail) then
+      echo " "
+      echo "AHA! $file is different:"
+      cat junk
+    endif  
+  endif
+end
+
+# Nothing! drphilmarshall/translations is *identical* to
+# zooniverse/translations! So why doesnt app run properly?
 
 # ============================================================================

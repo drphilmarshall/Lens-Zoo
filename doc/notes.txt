@@ -754,6 +754,7 @@ npm install .
 
 set pid = `ps -e | grep hem | grep -v grep | head -1 | awk '{print $1}'`
 if ($#pid > 0) kill -9 $pid
+
 npm run-script start &
 
 # -> shift refresh browser.
@@ -780,5 +781,28 @@ end
 
 # Nothing! drphilmarshall/translations is *identical* to
 # zooniverse/translations! So why doesnt app run properly?
+
+# Chris suggests running from fresh clone of drphilmarshall/Lens-Zoo. Trying
+# that. Still get require error - fix this by 
+
+npm uninstall hem -g
+
+# [11/11/13 11:28:08 AM] Chris Snyder: npm by default uses globally installed modules over local modules
+# [11/11/13 11:28:29 AM] Chris Snyder: You had a global version of hem that was overriding the locally installed version
+
+# OK! Right, now to make CFHTLS_stage2 work...
+
+git checkout CFHTLS_stage2
+git pull origin CFHTLS_stage2
+
+# Already up to date? Good.
+
+# Argh! require error is back again :-(
+# And hem is local:
+
+npm uninstall hem -g
+# npm WARN uninstall not installed in /usr/local/lib/node_modules: "hem"
+
+# Send back to Chris...
 
 # ============================================================================

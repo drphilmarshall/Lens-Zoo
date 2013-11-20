@@ -805,4 +805,29 @@ npm uninstall hem -g
 
 # Send back to Chris...
 
+# OK, seems to work - at least in a fresh clone of the repo!
+
+# ============================================================================
+# 2013-11-20 (Wednesday) 14:52 PST
+
+# Making gallery of known lenses for the Spotters Guide:
+
+cd public/images/guide/lenses
+git checkout CFHTLS_stage2
+git checkout dev gallery
+
+# OK, got pngs. Now write coffee script:
+
+set pngs = gallery/*png
+
+set k = 0
+while ($k < 97)
+  @ k ++
+  set png = "images/guide/lenses/$pngs[$k]"
+  set line = "<img class='lazy' src='' data-original='$png' width='154' height='154'>"
+  echo $line
+end  
+
+# Then copied and pasted from terminal into app/views/guide.eco.
+
 # ============================================================================

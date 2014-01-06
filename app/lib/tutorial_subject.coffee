@@ -1,52 +1,37 @@
-
 Subject = require 'zooniverse/models/subject'
 
 module.exports =
-  main:
+  first:
     new Subject
-      id: '5183f151e4bb2102190033b1'
+      id: '52c1c4d13ae740492c00a35d'
       location:
-        # standard: 'http://spacewarps.org/subjects/standard/5183f151e4bb2102190033b1.png'
-        standard: 'images/tutorial/tutorial-1.png'
+        standard: 'http://spacewarps.org/subjects/standard/52c1c4d13ae740492c00a35d.png'
+        thumbnail: 'http://spacewarps.org/subjects/thumbnail/52c1c4d13ae740492c00a35d.jpg'
       project_id: '5101a1341a320ea77f000001'
-      workflow_ids: ['5101a1361a320ea77f000002']
+      workflow_ids: ['52c1cf443ae7407d88000001']
       metadata:
+        id: 'VICS82_5000527'
         training: [
-          type: 'lensed galaxy'
+          x: 99
+          y: 99
+          type: 'lensing cluster'
         ]
-        id: 'CFHTLS_083_0111'
       tutorial: true
-      zooniverse_id: 'ASW0000a7l'
-  simulated:
+      zooniverse_id: 'ASW000a9tu'
+  second:
     new Subject
-      id: '5183f151e4bb210219003bb1'
+      id: '52c1c4d13ae740492c00a34a'
       location:
-        # standard: 'http://spacewarps.org/subjects/standard/5183f151e4bb210219003bb1.png'
-        standard: 'images/tutorial/tutorial-2.png'
+        standard: 'http://spacewarps.org/subjects/standard/52c1c4d13ae740492c00a34a.png'
+        thumbnail: 'http://spacewarps.org/subjects/thumbnail/52c1c4d13ae740492c00a34a.jpg'
       project_id: '5101a1341a320ea77f000001'
-      workflow_ids: ['5101a1361a320ea77f000002']
+      workflow_ids: ['52c1cf443ae7407d88000001']
       metadata:
+        id: 'VICS82_5000179'
         training: [
-          type: 'lensed galaxy'
-          x: 61.010010
-          y: 319.750000
+          x: 99
+          y: 99
+          type: 'lensing cluster'
         ]
-        id: 'CFHTLS_085_0136'
       tutorial: true
-      zooniverse_id: 'ASW0000bsh'
-  empty:
-    new Subject
-      id: '5183f151e4bb210219004e43'
-      location:
-        # standard: 'http://spacewarps.org/subjects/standard/5183f151e4bb210219004e43.png'
-        standard: 'images/tutorial/tutorial-3.png'
-      project_id: '5101a1341a320ea77f000001'
-      workflow_ids: ['5101a1361a320ea77f000002']
-      metadata:
-        training: [
-          type: 'empty'
-        ]
-        id: 'CFHTLS_171_0493'
-      tutorial: true
-      zooniverse_id: 'ASW0000fgj'
-    
+      zooniverse_id: 'ASW000a9tb'

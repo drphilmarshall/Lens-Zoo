@@ -222,7 +222,7 @@ class Classifier extends Page
     @tutorial.el.bind('end-tutorial', @onTutorialEnd)
     
     # Set first tutorial subject
-    subject = TutorialSubject.main
+    subject = TutorialSubject.first
     
     # Create classification object
     @classification = new Classification {subject}
@@ -256,16 +256,11 @@ class Classifier extends Page
     Subject.on 'select', @onSubjectSelect
     Subject.on 'no-more', @onNoMoreSubjects
     
-    # Create simulated and empty tutorial subjects
-    simSubject = TutorialSubject.simulated
-    dudSubject = TutorialSubject.empty
-    
     # Set queue length on Subject back to five
     Subject.queueLength = 5
     
     # Insert tutorial subjects into queue
-    Subject.instances.splice(1, 0, simSubject)
-    Subject.instances.splice(3, 0, dudSubject)
+    Subject.instances.splice(1, 0, TutorialSubject.second)
     
     # Append remaining subjects to DOM
     @appendSubjects(null, Subject.instances)

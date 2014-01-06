@@ -277,22 +277,33 @@
     </section>
 
     <section data-type="artifacts">
-        <%- translate 'p', 'guide.artifacts_text_1' %>
+      
+      <%- translate 'p', 'guide.artifacts_text' %>
+      <ul class="menu">
+        <%- translate 'li', 'guide.noise', 'data-type': 'noise', class: 'show' %>
+        <%- translate 'li', 'guide.asteroids', 'data-type': 'asteroids' %>
+      </ul>
+
+      <section data-type="noise" class="show">
+        <img class='lazy' src='' data-original='images/guide/artifacts/noise/VICS82_1001584_iJKs.png' width='226' height='226'>
+        <img class='lazy' src='' data-original='images/guide/artifacts/noise/VICS82_1001584_iJKs_zoom-noise.png' width='226' height='226'>
+        <img class='lazy' src='' data-original='images/guide/artifacts/noise/VICS82_1001584_iJKs_zoom.png' width='226' height='226'>
+        <%- translate 'p', 'guide.noise_text_1' %>
+        <%- translate 'p', 'guide.noise_text_2' %>
+      </section>
         
+      <section data-type="asteroids">
         <%- translate 'h2', 'guide.fast_moving' %>
         <img class='lazy' src='' data-original='images/guide/artifacts/AT_satellite_green.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/artifacts/AT_satellite_blue_annot.png' width='340' height='340'>
-        <%- translate 'p', 'guide.artifacts_text_2' %>
+        <%- translate 'p', 'guide.asteroids_text_1' %>
         
         <%- translate 'h2', 'guide.slow_moving' %>
         <img class='lazy' src='' data-original='images/guide/artifacts/AT_asteroid_n_zoom.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/artifacts/AT_asteroid_r_annot.png' width='340' height='340'>
-        <%- translate 'p', 'guide.artifacts_text_3' %>
-        <%- translate 'p', 'guide.artifacts_text_4' %>
-
-        <img class='lazy' src='' data-original='images/guide/artifacts/funny_green_spot.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/artifacts/funny_green_spot_zoom.png' width='340' height='340'>
-        <%- translate 'p', 'guide.artifacts_text_5' %>
+        <%- translate 'p', 'guide.asteroids_text_2' %>
+        <%- translate 'p', 'guide.asteroids_text_3' %>
+      </section>
 
     </section>
 

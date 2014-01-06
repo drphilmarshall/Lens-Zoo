@@ -49,71 +49,95 @@
         <%- translate 'p', 'guide.lensed_galaxies_text_3' %>
         <%- translate 'p', 'guide.lensed_galaxies_text_4' %>
         
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7008306_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7008306_iJKs_zoom_ann.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.lensed_galaxies_text_5' %>
         
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_105_1740_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_105_1740_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7008406_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7008406_iJKs_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.lensed_galaxies_text_6' %>
-      
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_109_1055_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_109_1055_gri_zoom.png' width='340' height='340'>
-        
+
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7009145_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7009145_iJKs_zoom_ann.png' width='340' height='340'>
+
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7010810_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7010810_iJKs_zoom_ann.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.lensed_galaxies_text_7' %>
-      
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri_zoom.png' width='340' height='340'>
-        
+
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7001368_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7001368_iJKs_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7010396_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7010396_iJKs_zoom.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.lensed_galaxies_text_8' %>
         
-        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri_zoom.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_040_1764_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/disk-galaxy/CFHTLS_040_1764_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7011015_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-galaxy/VICS82_7011015_iJKs_zoom_ann.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.lensed_galaxies_text_9' %>
+
       </section>
     
       <section data-type='lensed-quasars'>
         <%- translate 'p', 'guide.lensed_quasars_text_1' %>
         
         <%- translate 'h2', 'guide.double' %>
-        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri_zoom.png' width='340' height='340'>
-        
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7001789_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7001789_iJKs_zoom.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.lensed_quasars_text_2' %>
+
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7007297_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7007297_iJKs_zoom.png' width='340' height='340'>
+
+        <%- translate 'p', 'guide.lensed_quasars_text_3' %>
         
         <%- translate 'h2', 'guide.quad' %>
-        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.lensed_quasars_text_3' %>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7009093_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7009093_iJKs_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7009427_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7009427_iJKs_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7008189_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensed-quasar/VICS82_7008189_iJKs_zoom.png' width='340' height='340'>
 
-        <%- translate 'h2', 'guide.high_z' %>
-        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1222_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/galaxy-quasar/CFHTLS_082_1222_gri_zoom.png' width='340' height='340'>
-        
         <%- translate 'p', 'guide.lensed_quasars_text_4' %>
+        <%- translate 'p', 'guide.lensed_quasars_text_5' %>
+        <%- translate 'p', 'guide.lensed_quasars_text_6' %>
+
       </section>
     
       <section data-type='lensing-clusters'>
         
         <%- translate 'p', 'guide.group_lenses_text_1' %>
         
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_037_1973_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_037_1973_gri_zoom.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri_zoom.png' width='340' height='340'>
-        
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5008231_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5008231_iJKs_zoom.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.group_lenses_text_2' %>
-        
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_001_1554_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/CFHTLS_001_1554_gri_zoom.png' width='340' height='340'>
-        
+
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5004036_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5004036_iJKs_zoom.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.group_lenses_text_3' %>
+
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5006800_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5006800_iJKs_ann.png' width='340' height='340'>
+
+        <%- translate 'p', 'guide.group_lenses_text_4' %>
+
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5006961_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/lensing-group/VICS82_5006961_iJKs_ann.png' width='340' height='340'>
+
+        <%- translate 'p', 'guide.group_lenses_text_5' %>
+
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/VICS82_5003998_iJK.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/VICS82_5003998_iJK_zoom.png' width='340' height='340'>
         
+        <%- translate 'p', 'guide.group_lenses_text_6' %>
+
       </section>
 
     </section>

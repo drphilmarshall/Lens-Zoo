@@ -430,8 +430,8 @@ class Classifier extends Page
       mask = pixel.data[3]
     catch err
       mask = 0
-    console.log "Marker placed: ",x,y,mask
-    return if mask is 254 then true else mask
+    console.log "Marker placed on training sim: ",x,y,mask
+    return if mask is 255 then true else mask
   
   # Prevent annotations over SVG elements
   stopPropagation: (e) ->
@@ -692,10 +692,10 @@ class Classifier extends Page
         # if @isLensMarked in [true, 0]
         
         # Normal functioning (needs testing!!)
-        if @isLensMarked in [true, 254]
+        if @isLensMarked in [true, 255]
           # Lens was marked
           @tutorial = @createSimulationFoundFeedback(e, trainingType, x, y)
-        else if @isLensMarked in [false, 255]
+        else if @isLensMarked in [false, 254]
           # Lens was missed
           @tutorial = @createSimulationMissedFeedback(e, trainingType, x, y)
         else

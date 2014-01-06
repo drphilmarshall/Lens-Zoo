@@ -14,8 +14,15 @@
     </div>
   </div>
 
+  <ul class="social-icons">
+    <li><a href="https://www.facebook.com/therealzooniverse" target="_blank"><img src="images/icons/facebook.png"></a></li>
+    <li><a href="https://twitter.com/the_zooniverse" target="_blank"><img src="images/icons/twitter.png" /></a></li>
+    <li><a href="https://plus.google.com/+ZooniverseOrgReal" target="_blank"><img src="images/icons/google-plus.png" /></a></li>
+  </ul>
+
+
   <br>
-  <%- t 'div.sub-head', 'home.tagline' %>
+  <%- t 'p.tagline', 'home.tagline' %>
   <%- t 'p', 'home.explanation' %>
   <a href="#/classify"><%- t 'button.large', 'home.start' %></a>
 </div>

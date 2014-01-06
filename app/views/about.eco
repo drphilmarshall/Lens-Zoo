@@ -155,6 +155,17 @@
       <h4 class='name'>Arfon Smith<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=arfon">@arfon</a></span></h4>
       <%- translate 'p', 'about.smith_bio' %>
     </div>
+
+    <div class="bio">
+      <h4 class="name">Ed Paget<span class="twitter"><a href="https://twitter.com/intent/user?screen_name=edpaget">@edpaget</a></span></h4>
+      <%- translate 'p', 'about.paget_bio' %>
+    </div>
+
+    <div class="bio">
+      <h4 class="name">Chris Snyder<span class="twitter"><a href="https://twitter.com/intent/user?screen_name=bumishness">@bumishness</a></span></h4>
+      <%- translate 'p', 'about.snyder_bio' %>
+    </div>
+
     
   </section>
   

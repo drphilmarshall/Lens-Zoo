@@ -619,8 +619,11 @@ class Classifier extends Page
       if @classification.subject.metadata.training[0].type in ['lensing cluster', 'lensed quasar', 'lensed galaxy']
         @trigger 'addToTalk', @talkIds['My Simulations'], @classification.subject.zooniverse_id
     
-    # Record language
-    @classification.annotate {language: localStorage.preferredLanguage}
+    # Record various bits
+    @classification.annotate
+      language: localStorage.preferredLanguage
+      project: "VICS82"
+      stage: 1
     
     @classification.send()
     

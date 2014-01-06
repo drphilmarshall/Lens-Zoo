@@ -107,6 +107,7 @@ class QuickDashboard extends Controller
     # Setup WebFITS object
     @wfits = new astro.WebFITS(@el.find('.webfits')[0], @dimension)
     @wfits.setupControls()
+
     
     # Create new deferreds for each channel
     for band in @bands
@@ -179,7 +180,7 @@ class QuickDashboard extends Controller
 
             @dfs[band].resolve()
           )
-  
+
   onError: =>
     @trigger 'close'
     errorDialog = new Dialog
@@ -208,6 +209,14 @@ class QuickDashboard extends Controller
         
         # Remove the callback
         document.onkeydown = null
+    
+    # PJM: Pan and zoom to fill viewer:
+    # @wfits.setXOffset(0.5)
+    # @wfits.setYOffset(0.5)
+    # @wfits.setZoom(2.0)    
+    # The above lines do not work - the image appears with standard offsets and zoom, and
+    # apparently with a over=exposed blue channel! And then as brighter, bluer etc are selected,
+    # the data disappears... 
     
     @append("""
       <div class='viewer-tools'>

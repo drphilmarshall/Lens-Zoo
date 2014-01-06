@@ -37,17 +37,17 @@
     <%- translate 'h2', 'about.science_team' %>
     
     <div class='bio'>
-      <h4 class='name'>Phil Marshall<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=drphilmarshall">@drphilmarshall</a></span></h4>
+      <h4 class='name'>Phil Marshall<span class='twitter'><a href="http://talk.spacewarps.org/#/users/drphilmarshall">@drphilmarshall</a></span></h4>
       <%- translate 'p', 'about.marshall_bio2' %>
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Aprajita Verma<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=aprajitaverma">@aprajitaverma</a></span></h4>
+      <h4 class='name'>Aprajita Verma<span class='twitter'><a href="http://talk.spacewarps.org/#/users/Aprajita">@Aprajita</a></span></h4>
       <%- translate 'p', 'about.verma_bio' %>
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Anupreeta More<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=anupreeta">@anupreeta</a></span></h4>
+      <h4 class='name'>Anupreeta More<span class='twitter'><a href="http://talk.spacewarps.org/#/users/anupreeta">@anupreeta</a></span></h4>
       <%- translate 'p', 'about.a_more_bio' %>
     </div>
 
@@ -58,33 +58,23 @@
     
     
     <div class='bio'>
-      <h4 class='name'>Elisabeth Baeten<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=ElisabethBaeten">@ElisabethBaeten</a></span></h4>
+      <h4 class='name'>Elisabeth Baeten<span class='twitter'><a href="http://talk.spacewarps.org/#/users/ElisabethB">@ElisabethB</a></span></h4>
       <%- translate 'p', 'about.baeten_bio' %>
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Claude Cornen</h4>
+      <h4 class='name'>Claude Cornen<span class='twitter'><a href="http://talk.spacewarps.org/#/users/C_cld">@C_cld</a></span></h4>
       <%- translate 'p', 'about.cornen_bio' %>
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Tom Collett<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=TomCollettAstro">@TomCollettAstro</a></span></h4>
+      <h4 class='name'>Tom Collett<span class='twitter'><a href="http://talk.spacewarps.org/#/users/Tom Collett">@Tom Collett</a></span></h4>
       <%- translate 'p', 'about.collett_bio' %>
-    </div>
-    
-    <div class='bio'>
-      <h4 class='name'>Cécile Faure<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=DrCecileFaure">@DrCecileFaure</a></span></h4>
-      <%- translate 'p', 'about.faure_bio' %>
     </div>
     
     <div class='bio'>
       <h4 class='name'>Janine Fohlmeister</h4>
       <%- translate 'p', 'about.fohlmeister_bio' %>
-    </div>
-    
-    <div class='bio'>
-      <h4 class='name'>Mandeep Gill</h4>
-      <%- translate 'p', 'about.gill_bio' %>
     </div>
     
     <div class='bio'>
@@ -98,7 +88,7 @@
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Rafael Kueng</h4>
+      <h4 class='name'>Rafael Kueng<span class='twitter'><a href="http://talk.spacewarps.org/#/users/rafael_kueng">@rafael_kueng</a></span></h4>
       <%- translate 'p', 'about.kueng_bio' %>
     </div>
     
@@ -108,7 +98,7 @@
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Christine Macmillan<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=budgieye">@budgieye</a></span></h4>
+      <h4 class='name'>Christine Macmillan<span class='twitter'><a href="http://talk.spacewarps.org/#/users/budgieye">@budgieye</a></span></h4>
       <%- translate 'p', 'about.macmillan_bio' %>
     </div>
     
@@ -118,7 +108,7 @@
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Prasenjit Saha</h4>
+      <h4 class='name'>Prasenjit Saha<span class='twitter'><a href="http://talk.spacewarps.org/#/users/psaha">@psaha</a></span></h4>
       <%- translate 'p', 'about.saha_bio' %>
     </div>
     
@@ -128,12 +118,12 @@
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Julianne Wilcox<span class='twitter'><a href="https://twitter.com/intent/user?screen_name=Capella_SA">@Capella_SA</a></span></h4>
+      <h4 class='name'>Julianne Wilcox<span class='twitter'><a href="http://talk.spacewarps.org/#/users/Capella05">@Capella05</a></span></h4>
       <%- translate 'p', 'about.wilcox_bio' %>
     </div>
     
     <div class='bio'>
-      <h4 class='name'>Layne Wright</h4>
+      <h4 class='name'>Layne Wright<span class='twitter'><a href="http://talk.spacewarps.org/#/users/gumbosea">@gumbosea</a></h4>
       <%- translate 'p', 'about.wright_bio' %>
     </div>
     

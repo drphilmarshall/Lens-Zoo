@@ -435,7 +435,7 @@ class Classifier extends Page
       mask = pixel.data[3]
     catch err
       mask = 0
-    return if mask is 255 then true else mask
+    return if mask is 254 then true else mask
   
   # Prevent annotations over SVG elements
   stopPropagation: (e) ->
@@ -694,7 +694,7 @@ class Classifier extends Page
         if @isLensMarked in [true, 0]
           # Lens was marked
           @tutorial = @createSimulationFoundFeedback(e, trainingType, x, y)
-        else if @isLensMarked in [false, 254]
+        else if @isLensMarked in [false, 255]
           # Lens was missed
           @tutorial = @createSimulationMissedFeedback(e, trainingType, x, y)
         else

@@ -56,7 +56,7 @@ module.exports =
     className: 'arrow-left'
     onEnter: ->
       bounding = document.createElementNS('http://www.w3.org/2000/svg', "circle")
-      bounding.setAttribute("transform", "translate(#{258}, #{324})")
+      bounding.setAttribute("transform", "translate(#{220}, #{220})")
       bounding.setAttribute("class", "outline")
       bounding.setAttribute("stroke", 'white')
       bounding.setAttribute("stroke-width", 2)

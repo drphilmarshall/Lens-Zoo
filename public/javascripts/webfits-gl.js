@@ -461,6 +461,21 @@
       return this.zoom;
     };
 
+    Api.prototype.setXOffset = function(xOffset) {
+      this.xOffset = xOffset;
+      return null;
+    };
+
+    Api.prototype.setYOffset = function(yOffset) {
+      this.yOffset = yOffset;
+      return null;
+    };
+
+    Api.prototype.setZoom = function(zoom) {
+      this.zoom = zoom;
+      return null;
+    };
+
     Api.prototype.teardown = function() {
       var buffer, ctx, key, program, shader, texture, _i, _j, _len, _len1, _ref, _ref1, _ref2, _ref3;
       ctx = this.ctx;

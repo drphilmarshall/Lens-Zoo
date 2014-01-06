@@ -491,6 +491,21 @@
       return this.yOffset - this.height / 2;
     };
 
+    Api.prototype.setZoom = function(zoom) {
+      this.zoom = zoom * this.width / 2.0;
+      return null;
+    };
+
+    Api.prototype.setXOffset = function(xOffset) {
+      this.xOffset = xOffset + this.width / 2;
+      return null;
+    };
+
+    Api.prototype.setYOffset = function(yOffset) {
+      this.yOffset = yOffset + this.height / 2;
+      return null;
+    };
+
     Api.prototype.teardown = function() {
       this.el.removeChild(this.canvas);
       this.ctx = void 0;

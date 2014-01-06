@@ -430,6 +430,7 @@ class Classifier extends Page
       mask = pixel.data[3]
     catch err
       mask = 0
+    console.log "Marker placed: ",x,y,mask
     return if mask is 254 then true else mask
   
   # Prevent annotations over SVG elements
@@ -686,10 +687,12 @@ class Classifier extends Page
         console.log "isLensMarked: ", @isLensMarked
         
         # HACK (PJM): marking anywhere in image returns value 0, so interpret this
-        # as a vote for a lens... Real issue is that alpha channel images seem 
-        # to be absent?
+        # as a vote for a lens... 0 is returned if there is an error reading the
+        # mask in @checkImageMask, this is the workaround:
+        # if @isLensMarked in [true, 0]
         
-        if @isLensMarked in [true, 0]
+        # Normal functioning (needs testing!!)
+        if @isLensMarked in [true, 254]
           # Lens was marked
           @tutorial = @createSimulationFoundFeedback(e, trainingType, x, y)
         else if @isLensMarked in [false, 255]

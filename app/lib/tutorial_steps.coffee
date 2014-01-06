@@ -51,7 +51,7 @@ module.exports =
     number: 5
     header: translate 'span', 'tutorial.identify.header'
     details: translate 'span', 'tutorial.identify.details'
-    attachment: 'left top .current 1 0.5'
+    attachment: 'left center .current 1 0.45'
     block: '.annotation, .controls:first'
     className: 'arrow-left'
     onEnter: ->
@@ -70,7 +70,7 @@ module.exports =
     number: 6
     header: translate 'span', 'tutorial.mark.header'
     details: translate 'span', 'tutorial.mark.details'
-    attachment: 'left top .current 1 0.52'
+    attachment: 'left center .current 1 0.45'
     block: '.controls:first'
     className: 'arrow-left'
     onEnter: (tutorial) ->
@@ -85,12 +85,12 @@ module.exports =
     next:
       'mouseup .annotation': (e, tutorial, step) ->
         mask = getMaskValue(e)
-        return if mask is 255 then 'good_job' else 'try_again'
+        return if mask is 254 then 'good_job' else 'try_again'
   
   good_job: new Step
     header: translate 'span', 'tutorial.good_job.header'
     details: translate 'span', 'tutorial.good_job.details'
-    attachment: 'left top .current 1 0.52'
+    attachment: 'left top .current 1 0.45'
     block: '.controls'
     className: 'arrow-left'
     next: 'training'
@@ -104,7 +104,7 @@ module.exports =
     next:
       'mouseup .annotation': (e, tutorial, step) ->
         mask = getMaskValue(e)
-        return if mask is 255 then 'good_job' else false
+        return if mask is 254 then 'good_job' else false
   
   training: new Step
     number: 7

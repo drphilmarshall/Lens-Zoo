@@ -23,9 +23,9 @@
 
         <%- translate 'p', 'guide.intro_VICS82_text_2' %>
         
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/VICS82_5000179_iJK.png' width='200' height='200'>
-        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/VICS82_5000326_iJK.png' width='200' height='200'>
-        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/VICS82_5003998_iJK.png' width='200' height='200'>
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/VICS82_5000179_iJK.png' width='226' height='226'>
+        <img class='lazy' src='' data-original='images/guide/lenses/elliptical-galaxy/VICS82_5000326_iJK.png' width='226' height='226'>
+        <img class='lazy' src='' data-original='images/guide/lenses/cluster-galaxy/VICS82_5003998_iJK.png' width='226' height='226'>
         
         <%- translate 'p', 'guide.intro_VICS82_text_3' %>
         <%- translate 'p', 'guide.intro_VICS82_text_4' %>

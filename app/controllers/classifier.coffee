@@ -574,7 +574,7 @@ class Classifier extends Page
     
     # When duds are included in the @TrainingGroup, need to multiply @simratio by 2 to 
     nClassified = @counter.classified
-    baseLevel = Math.floor(nClassified / 20) + 1
+    baseLevel = Math.floor(nClassified / 30) + 1
     @level = Math.min(baseLevel, 3)
     denominator = (5 * Math.pow(Math.sqrt(2), @level - 1))
     @simRatio = 2 / denominator

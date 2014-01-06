@@ -6,6 +6,7 @@ browserDialog = require 'zooniverse/controllers/browser-dialog'
 
 class QuickDashboard extends Controller
   dimension: 441
+  # VICS82:
   bands:  ['i', 'J', 'Ks']
   source: 'http://spacewarps.org.s3.amazonaws.com/subjects/raw/'
   
@@ -13,6 +14,21 @@ class QuickDashboard extends Controller
   prefix: null
   
   parameters:
+  
+    # Old settings for CFHTLS images (no PROV keyword), for reference:
+    # 0:
+    #   alpha: 0.09
+    #   Q: 1.0
+    #   scales: [0.4, 0.6, 1.7]
+    # 1:
+    #   alpha: 0.17
+    #   Q: 1.0
+    #   scales: [0.4, 0.6, 1.7]
+    # 2:
+    #   alpha: 0.11
+    #   Q: 2
+    #   scales: [0.4, 0.6, 2.5]
+    
     # VICS82 VISTA IR data, PROV = 'V':
     0:
       alpha: 0.0040
@@ -27,7 +43,8 @@ class QuickDashboard extends Controller
       Q: 2.0
       scales: [1.0, 1.4, 4.0]
 
-    # CICS82, CFHT IR data, PROV = 'C':
+    # VICS82, CFHT IR data, PROV = 'C':
+    # (If PROV keyword is 'C' then we'll add 3 to the value of preset)
     3:
       alpha: 0.0020
       Q: 1.5
@@ -52,6 +69,7 @@ class QuickDashboard extends Controller
     super
     
     @calibrations = {}
+    # VICS82:
     @provenances = {}
     @dfs =
       webfits: new $.Deferred()
@@ -136,6 +154,7 @@ class QuickDashboard extends Controller
           width = cache[band].width
           height = cache[band].height
           @calibrations[band] = cache[band].calibration
+          # VICS82:
           @provenances[band] = cache[band].provenance
           
           @wfits.loadImage(band, arr, width, height)
@@ -163,9 +182,11 @@ class QuickDashboard extends Controller
             width = dataunit.width
             height = dataunit.height
             calibration = @getCalibration(header)
+            # VICS82:
             provenance = @getProvenance(header)
             
             @calibrations[band] = calibration
+            # VICS82:
             @provenances[band] = provenance
             @wfits.loadImage(band, arr, width, height)
             
@@ -176,6 +197,7 @@ class QuickDashboard extends Controller
             @cache['prefix'][band].width = width
             @cache['prefix'][band].height = height
             @cache['prefix'][band].calibration = calibration
+            # VICS82:
             @cache['prefix'][band].provenance = provenance
 
             @dfs[band].resolve()
@@ -193,6 +215,7 @@ class QuickDashboard extends Controller
     zeroPoint = header.get('MZP_AB')
     return Math.pow(10, 0.4*(30.0 - zeroPoint))
   
+  # VICS82:
   getProvenance: (header) ->
     return header.get('PROV')
   
@@ -251,7 +274,7 @@ class QuickDashboard extends Controller
       @trigger 'close'
       return
     
-    # PJM: Adjust preset if provenance of IR data is CFHT:
+    # VICS82: Adjust preset if provenance of IR data is CFHT:
     if @provenances['Ks'] is 'C'
       preset = parseInt(preset,10) + 3
     
@@ -262,7 +285,7 @@ class QuickDashboard extends Controller
     parameters = @parameters[preset]
     # console.log "preset, @parameters = ",preset,@parameters
         
-    # PJM: not sure this is the best way to pass down the calibrations array but it works:
+    # VICS82: not sure this is the best way to pass down the calibrations array but it works:
     # @wfits.setCalibrations(1, 1, 1)
     @wfits.setCalibrations(@calibrations['Ks'],@calibrations['J'],@calibrations['i'])
     @wfits.setScales.apply(@wfits, parameters.scales)

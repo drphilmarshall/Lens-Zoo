@@ -281,6 +281,7 @@
       <%- translate 'p', 'guide.artifacts_text' %>
       <ul class="menu">
         <%- translate 'li', 'guide.noise', 'data-type': 'noise', class: 'show' %>
+        <%- translate 'li', 'guide.offsets', 'data-type': 'offsets' %>
         <%- translate 'li', 'guide.asteroids', 'data-type': 'asteroids' %>
       </ul>
 
@@ -291,7 +292,15 @@
         <%- translate 'p', 'guide.noise_text_1' %>
         <%- translate 'p', 'guide.noise_text_2' %>
       </section>
-        
+      
+      <section data-type="offsets">
+        <img class='lazy' src='' data-original='images/guide/artifacts/offsets/VICS82_1000232_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/artifacts/offsets/VICS82_1000317_iJKs.png' width='340' height='340'>
+        <%- translate 'p', 'guide.offsets_text_1' %>
+      </section>
+      
+           
+      
       <section data-type="asteroids">
         <%- translate 'h2', 'guide.fast_moving' %>
         <img class='lazy' src='' data-original='images/guide/artifacts/AT_satellite_green.png' width='340' height='340'>

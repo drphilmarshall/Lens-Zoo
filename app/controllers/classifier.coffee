@@ -309,9 +309,10 @@ class Classifier extends Page
       # Set up offscreen canvas and cache the context
       img = new Image()
       img.onload = (e) =>
-        @canvas.width = img.width
-        @canvas.height = img.height
-        @ctx.drawImage(img, 0, 0, img.width, img.height)
+        viewportSize = 441
+        @canvas.width = viewportSize
+        @canvas.height = viewportSize
+        @ctx.drawImage(img, 0, 0, viewportSize, viewportSize)
       img.src = $('.current img').attr('src')
     
     # Enable controls
@@ -430,7 +431,6 @@ class Classifier extends Page
       mask = pixel.data[3]
     catch err
       mask = 0
-    console.log "Marker placed on training sim: ",x,y,mask
     return if mask is 255 then true else mask
   
   # Prevent annotations over SVG elements
@@ -684,14 +684,6 @@ class Classifier extends Page
           @isLensMarked = @checkImageMask(annotation.x, annotation.y)
           break if @isLensMarked is true
         
-        console.log "isLensMarked: ", @isLensMarked
-        
-        # HACK (PJM): marking anywhere in image returns value 0, so interpret this
-        # as a vote for a lens... 0 is returned if there is an error reading the
-        # mask in @checkImageMask, this is the workaround:
-        # if @isLensMarked in [true, 0]
-        
-        # Normal functioning (needs testing!!)
         if @isLensMarked in [true, 255]
           # Lens was marked
           @tutorial = @createSimulationFoundFeedback(e, trainingType, x, y)

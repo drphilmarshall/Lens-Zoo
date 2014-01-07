@@ -119,7 +119,7 @@ module.exports =
       details_stage2: "If you see something that is being lensed, and you have checked the Spotter's Guide to make sure it is not a False Positive, mark it. In this case, click on the arc!"
     good_job:
       header: "Great job!"
-      details: "You've correctly identified a gravitational lens!<br/><br/>To remove a marker, just click it and you will see the remove button."
+      details: "You've correctly identified a gravitational lens!<br/><br/>If you change your mind and want to remove a marker, just click it and you will see the remove button."
     try_again:
       header: "Whoops, try again."
       details: "Drag the marker over the arc to identify the lens."

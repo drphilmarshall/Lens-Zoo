@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "hem server --includeCss",
+    "deploy-to-production": "ruby build.rb && publisssh build spacewarps.org && trash ./build",
     "deploy-to-beta": "ruby build.rb && publisssh build spacewarps.org/beta2 && trash ./build",
     "deploy-to-demo": "ruby build.rb && publisssh build zooniverse-demo/spacewarps-z8e && trash ./build"
   }

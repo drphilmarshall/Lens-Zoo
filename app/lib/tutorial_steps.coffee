@@ -51,7 +51,7 @@ module.exports =
     number: 5
     header: translate 'span', 'tutorial.identify.header'
     details: translate 'span', 'tutorial.identify.details'
-    attachment: 'left center .current 1 0.45'
+    attachment: 'left center .primary 0.7 center'
     block: '.annotation, .controls:first'
     className: 'arrow-left'
     onEnter: ->
@@ -70,7 +70,7 @@ module.exports =
     number: 6
     header: translate 'span', 'tutorial.mark.header'
     details: translate 'span', 'tutorial.mark.details'
-    attachment: 'left center .current 1 0.45'
+    attachment: 'left center .primary 0.7 center'
     block: '.controls:first'
     className: 'arrow-left'
     onEnter: (tutorial) ->
@@ -78,9 +78,10 @@ module.exports =
       ctx = canvas.getContext('2d')
       img = new Image()
       img.onload = (e) =>
-        canvas.width = img.width
-        canvas.height = img.height
-        ctx.drawImage(img, 0, 0, img.width, img.height)
+        viewportSize = 441
+        canvas.width = viewportSize
+        canvas.height = viewportSize
+        ctx.drawImage img, 0, 0, viewportSize, viewportSize
       img.src = $('.current .image img').attr('src')
     next:
       'mouseup .annotation': (e, tutorial, step) ->
@@ -90,7 +91,7 @@ module.exports =
   good_job: new Step
     header: translate 'span', 'tutorial.good_job.header'
     details: translate 'span', 'tutorial.good_job.details'
-    attachment: 'left top .current 1 0.5'
+    attachment: 'left center .primary 0.7 center'
     block: '.controls'
     className: 'arrow-left'
     next: 'training'
@@ -98,7 +99,7 @@ module.exports =
   try_again: new Step
     header: translate 'span', 'tutorial.try_again.header'
     details: translate 'span', 'tutorial.try_again.details'
-    attachment: 'left top .current 1 0.52'
+    attachment: 'left center .primary 0.7 center'
     className: 'arrow-left'
     blocks: '.controls:first'
     next:

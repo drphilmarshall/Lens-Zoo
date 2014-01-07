@@ -103,6 +103,11 @@
     </div>
     
     <div class='bio'>
+      <h4 class='name'>Martin Makler</h4>
+      <%- translate 'p', 'about.makler_bio' %>
+    </div>
+    
+    <div class='bio'>
       <h4 class='name'>Surhud More</h4>
       <%- translate 'p', 'about.s_more_bio' %>
     </div>

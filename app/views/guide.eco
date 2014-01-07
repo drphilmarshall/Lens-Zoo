@@ -146,111 +146,78 @@
       <ul class="menu">
         <%- translate 'li', 'guide.rings_spirals', 'data-type': 'rings-spirals', class: 'show' %>
         <%- translate 'li', 'guide.loners', 'data-type': 'loners' %>
-        <%- translate 'li', 'guide.lightweights', 'data-type': 'lightweights' %>
         <%- translate 'li', 'guide.mergers_neighbors', 'data-type': 'mergers-neighbors' %>
+        <%- translate 'li', 'guide.groups', 'data-type': 'groups' %>
         <%- translate 'li', 'guide.stars', 'data-type': 'stars' %>
       </ul>
 
       <section data-type="rings-spirals" class="show">
         <%- translate 'p', 'guide.rings_spirals_text_1' %>
 
-        <%- translate 'h2', 'guide.arms' %>
+        <%- translate 'h2', 'guide.face' %>
         
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_008_10921_6476_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_008_10921_6476_b_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/VICS82_2070266_iJKs_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/VICS82_2090795_iJKs_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.rings_spirals_text_2' %>
         
-        <%- translate 'h2', 'guide.rings' %>
+        <%- translate 'h2', 'guide.edge' %>
 
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/VICS82_4010174_iJKs_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.rings_spirals_text_3' %>
-
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_halo_arms.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_halo_arms_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.rings_spirals_text_4' %>
-
-        <%- translate 'h2', 'guide.clumps' %>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_clumpy_ring.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_clumpy_ring_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.rings_spirals_text_5' %>
-
-        <%- translate 'h2', 'guide.red' %>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_red_spiral.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_red_spiral_zoom.png' width='340' height='340'>
-
-        <%- translate 'p', 'guide.rings_spirals_text_6' %>
 
       </section>
     
       <section data-type="loners">
         <%- translate 'p', 'guide.loners_text_1' %>
-        <%- translate 'h2', 'guide.isolated_blue' %>
 
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/VICS82_4010226_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/VICS82_4010226_iJKs_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.loners_text_2' %>
         
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_101_10091_10348_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_101_10091_10348_b_gri_zoom.png' width='340' height='340'>
-        
+        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/VICS82_3010235_iJKs.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/VICS82_3010235_iJKs_zoom.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.loners_text_3' %>
 
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/LN_faintred.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/LN_faintred_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.loners_text_4' %>
-
-        <%- translate 'h2', 'guide.blue_group' %>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_110_1042_7688_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/loners/CFHTLS_110_1042_7688_b_gri_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.loners_text_5' %>
-      </section>
-    
-      <section data-type="lightweights">
-        <%- translate 'p', 'guide.lightweights_text_1' %>
-        
-        <%- translate 'h2', 'guide.arclets' %>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri_zoom.png' width='340' height='340'>
-        <%- translate 'p', 'guide.lightweights_text_2' %>
-        
-        <%- translate 'h2', 'guide.bulgeless_blue' %>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_152_7089_17977_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_152_7089_17977_b_gri_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.lightweights_text_3' %>
       </section>
     
       <section data-type="mergers-neighbors">
         <%- translate 'p', 'guide.mergers_neighbors_text_1' %>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010391_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010391_iJKs_zoom.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.mergers_neighbors_text_2' %>
 
-        <%- translate 'h2', 'guide.mergers' %>
-        
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri_zoom.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010226_iJKs.png' width='220' height='220'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010386_iJKs.png' width='220' height='220'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_2090372_iJKs.png' width='220' height='220'>
+
         <%- translate 'p', 'guide.mergers_neighbors_text_3' %>
-        
-        <%- translate 'h2', 'guide.neighbouring_galaxies' %>
-        
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri_zoom.png' width='340' height='340'>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010378_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_1000747_iJKs.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.mergers_neighbors_text_4' %>
-
-
-        <img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/MN_satellites.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/MN_satellites_zoom.png' width='340' height='340'>
-        <%- translate 'p', 'guide.mergers_neighbors_text_5' %>
 
       </section>
       
+      <section data-type="groups">
+        <%- translate 'p', 'guide.groups_text_2' %>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_3000813_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_3000813_iJKs_zoom.png' width='340' height='340'>
+
+        <%- translate 'p', 'guide.groups_text_3' %>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_1000452_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_1000452_iJKs_zoom.png' width='340' height='340'>
+
+      </section>
+
       <section data-type="stars">
         <%- translate 'p', 'guide.stars_text_1' %>
         

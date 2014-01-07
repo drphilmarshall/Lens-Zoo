@@ -121,6 +121,11 @@
       <h4 class='name'>Matthias Tecza</h4>
       <%- translate 'p', 'about.tecza_bio' %>
     </div>
+     
+    <div class='bio'>
+      <h4 class='name'>Ludovic Van Waerbeke</h4>
+      <%- translate 'p', 'about.ludo_bio' %>
+    </div>
     
     <div class='bio'>
       <h4 class='name'>Julianne Wilcox<span class='twitter'><a href="http://talk.spacewarps.org/#/users/Capella05">@Capella05</a></span></h4>

@@ -71,25 +71,25 @@ module.exports =
 
     non_lens_examples:
       example_1: 
-        title: "Some lightweight galaxies have arms and tails that can look like lensed arcs."
-        image: "images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri_zoom.png"
-        data_type: "lightweights"
+        title: "Often galaxies have companions the same colour, or a nearby low mass galaxy or star sitting in front of them in the foreground."
+        image: "images/guide/non-lenses/neighbours/VICS82_3010391_iJKs_zoom.png"
+        data_type: "mergers-neighbors"
       example_2: 
         title: "Some lightweight galaxies have arms and tails that can look like lensed arcs."
-        image: "images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri_zoom.png"
-        data_type: "mergers-neighbors"
+        image: "images/guide/non-lenses/loners/VICS82_4010226_iJKs_zoom.png"
+        data_type: "loners"
       example_3: 
-        title: "Some faint blue galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it’s not being lensed."
-        image: "images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri_zoom.png"
+        title: "Some faint galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it's not being lensed."
+        image: "images/guide/non-lenses/lightweights/VICS82_3010235_iJKs_zoom.png"
         data_type: "loners"
       example_4: 
         title: "Noise in the image can look like patterns of lensed images - beware of pure green or red features!"
         image: "images/guide/artifacts/noise/VICS82_1001584_iJKs_zoom.png"
         data_type: "noise"
       example_5: 
-        title: "Spirals and ring galaxies can host blue arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs."
-        image: "images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri_zoom.png"
-        data_type: "mergers-neighbors"
+        title: "Spirals and ring galaxies can host arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs."
+        image: "images/guide/non-lenses/spirals-rings/VICS82_2070266_iJKs_zoom.png"
+        data_type: "rings-spirals"
       example_6: 
         title: "Some images' red, green and blue channels are not well aligned, making all the objects in the field look a bit like lenses!"
         image: "images/guide/artifacts/offsets/VICS82_1000232_iJKs_zoom.png"

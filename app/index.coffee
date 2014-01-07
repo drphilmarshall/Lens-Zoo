@@ -22,7 +22,6 @@ Recent = require 'zooniverse/models/recent'
 
 api = new Api
   project: 'spacewarp'
-  host: 'https://api.zooniverse.org'
 
 # Initialize Counter model
 new Counter({classified: 0, potentials: 0, favorites: 0}).save()

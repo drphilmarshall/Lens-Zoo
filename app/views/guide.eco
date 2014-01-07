@@ -154,36 +154,19 @@
       <section data-type="rings-spirals" class="show">
         <%- translate 'p', 'guide.rings_spirals_text_1' %>
 
-        <%- translate 'h2', 'guide.arms' %>
+        <%- translate 'h2', 'guide.face' %>
         
         <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_008_10921_6476_b_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_008_10921_6476_b_gri_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.rings_spirals_text_2' %>
         
-        <%- translate 'h2', 'guide.rings' %>
+        <%- translate 'h2', 'guide.arms' %>
 
         <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri.png' width='340' height='340'>
         <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.rings_spirals_text_3' %>
-
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_halo_arms.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_halo_arms_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.rings_spirals_text_4' %>
-
-        <%- translate 'h2', 'guide.clumps' %>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_clumpy_ring.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_clumpy_ring_zoom.png' width='340' height='340'>
-        
-        <%- translate 'p', 'guide.rings_spirals_text_5' %>
-
-        <%- translate 'h2', 'guide.red' %>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_red_spiral.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/SF_red_spiral_zoom.png' width='340' height='340'>
-
-        <%- translate 'p', 'guide.rings_spirals_text_6' %>
 
       </section>
     
@@ -230,24 +213,22 @@
     
       <section data-type="mergers-neighbors">
         <%- translate 'p', 'guide.mergers_neighbors_text_1' %>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010391_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010391_iJKs_zoom.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.mergers_neighbors_text_2' %>
 
-        <%- translate 'h2', 'guide.mergers' %>
-        
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri_zoom.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010226_iJKs.png' width='220' height='220'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010386_iJKs.png' width='220' height='220'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_2090372_iJKs.png' width='220' height='220'>
+
         <%- translate 'p', 'guide.mergers_neighbors_text_3' %>
-        
-        <%- translate 'h2', 'guide.neighbouring_galaxies' %>
-        
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri_zoom.png' width='340' height='340'>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_3010378_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/VICS82_1000747_iJKs.png' width='340' height='340'>
+
         <%- translate 'p', 'guide.mergers_neighbors_text_4' %>
-
-
-        <img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/MN_satellites.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/neighbours/MN_satellites_zoom.png' width='340' height='340'>
-        <%- translate 'p', 'guide.mergers_neighbors_text_5' %>
 
       </section>
       

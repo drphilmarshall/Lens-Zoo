@@ -46,27 +46,27 @@ module.exports =
     lens_examples:
       example_1:
         title: "A distant quasar being lensed by a massive galaxy in the foreground."
-        image: "images/guide/lenses/galaxy-quasar/CFHTLS_082_0427_gri_zoom.png"
+        image: "images/guide/lenses/lensed-quasar/VICS82_7009427_iJKs_zoom.png"
         data_type: "lensed-quasars"
       example_2:
-        title: "An edge-on spiral galaxy acting as a gravitational lens."
-        image: "images/guide/lenses/disk-galaxy/CFHTLS_024_2215_gri_zoom.png"
-        data_type: "lensed-galaxies"
+        title: "A distant blue galaxy being lensed by a group of massive galaxies."
+        image: "images/guide/lenses/lensing-group/VICS82_5008231_iJKs_zoom.png"
+        data_type: "lensing-clusters"
       example_3: 
         title: "A group of massive galaxies acting as a gravitational lens."
-        image: "images/guide/lenses/cluster-galaxy/CFHTLS_052_1191_gri_zoom.png"
+        image: "images/guide/lenses/lensing-group/VICS82_5004036_iJKs_zoom.png"
         data_type: "lensing-clusters"
       example_4:
         title: "A distant blue galaxy being lensed by a massive galaxy in the foreground."
-        image: "images/guide/lenses/elliptical-galaxy/CFHTLS_030_2132_gri_zoom.png"
+        image: "images/guide/lenses/lensed-galaxy/VICS82_7008306_iJKs_zoom.png"
         data_type: "lensed-galaxies"
       example_5:
-        title: "A distant blue galaxy being lensed by a massive galaxy in the foreground."
-        image: "images/guide/lenses/elliptical-galaxy/CFHTLS_039_1471_gri_zoom.png"
-        data_type: "lensed-galaxies"
+        title: "A distant quasar being lensed by a massive galaxy in the foreground"
+        image: "images/guide/lenses/lensed-quasar/VICS82_7007297_iJKs_zoom.png"
+        data_type: "lensed-quasars"
       example_6:
         title: "A distant quasar being lensed by a massive galaxy in the foreground."
-        image: "images/guide/lenses/galaxy-quasar/CFHTLS_082_1138_gri_zoom.png"
+        image: "images/guide/lenses/lensed-galaxy/VICS82_7008406_iJKs_zoom.png"
         data_type: "lensed-quasars"
 
     non_lens_examples:

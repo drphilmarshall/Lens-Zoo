@@ -83,17 +83,17 @@ module.exports =
         image: "images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri_zoom.png"
         data_type: "loners"
       example_4: 
-        title: "Some faint blue galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it’s not being lensed."
-        image: "images/guide/non-lenses/loners/CFHTLS_110_1042_7688_b_gri_zoom.png"
-        data_type: "loners"
+        title: "Noise in the image can look like patterns of lensed images - beware of pure green or red features!"
+        image: "images/guide/artifacts/noise/VICS82_1001584_iJKs_zoom.png"
+        data_type: "noise"
       example_5: 
         title: "Spirals and ring galaxies can host blue arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs."
         image: "images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri_zoom.png"
         data_type: "mergers-neighbors"
       example_6: 
-        title: "Spirals and ring galaxies can host blue arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs."
-        image: "images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri_zoom.png"
-        data_type: "rings-spirals"
+        title: "Some images' red, green and blue channels are not well aligned, making all the objects in the field look a bit like lenses!"
+        image: "images/guide/artifacts/offsets/VICS82_1000232_iJKs_zoom.png"
+        data_type: "offsets"
 
   tutorial:
     welcome:

@@ -10,7 +10,7 @@
     "underscore": "~1.4.2",
     "zootorial": "~0.3.4",
     "nib": "~0.9.1",
-    "zooniverse": "~0.2.0",
+    "zooniverse": "0.2.3",
     "publisssh": "~0.2.1",
     "coffee-script": "~1.6.3"
   },

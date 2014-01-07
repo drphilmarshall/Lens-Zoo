@@ -295,7 +295,7 @@ class Classifier extends Page
     
     # Reset classification variables
     @reset()
-    
+
     # Create new classification
     @classification = new Classification {subject}
     
@@ -681,7 +681,13 @@ class Classifier extends Page
         
         # Check if any annotation over lens
         for index, annotation of @annotations
-          @isLensMarked = @checkImageMask(annotation.x, annotation.y)
+          if trainingType is 'lensed_galaxy'
+            r2 = (annotation.x - 220)*(annotation.x - 220) + (annotation.y - 220)*(annotation.y - 220)
+            @isLensMarked = if r2 < 400 then true else false
+            console.log r2, @isLensMarked, annotation.x, annotation.y
+          else
+            @isLensMarked = @checkImageMask(annotation.x, annotation.y)
+
           break if @isLensMarked is true
         
         if @isLensMarked in [true, 255]

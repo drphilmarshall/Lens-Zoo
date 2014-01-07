@@ -24,6 +24,8 @@ class QuickGuide extends Controller
     
     if type in ['lensing-clusters', 'lensed-galaxies', 'lensed-quasars']
       sectionType = 'real-lenses'
+    if type in ['noise', 'offsets']
+      sectionType = 'artifacts'
     else
       sectionType = 'false-positives'
     

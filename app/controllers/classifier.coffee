@@ -260,7 +260,7 @@ class Classifier extends Page
     Subject.queueLength = 5
     
     # Insert tutorial subjects into queue
-    Subject.instances.splice(1, 0, TutorialSubject.second)
+    # Subject.instances.splice(1, 0, TutorialSubject.second)
     
     # Append remaining subjects to DOM
     @appendSubjects(null, Subject.instances)

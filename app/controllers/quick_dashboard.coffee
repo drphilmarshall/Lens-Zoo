@@ -69,49 +69,17 @@ class QuickDashboard extends Controller
     super
     
     @calibrations = {}
-    # VICS82:
     @provenances = {}
+    
     @dfs =
       webfits: new $.Deferred()
       fitsjs: new $.Deferred()
     
-    @getApi()
-  
-  getApi: ->
-    # Get the browser vendor and version
-    userAgent = browserDialog.testAgent(navigator.userAgent)
-    
-    unless (DataView?)
-      alert 'Sorry, your browser does not support features needed for this tool.'
-      return
-    
-    # Determine if WebGL is supported, otherwise fall back to canvas
-    canvas  = document.createElement('canvas')
-    for name in ['webgl', 'experimental-webgl']
-      try
-        context = canvas.getContext(name)
-        
-        # Check if browser support floating-point textures
-        ext = context.getExtension('OES_texture_float')
-        
-      catch error
-        continue
-      break if context?
-    
-    lib = if context? then 'gl' else 'canvas'
-    
-    # Default to canvas if browser does not support WebGL floating-point texture extension
-    lib = if ext? then 'gl' else 'canvas'
-    
-    # Default to canvas if Safari regardless of WebGL
-    lib = 'canvas' if userAgent.browser is 'safari'
-    
-    # Load appropriate WebFITS library asynchronously
-    url = "javascripts/webfits-#{lib}.js"
+    url = "javascripts/webfits-canvas.js"
     $.getScript(url, =>
       @dfs.webfits.resolve()
     )
-    # Load fitsjs asynchronously
+
     $.getScript("javascripts/fits.js", =>
       @dfs.fitsjs.resolve()
     )
@@ -126,7 +94,6 @@ class QuickDashboard extends Controller
     @wfits = new astro.WebFITS(@el.find('.webfits')[0], @dimension)
     @wfits.setupControls()
 
-    
     # Create new deferreds for each channel
     for band in @bands
       @dfs[band] = new $.Deferred()
@@ -179,8 +146,7 @@ class QuickDashboard extends Controller
             
             arr = dataunit.getFrame(0)
             [min, max] = dataunit.getExtent(arr)
-            width = dataunit.width
-            height = dataunit.height
+            {width, height} = dataunit
             calibration = @getCalibration(header)
             # VICS82:
             provenance = @getProvenance(header)
@@ -232,14 +198,6 @@ class QuickDashboard extends Controller
         
         # Remove the callback
         document.onkeydown = null
-    
-    # PJM: Pan and zoom to fill viewer:
-    # @wfits.setXOffset(0.5)
-    # @wfits.setYOffset(0.5)
-    # @wfits.setZoom(2.0)    
-    # The above lines do not work - the image appears with standard offsets and zoom, and
-    # apparently with a over=exposed blue channel! And then as brighter, bluer etc are selected,
-    # the data disappears... 
     
     @append("""
       <div class='viewer-tools'>

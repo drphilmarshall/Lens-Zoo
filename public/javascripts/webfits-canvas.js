@@ -330,6 +330,7 @@
         arr[length + 3] = 255;
       }
       imgData.data = arr;
+      this.ctx.scale(1.22, 1.22);
       this.ctx.putImageData(imgData, 0, 0);
       return this._applyTransforms();
     };

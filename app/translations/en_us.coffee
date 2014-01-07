@@ -416,9 +416,9 @@ module.exports =
     gallery_text: "Automated searches have detected nearly one hundred gravitational lenses (or high probability candidates) in the CFHTLS area. In this gallery, each one is shown at the centre of a zoomed-in image that is one quarter the size of a regular Space Warps image."
     
     rings_spirals: "Disk Galaxies"
-    loners: "Loners"
-    lightweights: "Lightweights"
+    loners: "Loners &amp; Lightweights"
     mergers_neighbors: "Neighbours"
+    groups: "Group Members"
     stars: "Stars"
     
     rings_spirals_text_1: "A disk galaxy with a star-forming ring might look like the images below. If you look at Real Lenses: Lensed Galaxies, some of the ring galaxies look similar. THis is how you distibguish between the two..."
@@ -431,27 +431,17 @@ module.exports =
 
     rings_spirals_text_3: "Fried eggs:..."
 
-
-    isolated_blue: "Isolated Blue Irregular Galaxy"
-    loners_text_1: "We have put a selection of objects that look like blue arcs in this page, however these are not gravitationally lensed systems. The easiest check is that there is no plausible massive gravitational lens in their vicinity. See below for some examples."
-    loners_text_2: "Some faint blue galaxies appear arc-like. If there isn't a massive galaxy present, it is almost certainly not being lensed!"
-    loners_text_3: "This example is very elongated, like a cluster arc - but there is no cluster of massive yellow galaxies present."
-    loners_text_4: "This example is a bright boomerang shaped blue galaxy. There is a very faint hint of a red galaxy, but to make such a large bright lensed galaxy would need a very massive galaxy or group of galaxies. The faint red object is so small that it is unlikely to create such a large lensed image. Moreover, we can't be sure that the red light is real, it could well be an image artifact or a noisy pixel."
-    blue_group: "Blue Group"
-    loners_text_5: "Faint blue galaxies can appear in groups and clusters too, and sometimes the galaxies in those groups can look aligned in an arc shape so they look a bit like multiple lensed images - but with no lens!"
+    loners_text_1: "In this page you see a couple of examples of things that might be mistaken for lensed arcs, however these are not gravitationally lensed systems. The easiest check is that there is no plausible massive gravitational lens in their vicinity."
+    loners_text_2: "In this image there is a red arc like feature close to a yellow galaxy that might be a potential lensing galaxy. However, if this was a real arc one would expect the arc to curve around the lensing galaxy. This arc clearly doesn't, and it is displaced from the lensing galaxy suggesting that this is not a lensed arc."
+    loners_text_3: "This is an example of an edge on red galaxy that might be mistaken for being lensed by the yellow galaxy at the centre of the image. In this case the yellow galaxy at the cnetre is much to small to produce an arc so far away from it. It would have to have a great deal more mass for this to be a real lens at this distance. If this were a galaxy cluster or group then large scale arcs can be expected but we would see many more yellow galaxies in this image. The fact that we do not just means these are two unrelated galaxies. The red object is an edge-on galaxy that is not lensed!"
     
-    lightweights_text_1: "As we described  previously, a galaxy needs to be massive to act as a gravitational lens. Spiral and irregular galaxies are not massive enough to cause strong gravitational lensing usually. However, there are some known cases of spiral galaxies (both seen face-on and edge-on) acting as gravitational lenses. While thinking about whether you are seeing gravitational lensing it is worthwhile considering if the object you think is the lens is massive enough or is it a &quot;lightweight&quot;? Do you see any other evidence that might disfavor lensing e.g. the lensed images are too far or the arc is too straight? Here are some examples."
-    arclets: "Straight or Distant Arclets"
-    lightweights_text_2: "Sometimes a yellow/red galaxy is present near a blue arc but its too small to create such a large or separated arc. The arc might appear too curved or curved in the wrong direction (it doesn't encircle the lensing galaxy). In the case above, the arc is too far away to be lensed by such a small galaxy."
-    bulgeless_blue: "Bulgeless Blue Galaxies"
-    lightweights_text_3: "The most massive galaxies have bulges of yellow/red stars - bulgeless, blue galaxies usually don't have enough mass to strongly deflect light. Such galaxies are less likely to act as lenses."
-
     
     mergers_neighbors_text_1: "Images taken of the sky are a flattened 2-D projection of a 3D universe. This means that galaxies that are physically unrelated to each other or distant in space and time appear next to each in the images - this is a chance or random alignment. Sometimes the shape of these neighbouring galaxies are such that they can mimic lenses, but there are clear signs that these are not lensed images. For lens candidates remember to look for an arc that is defined and curved around a plausible lensing galaxy, and also look for hints of a counter image. If things look very extended and fuzzy, or curved the wrong way or too straight, it is most likely this isn't a lens. Some examples follow."
     mergers_neighbors_text_2: "This is an example of a yellow galaxy with a neighbouring, edge-on, disk galaxy that is orange in colour. This is not a lensed arc as it is too straight, it is not cureved around the lensing yellow galaxy, and there is a sign of the bulge with a tapered disk that would not be seen in a lensed arc."
     mergers_neighbors_text_3: "These are examples of galaxies that are neighbouring yellow/pink potential lensing galaxies. Left: a red compact object is located close to a galaxy group, this is a round object, there is no hint of any accompanyign counter image and there is little evidence that this red object is a lensed image. Middle: Here you see a blue galaxy next to an edge on galaxy. The most mass in edge on galaxies is at the central bulge, this is the only part of the galaxy that is capable of producing gravitational lensing asn therefore any lensed images would appear around the bulge and not at the extremeity of the disk. This is a simple neighbouring blue star-forming galaxy that happens to appear close to the potential lens. Right: This is a compact high redshift galaxy that appers pink rather than yellow-orange, there are two red blobs nearby, this cannot be lensing as they are not in the right configuration to belensed and too far form the lensing galaxy. This must be a chance alignemnt of neighbouring high-redshift galaxies."
     mergers_neighbors_text_4: "As well as galaxies appearing to be neighbours, stars in our own galaxy can appear to lie close to potnetial lensign galaxies. These can often be mistaken for lensed quasars. Here's an example of a green and blue star close by a potential lens. If these were lensed quasars we would expect to see multiple images (of the same colour but usually different brightness) and very typical configurations (see tab Real Lenses: Lensed Quasars)."
 
+    groups_text_1: "Gal groups ...BLAH"
 
     stars_text_1: "Stars are bright compact sources that can show strange features depending on how bright they are. The stars in our galaxy have a range of properties, including temperature that determines the colour they are. If they are young stars, they are typically hot and blue in colour, older stars are cooler and red. Yellow or red stars can be mistaken to be very round galaxies and look a bit like those that are typical lenses. See the example below:"
     stars_text_2: "This field shows some compact objects that are stars. Some of the bright red and blue stars have been marked in the right image by red and blue arrows, respectively. Sometimes blue background galaxies lie close to these red stars and give the impression that they are lenses. To determine if you are looking at a star or a galaxy a quick check is to look out for faint symmetric spikes emanating from the compact sources (faint spikes are marked in grey). These spikes are caused by the structure in the telescope, and stars are so compact and bright that they can cause these spikes to be recorded on the detector. They are not inherent features of the star but just an artifact caused by the light of the star passing into the telescope. These features are called diffraction spikes."

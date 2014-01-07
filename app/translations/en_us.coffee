@@ -71,25 +71,25 @@ module.exports =
 
     non_lens_examples:
       example_1: 
-        title: "Some lightweight galaxies have arms and tails that can look like lensed arcs."
-        image: "images/guide/non-lenses/lightweights/CFHTLS_022_14405_13384_b_gri_zoom.png"
-        data_type: "lightweights"
-      example_2: 
-        title: "Some lightweight galaxies have arms and tails that can look like lensed arcs."
-        image: "images/guide/non-lenses/lightweights/CFHTLS_084_6943_2087_b_gri_zoom.png"
+        title: "Often galaxies have companions the same colour, or a nearby low mass galaxy or star sitting in front of them in the foreground."
+        image: "images/guide/non-lenses/neighbours/VICS82_3010391_iJKs_zoom.png"
         data_type: "mergers-neighbors"
+      example_2: 
+        title: "Some compact galaxy groups can look like lensed image configurations - check for arcs stretched around massive galaxies, usually with different colours to the lensing objects."
+        image: "images/guide/non-lenses/groups/VICS82_3000813_iJKs_zoom.png"
+        data_type: "groups"
       example_3: 
-        title: "Some faint blue galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it’s not being lensed."
-        image: "images/guide/non-lenses/loners/CFHTLS_050_8615_13075_b_gri_zoom.png"
+        title: "Some faint galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it's not being lensed."
+        image: "images/guide/non-lenses/lightweights/VICS82_3010235_iJKs_zoom.png"
         data_type: "loners"
       example_4: 
         title: "Noise in the image can look like patterns of lensed images - beware of pure green or red features!"
         image: "images/guide/artifacts/noise/VICS82_1001584_iJKs_zoom.png"
         data_type: "noise"
       example_5: 
-        title: "Spirals and ring galaxies can host blue arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs."
-        image: "images/guide/non-lenses/spirals-rings/CFHTLS_001_1555_gri_zoom.png"
-        data_type: "mergers-neighbors"
+        title: "Spirals and ring galaxies can host arc-like features. However, they are often larger, fuzzier, or too asymmetric to be lensed arcs."
+        image: "images/guide/non-lenses/spirals-rings/VICS82_2070266_iJKs_zoom.png"
+        data_type: "rings-spirals"
       example_6: 
         title: "Some images' red, green and blue channels are not well aligned, making all the objects in the field look a bit like lenses!"
         image: "images/guide/artifacts/offsets/VICS82_1000232_iJKs_zoom.png"
@@ -421,15 +421,15 @@ module.exports =
     groups: "Group Members"
     stars: "Stars"
     
-    rings_spirals_text_1: "A disk galaxy with a star-forming ring might look like the images below. If you look at Real Lenses: Lensed Galaxies, some of the ring galaxies look similar. THis is how you distibguish between the two..."
+    rings_spirals_text_1: "A disk galaxy with star-forming spiral arms, or a star forming ring might look like the images below. If you look at Real Lenses: Lensed Galaxies, some of them galaxies look similar... This is how you distinguish between the two..."
 
     face: "Face-on Disks"
     
-    rings_spirals_text_2: "OLD TEXT: These often have yellow &quot;bulges&quot; and blue &quot;spiral arms.&quot; Unlike gravitationally lensed arcs, the arms don't trace a rough circle around the bulge, and they are usually accompanied by some fuzzy distribution of light. This example shows a small spiral galaxy, you can see the upper blue arm very clearly and the opposing second arm is much fainter. You can see the underlying fuzz of the disk of the galaxy. You would see much more clearly defined arcs and no fuzzy component in a gravitational lens with arcs."
+    rings_spirals_text_2: "Notice how these galaxies appear blue-ish all over, and somewhat fuzzy, unlike the well-defined massive, orangey lens galaxies in the Lensed Galaxies section. If you can see structure in the fuzz, look for an arc plus a counter-arc on the opposite side as signs of lensing - the galaxies above don't have this symmetry."
 
     edge: "Edge-on Disks"
 
-    rings_spirals_text_3: "Fried eggs:..."
+    rings_spirals_text_3: "Disk galaxies are like two fried eggs placed back to back and viewed from the side: they bulge in the middle and have thin disks of stars around them. If a disk galaxy is acting as a lens, the arc usually forms across one of the disk arms - or there are two very closely separated features either side of the bulge. Disk galaxies that are not lensing might appear similar to lensed arcs, but they are straighter and often have the disk plus bulge shape."
 
     loners_text_1: "In this page you see a couple of examples of things that might be mistaken for lensed arcs, however these are not gravitationally lensed systems. The easiest check is that there is no plausible massive gravitational lens in their vicinity."
     loners_text_2: "In this image there is a red arc like feature close to a yellow galaxy that might be a potential lensing galaxy. However, if this was a real arc one would expect the arc to curve around the lensing galaxy. This arc clearly doesn't, and it is displaced from the lensing galaxy suggesting that this is not a lensed arc."

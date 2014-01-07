@@ -156,15 +156,14 @@
 
         <%- translate 'h2', 'guide.face' %>
         
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_008_10921_6476_b_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_008_10921_6476_b_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/VICS82_2070266_iJKs_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/VICS82_2090795_iJKs_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.rings_spirals_text_2' %>
         
         <%- translate 'h2', 'guide.edge' %>
 
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri.png' width='340' height='340'>
-        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/CFHTLS_074_0786_gri_zoom.png' width='340' height='340'>
+        <img class='lazy' src='' data-original='images/guide/non-lenses/spirals-rings/VICS82_4010174_iJKs_zoom.png' width='340' height='340'>
         
         <%- translate 'p', 'guide.rings_spirals_text_3' %>
 

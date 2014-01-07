@@ -207,7 +207,15 @@
       </section>
       
       <section data-type="groups">
-        <%- translate 'p', 'guide.groups_text_1' %>
+        <%- translate 'p', 'guide.groups_text_2' %>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_3000813_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_3000813_iJKs_zoom.png' width='340' height='340'>
+
+        <%- translate 'p', 'guide.groups_text_3' %>
+
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_1000452_iJKs.png' width='340' height='340'>
+	<img class='lazy' src='' data-original='images/guide/non-lenses/groups/VICS82_1000452_iJKs_zoom.png' width='340' height='340'>
 
       </section>
 

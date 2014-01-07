@@ -421,15 +421,15 @@ module.exports =
     groups: "Group Members"
     stars: "Stars"
     
-    rings_spirals_text_1: "A disk galaxy with a star-forming ring might look like the images below. If you look at Real Lenses: Lensed Galaxies, some of the ring galaxies look similar. THis is how you distibguish between the two..."
+    rings_spirals_text_1: "A disk galaxy with star-forming spiral arms, or a star forming ring might look like the images below. If you look at Real Lenses: Lensed Galaxies, some of them galaxies look similar... This is how you distinguish between the two..."
 
     face: "Face-on Disks"
     
-    rings_spirals_text_2: "OLD TEXT: These often have yellow &quot;bulges&quot; and blue &quot;spiral arms.&quot; Unlike gravitationally lensed arcs, the arms don't trace a rough circle around the bulge, and they are usually accompanied by some fuzzy distribution of light. This example shows a small spiral galaxy, you can see the upper blue arm very clearly and the opposing second arm is much fainter. You can see the underlying fuzz of the disk of the galaxy. You would see much more clearly defined arcs and no fuzzy component in a gravitational lens with arcs."
+    rings_spirals_text_2: "Notice how these galaxies appear blue-ish all over, and somewhat fuzzy, unlike the well-defined massive, orangey lens galaxies in the Lensed Galaxies section. If you can see structure in the fuzz, look for an arc plus a counter-arc on the opposite side as signs of lensing - the galaxies above don't have this symmetry."
 
     edge: "Edge-on Disks"
 
-    rings_spirals_text_3: "Fried eggs:..."
+    rings_spirals_text_3: "Disk galaxies are like two fried eggs placed back to back and viewed from the side: they bulge in the middle and have thin disks of stars around them. If a disk galaxy is acting as a lens, the arc usually forms across one of the disk arms - or there are two very closely separated features either side of the bulge. Disk galaxies that are not lensing might appear similar to lensed arcs, but they are straighter and often have the disk plus bulge shape."
 
     loners_text_1: "In this page you see a couple of examples of things that might be mistaken for lensed arcs, however these are not gravitationally lensed systems. The easiest check is that there is no plausible massive gravitational lens in their vicinity."
     loners_text_2: "In this image there is a red arc like feature close to a yellow galaxy that might be a potential lensing galaxy. However, if this was a real arc one would expect the arc to curve around the lensing galaxy. This arc clearly doesn't, and it is displaced from the lensing galaxy suggesting that this is not a lensed arc."

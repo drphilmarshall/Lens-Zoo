@@ -75,9 +75,9 @@ module.exports =
         image: "images/guide/non-lenses/neighbours/VICS82_3010391_iJKs_zoom.png"
         data_type: "mergers-neighbors"
       example_2: 
-        title: "Some lightweight galaxies have arms and tails that can look like lensed arcs."
-        image: "images/guide/non-lenses/loners/VICS82_4010226_iJKs_zoom.png"
-        data_type: "loners"
+        title: "Some compact galaxy groups can look like lensed image configurations - check for arcs stretched around massive galaxies, usually with different colours to the lensing objects."
+        image: "images/guide/non-lenses/groups/VICS82_3000813_iJKs_zoom.png"
+        data_type: "groups"
       example_3: 
         title: "Some faint galaxies are naturally long and curved; if you see one without a massive galaxy nearby, it's not being lensed."
         image: "images/guide/non-lenses/lightweights/VICS82_3010235_iJKs_zoom.png"

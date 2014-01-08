@@ -683,7 +683,7 @@ class Classifier extends Page
         for index, annotation of @annotations
           if trainingType is 'lensed_galaxy'
             r2 = (annotation.x - 220)*(annotation.x - 220) + (annotation.y - 220)*(annotation.y - 220)
-            @isLensMarked = if r2 < 400 then true else false
+            @isLensMarked = if r2 < 900 then true else false
             console.log r2, @isLensMarked, annotation.x, annotation.y
           else
             @isLensMarked = @checkImageMask(annotation.x, annotation.y)

@@ -646,7 +646,7 @@ class Classifier extends Page
     setTimeout ->
       current.remove()
       Subject.next()
-    , 600
+    , 800
     
     # Update stats
     @counter.increment('classified')

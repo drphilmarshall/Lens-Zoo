@@ -17,7 +17,7 @@ module.exports =
   welcome: new Step
     number: 1
     header: translate 'span', 'tutorial.welcome.header'
-    details: translate 'span', 'tutorial.welcome.details'
+    details: translate 'span', 'tutorial.welcome.details_stage2'
     attachment: 'center center .current center center'
     block: '.annotation, .controls:first'
     next: 'what_are_lenses_1'
@@ -118,7 +118,7 @@ module.exports =
   thanks: new Step
     number: 8
     header: translate 'span', 'tutorial.thanks.header'
-    details: translate 'span', 'tutorial.thanks.details'
+    details: translate 'span', 'tutorial.thanks.details_stage2'
     className: 'arrow-bottom'
     attachment: 'center bottom a.last center -0.2'
     block: '.annotation, .current .controls a:not(:last)'
